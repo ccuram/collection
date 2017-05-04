@@ -1,0 +1,22 @@
+
+
+
+<div class="columns is-multiline is-mobile ">
+  <div class="column  is-one-quarter has-text-centered"
+    *ngFor="let cup of cups"
+    (click)="gotoDetail(cup.id)">
+        <img [src]="'/assets/images/cups/'+ cup.imgUrls">
+        <p class="ko"> {{ cup.name }} </p>
+        <p class="en" > {{ cup.name_eng }} </p>
+  </div>
+</div>
+
+<!-- tile ver
+<div class="tile is-parent"
+  *ngFor="let cup of cups"
+  (click)="gotoDetail(cup.id)">
+    <article class="tile is-child box">
+      {{ cup.name }}
+    </article>
+</div>
+-->
