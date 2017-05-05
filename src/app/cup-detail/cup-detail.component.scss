@@ -1,0 +1,16 @@
+@import 'assets/scss/global';
+
+.cup { margin: 100px auto; }
+.section { 
+    @include testBorder();
+    .column {
+        @include testBorder();
+    }
+    .view { 
+        background-color: $primary;
+    }
+    .info {
+        background-color: $info;
+    }
+}
+p { font-size: $size-large; }

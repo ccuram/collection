@@ -1,0 +1,18 @@
+@import 'assets/scss/global';
+
+.nav-item {  img { max-height: 3rem; } }
+
+.footer {
+    padding: 2rem 0.5rem 1rem;
+    line-height: 170%;
+
+    p { font-size: $size-normal; }
+    .comment { font-size: $size-medium; }
+    .email { font-size: $size-small; }
+
+    a {
+        color: $link;
+        &:hover { color: $link-hover; }
+    }
+
+}

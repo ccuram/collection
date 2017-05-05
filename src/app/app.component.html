@@ -1,70 +1,56 @@
-<nav class="nav is-fullwidth">
-  <div class="nav-left">
-    <a class="nav-item">
-      <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
-    </a>
-  </div>
+<nav class="nav">
+  <div class="container">
 
-  <div class="nav-center">
-    <a class="nav-item" href="https://www.instagram.com/stuckyi.collection/">
-      <span class="icon">
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-      </span>
-    </a>
-    <a class="nav-item" href="https://twitter.com/cup_collector">
-      <span class="icon">
-        <i class="fa fa-twitter"></i>
-      </span>
-    </a>
-  </div>
-
-  <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-  <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-  <span class="nav-toggle">
-    <span>1</span>
-    <span>2</span>
-    <span>3</span>
-  </span>
-
-  <!-- This "nav-menu" is hidden on mobile -->
-  <!-- Add the modifier "is-active" to display it on mobile -->
-  <div class="nav-right nav-menu">
-    <a class="nav-item"> Home </a>
-    <a class="nav-item"> Documentation </a>
-    <a class="nav-item"> Blog </a>
-
-    <div class="nav-item">
-
-      <div class="field is-grouped">
-        <p class="control">
-          <a class="button" >
-            <span class="icon">
-              <i class="fa fa-twitter"></i>
-            </span>
-            <span>Tweet</span>
-          </a>
-        </p>
-        <p class="control">
-          <a class="button is-primary">
-            <span class="icon">
-              <i class="fa fa-download"></i>
-            </span>
-            <span>Download</span>
-          </a>
-        </p>
-      </div>
-
+    <div class="nav-left">
+      <a class="logo" class="nav-item" routerLink="/cups">
+          <img class="logo" src="assets/images/icons/logo.png" alt="logo">
+      </a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-item">
+        <span class="icon">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </span>
+      </a>
     </div>
 
   </div>
+  
 </nav>
 
 
-
-<section class="hero is-primary">
-  
-  <div class="container">
+<!-- main content -->
+<div class="container">
     <router-outlet></router-outlet>
-  </div>
-</section>
+</div>
 
+<footer class="footer">
+  
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <p class="comment"><strong>누군가 정리해줬으면 좋겠다 싶었는데....</strong></p>
+          <p>스투키 스튜디오</p>
+          <br/>
+          <p class="email">stuckyi.info@gmail.com</p>
+        </div>
+        <div class="column">
+          <p><a href="#"> 활용한 데이터에 관하여 </a></p>
+          <p><a href="#"> 프로젝트에 기여하기    </a></p>
+        </div>
+        <div class="column">
+          <p> 최종 업데이트 일자 : 2016-03-03</p>
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+            <img alt="크리에이티브 커먼즈 라이선스" 
+              style="border-width:0" 
+              src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+  
+  
+</footer>
+
+
+  
