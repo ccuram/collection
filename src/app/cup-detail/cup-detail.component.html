@@ -1,18 +1,121 @@
 
 
-<section class="section cup">
+
+<section class="hero is-bold is-info is-medium">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title"> {{ cup.name }} </h1>
+      <h2 class="subtitle"> {{ cup.name_eng }} </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section area">
+
   <div class="columns">
     <!-- view -->
     <div class="column is-one-half view">
-      <div class="columns">
-        <div class="column is-offset-1 is-11">View area1</div>
-        <div class="column"><p>View area2</p></div>
+      
+      <div class="columns is-multiline">
+        <!-- Cup View Info : P -->
+        <div class="column is-offset-4 is-8 no-padding-bottom">
+          <p> 바깥 지름<p>
+          <p> {{ cup.externalDiameter }} mm</p>
+        </div>
+        <div class="column is-2" > 
+          <!--<p>최상단에서 공기구멍까지의 길이</p>-->
+          <p class="vertical-text">최상단에서 공기구멍까지의 길이</p>
+          <p class="value">{{ cup.topToHole }} </p>
+        </div>
+        <div class="column is-2">
+          
+            <p>컵길이</p>
+            <p>{{ cup.bodyLength }} </p>
+            <p> 손잡이 길이 </p>
+            <p> {{ cup.stemLength }} </p>
+          
+          
+        </div> 
+        
+        
+        <!-- Cup View: Figure, Image -->
+        <div class="column is-8 no-padding-top">
+          <figure class="image">
+            <img [src]="'/assets/images/cups/'+ cup.imgUrls">
+          </figure>
+        </div>
+        
       </div>
 
     </div>
+
     <!-- info -->
     <div class="column is-half info">
-      <p>info area</p>
+
+      <div class="columns is-multiline">
+
+        <div class="column is-offset-2 is-10">
+          <div class="columns is-multiline">
+            <p class="item">색상</p>
+            <p class="value">색1, 색2, 색3</p>
+
+            <p class="item">제조국</p>
+            <p class="value">{{ cup.country }}</p>
+            
+            <p class="item">소재</p>
+            <p class="value">{{ cup.material }} </p>
+
+            <p class="item">가격</p>
+            <p class="value">{{ cup.price }} </p>
+
+            <p class="item">공기구멍 형태</p>
+            <p class="value">{{ cup.airholeType }} </p>
+
+            <p class="item">공기구멍 까지의 용량</p>
+            <p class="value">{{ cup.airholeCapacity }} </p>
+            
+            <p class="item">전체 용량</p>
+            <p class="value">{{ cup.totalCapacity }} </p>
+
+            <p class="item">손잡이 형태</p>
+            <p class="value">{{ cup.stemType }} </p>
+          </div>
+        </div>
+
+        <div class="column is-offset-2 is-10">
+          <div class="columns is-multiline">
+            <p class="item">공기구멍 형태</p>
+            <p class="value">{{ cup.airholeType }} </p>
+
+            <p class="item">공기구멍 까지의 용량</p>
+            <p class="value">{{ cup.airholeCapacity }} </p>
+            
+            <p class="item">전체 용량</p>
+            <p class="value">{{ cup.totalCapacity }} </p>
+
+            <p class="item">손잡이 형태</p>
+            <p class="value">{{ cup.stemType }} </p>
+          </div>
+        </div>
+
+
+
+
+        <div class="column is-offset-2 is-10">
+          <div class="columns">
+            <p class="item">공식 홈페이지로 이동</p>
+            <a class="value">{{ cup.officialsite }} </a>
+          </div>
+        </div>
+
+        
+        
+              
+      </div>
+
+      
+
     </div>
 
   </div>

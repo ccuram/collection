@@ -1,16 +1,62 @@
 @import 'assets/scss/global';
 
-.cup { margin: 100px auto; }
+$imgWidth: 300px;
+$imgHeight: 450px;
+
+p { font-size: $size-normal; }
+
+
+
+
+.diameter { margin-bottom: 0;}
+.area { margin: 100px auto; }
+
 .section { 
-    @include testBorder();
+    @include testBorder(ridge);
     .column {
-        @include testBorder();
+        @include testBorder(ridge);
     }
     .view { 
-        background-color: $primary;
+        text-align:center;
+        p { color: $text-light; }
+
+        .vertical-text {
+
+            // transform: scale(-1, -1);
+            p { 
+                display: inline-block;
+                vertical-align: top;
+                transform: translate(0,100%) rotate(90deg);
+                transform-origin: 0 0;
+                white-space: nowrap;
+            }
+          
+        }
+
+        figure{ 
+            @include size(100%, 450px);
+            @include testBg();
+            margin: 0 auto;
+
+            img { 
+                @include testBorder(ridge);
+                @include size(300px, 450px);
+                margin: 0 auto;
+            }
+        }
+
+
     }
     .info {
         background-color: $info;
+        p { padding: 4px 10px; }
+        .item {
+            @include testBg();
+            @include size(35%, auto);
+        }
+        .value {
+            @include size(65%, auto);
+        }
     }
 }
-p { font-size: $size-large; }
+
