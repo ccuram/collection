@@ -1,16 +1,19 @@
 
-<section class="section cups">
+<section class="section area">
   <div class="columns is-multiline">
     <div class="column is-one-third has-text-centered"
       *ngFor="let cup of cups"
       (click)="gotoDetail(cup.id)">
-        
+
           <p class="ko"> {{ cup.name }} </p>
           <p class="en" > {{ cup.name_eng }} </p>
 
           <figure class="image">
             <img [src]="'/assets/images/cups/'+ cup.imgUrls">
+            <div align="center" class="rulers"> &nbsp; </div>
           </figure>
     </div>
   </div>
 </section>
+
+

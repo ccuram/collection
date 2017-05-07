@@ -15,4 +15,8 @@
         &:hover { color: $link-hover; }
     }
 
+    img {
+        @include size(auto, 24px);
+    }
+
 }

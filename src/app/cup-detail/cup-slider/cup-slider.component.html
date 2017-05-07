@@ -1,0 +1,28 @@
+
+<div class="slider-container">
+  <div class="dir">
+    <img *ngIf="isLeft" (click)="updatePos('left')" src="/assets/images/icons/dir_left.png" />
+    
+  </div>
+
+  <div class="sliders">
+    <a class="slider-item"
+      [ngStyle]="{ 'transform' : currentClass }"
+      [href]="getTargetURL(reorder.id)"
+      *ngFor="let reorder of reOrderArr">
+      <figure class="image">
+        <img [src]="'/assets/images/cups/'+ reorder.imgUrls">
+      </figure>
+      
+      <p class="ko">{{reorder.name}}</p>
+      <p class="en"> {{ reorder.name_eng }} </p> 
+    </a>
+  </div>
+
+  <div class="dir">
+    <img *ngIf="isRight"  (click)="updatePos('right')" align="right" src="/assets/images/icons/dir_right.png" />
+  </div>
+</div>
+
+
+

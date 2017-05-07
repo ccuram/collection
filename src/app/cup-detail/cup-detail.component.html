@@ -1,12 +1,10 @@
 
 
 
-<section class="hero is-bold is-info is-medium">
-  <div class="hero-body">
-    <div class="container has-text-centered">
+<section class="section">
+  <div class="container has-text-centered">
       <h1 class="title"> {{ cup.name }} </h1>
       <h2 class="subtitle"> {{ cup.name_eng }} </h2>
-    </div>
   </div>
 </section>
 
@@ -54,77 +52,74 @@
     <div class="column is-half info">
 
       <div class="columns is-multiline">
-
+        <!-- info 1 -->
         <div class="column is-offset-2 is-10">
           <div class="columns is-multiline">
-            <p class="item">색상</p>
-            <p class="value">색1, 색2, 색3</p>
+            <span class="item">색상</span>
+            <span class="value">색1, 색2, 색3</span>
 
-            <p class="item">제조국</p>
-            <p class="value">{{ cup.country }}</p>
+            <span class="item">제조국</span>
+            <span class="value">{{ cup.country }}</span>
             
-            <p class="item">소재</p>
-            <p class="value">{{ cup.material }} </p>
+            <span class="item">소재</span>
+            <span class="value">{{ cup.material }} </span>
 
-            <p class="item">가격</p>
-            <p class="value">{{ cup.price }} </p>
+            <span class="item">가격</span>
+            <span class="value">{{ cup.price }} </span>
 
-            <p class="item">공기구멍 형태</p>
-            <p class="value">{{ cup.airholeType }} </p>
+            <span class="item">공기구멍 형태</span>
+            <span class="value">{{ cup.airholeType }} </span>
 
-            <p class="item">공기구멍 까지의 용량</p>
-            <p class="value">{{ cup.airholeCapacity }} </p>
+            <span class="item">공기구멍 까지의 용량</span>
+            <span class="value">{{ cup.airholeCapacity }} </span>
             
-            <p class="item">전체 용량</p>
-            <p class="value">{{ cup.totalCapacity }} </p>
+            <span class="item">전체 용량</span>
+            <span class="value">{{ cup.totalCapacity }} </span>
 
-            <p class="item">손잡이 형태</p>
-            <p class="value">{{ cup.stemType }} </p>
+            <span class="item">손잡이 형태</span>
+            <span class="value">{{ cup.stemType }} </span>
+          </div>
+        </div>
+        
+        <!-- info 2 -->
+        <div class="column is-offset-2 is-10">
+          <div class="columns is-multiline">
+            <span class="item">공기구멍 형태</span>
+            <span class="value">{{ cup.airholeType }} </span>
+
+            <span class="item">공기구멍 까지의 용량</span>
+            <span class="value">{{ cup.airholeCapacity }} </span>
+
+            <span class="item">전체 용량</span>
+            <span class="value">{{ cup.totalCapacity }} </span>
+
+            <span class="item">손잡이 형태</span>
+            <span class="value">{{ cup.stemType }} </span>
           </div>
         </div>
 
-        <div class="column is-offset-2 is-10">
-          <div class="columns is-multiline">
-            <p class="item">공기구멍 형태</p>
-            <p class="value">{{ cup.airholeType }} </p>
-
-            <p class="item">공기구멍 까지의 용량</p>
-            <p class="value">{{ cup.airholeCapacity }} </p>
-            
-            <p class="item">전체 용량</p>
-            <p class="value">{{ cup.totalCapacity }} </p>
-
-            <p class="item">손잡이 형태</p>
-            <p class="value">{{ cup.stemType }} </p>
-          </div>
-        </div>
 
 
-
-
+        <!-- info 3 -->
         <div class="column is-offset-2 is-10">
           <div class="columns">
-            <p class="item">공식 홈페이지로 이동</p>
-            <a class="value">{{ cup.officialsite }} </a>
+            <span class="item">공식 홈페이지로 이동</span>
+            <a [href]="cup.officialsite" class="value">
+              <img align="middle" src="/assets/images/icons/home.png">
+            </a>
           </div>
         </div>
 
-        
-        
-              
+ 
       </div>
-
-      
-
     </div>
 
   </div>
 </section>
 
 
-{{ cup.name }} detail page 입니다.
 
 
-<div class="container">
-  슬라이더 영역입니다.
-</div>
+<section class="section area">
+  <cup-slider></cup-slider>
+</section>

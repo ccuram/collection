@@ -5,12 +5,17 @@ import { AppComponent } from './app.component';
 import { CupsComponent } from './cups/cups.component';
 import { CupDetailComponent } from './cup-detail/cup-detail.component';
 
+import { SourceComponent } from './source/source.component';
+import { ContributingComponent } from './contributing/contributing.component';
+
 
 const routes: Routes = [
     { path: '', redirectTo: '/cups', pathMatch: 'full' },
     { path: 'app', component: AppComponent },
     { path: 'cups', component: CupsComponent },
-    { path: 'detail/:id', component: CupDetailComponent }
+    { path: 'detail/:id', component: CupDetailComponent },
+    { path: 'contributing', component: ContributingComponent },
+    { path: 'source', component: SourceComponent }
 ];
 
 @NgModule({

@@ -4281,11 +4281,40 @@ label.panel-block {
 .no-padding-bottom {
   padding-bottom: 0; }
 
-.cups {
+.page-margin {
   margin: 100px auto; }
 
+.nav {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+
+.container {
+  width: 960px;
+  height: auto;
+  overflow: hidden; }
+
+.mw720 {
+  width: 720px;
+  height: auto;
+  margin: 0 auto; }
+
+.is-center {
+  text-align: center; }
+
+.rulers {
+  z-index: 100;
+  width: 500%;
+  height: 1px;
+  background-color: #7a7a7a;
+  position: absolute;
+  margin-top: -120px;
+  transform: translateX(-200px); }
+
 .column {
-  border: 0.5px dashed black; }
+  border: 0.5px dashed black;
+  width: 300px;
+  height: 410px; }
   .column .ko {
     font-size: 1rem;
     font-weight: 700; }
@@ -4295,13 +4324,13 @@ label.panel-block {
     color: #7a7a7a; }
   .column figure {
     width: 100%;
-    height: 150px;
+    height: 320px;
     background-color: rgba(236, 236, 236, 0.8);
-    margin: 20px auto; }
+    margin: 0 auto; }
     .column figure img {
       border: 0.5px ridge black;
-      width: 100px;
-      height: 150px;
+      width: 200px;
+      height: 320px;
       margin: 0 auto; }
 
 /*# sourceMappingURL=cups.component.css.map */

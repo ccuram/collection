@@ -1,0 +1,11 @@
+@import 'assets/scss/global';
+
+.column {
+        @include size(720px, auto);
+        margin: 40px auto;
+    
+    // p { 
+    //     @include size(720px, auto);
+    //     margin: 15px auto;
+    // }
+}

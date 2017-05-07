@@ -8,6 +8,7 @@ p { font-size: $size-normal; }
 
 
 
+
 .diameter { margin-bottom: 0;}
 .area { margin: 100px auto; }
 
@@ -18,7 +19,10 @@ p { font-size: $size-normal; }
     }
     .view { 
         text-align:center;
-        p { color: $text-light; }
+        p { 
+            color: $text-light;
+            font-size: $size-small;
+        }
 
         .vertical-text {
 
@@ -34,13 +38,13 @@ p { font-size: $size-normal; }
         }
 
         figure{ 
-            @include size(100%, 450px);
+            @include size(100%, $imgHeight);
             @include testBg();
             margin: 0 auto;
 
             img { 
                 @include testBorder(ridge);
-                @include size(300px, 450px);
+                @include size($imgWidth, $imgHeight);
                 margin: 0 auto;
             }
         }
@@ -48,14 +52,25 @@ p { font-size: $size-normal; }
 
     }
     .info {
-        background-color: $info;
-        p { padding: 4px 10px; }
+        
+        span { padding: 4px 10px; }
+        .column {
+            margin-bottom: 30px;
+            &:nth-of-type(1) { margin-top:40px; }
+        }
         .item {
             @include testBg();
+
             @include size(35%, auto);
+            font-weight: $text-strong;
         }
         .value {
             @include size(65%, auto);
+            
+            img {
+                @include size(18px, 18px);
+                margin-left: 10px;
+            }
         }
     }
 }
