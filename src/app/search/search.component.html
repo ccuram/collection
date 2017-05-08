@@ -1,0 +1,23 @@
+<img (click)="onSearch()" src="../../assets/images/icons/search.png"/>
+
+
+
+<div class="modal" [class.is-active]="isSearch">
+  <div class="modal-background" (click)="close()"></div>
+  <div class="modal-card">
+    
+    <section class="modal-card-body">
+      <button (click)="close()" class="delete"></button>
+      <div class="searchBox">
+        <ng2-completer
+          *ngIf="isSearch"
+          [(ngModel)]="searchStr"
+          [datasource]="dataService"
+          [minSearchLength]="0"
+          [placeholder]="'페미사이클'"
+          >
+        </ng2-completer>
+      </div>
+    </section>
+  </div>
+</div>

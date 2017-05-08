@@ -20,6 +20,10 @@ $imgWidth: 200px;
 $imgHeight: 320px;
 
 //ruler option
+$ruler-zIndex: 100;
 $rulerHeight: -120px;
 $rulerCol: $grey;
 $rulerWeight: 1px;
+
+//modal option
+$modal-zIndex: 200;

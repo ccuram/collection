@@ -31,7 +31,10 @@
         overflow: hidden;
  }
 
+
 .mw720 { @include size(720px, auto); margin: 0 auto; }
+
 .is-center { text-align: center;   }
+.is-front { z-index:999; }
 
 

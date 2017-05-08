@@ -4302,6 +4302,9 @@ label.panel-block {
 .is-center {
   text-align: center; }
 
+.is-front {
+  z-index: 999; }
+
 .rulers {
   z-index: 100;
   width: 500%;

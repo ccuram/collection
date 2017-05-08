@@ -1,0 +1,97 @@
+@charset "utf-8";
+@import 'assets/scss/global';
+
+.searchBox {
+    // @include size(40%, 70%);
+    min-height:300px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.completer-input  {
+    @include size(100%, 100px);
+    margin: 0 auto;
+    padding: 10px;
+    color: $dark;
+    font-size: $size-1;
+    font-weight: $weight-light;
+    border-bottom: 3px solid black;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+
+// 검색결과가 나타는 영역
+.completer-holder {
+    text-align: left;
+    @include size(100%, auto);
+    background-color: green;
+}
+
+.completer-list-item {
+    @include size(100%, auto);
+    background-color: red;
+}   
+
+
+
+.completer-list-item-holder {
+    @include size(100%, auto);
+    background-color: aqua;
+}
+
+
+// 검색결과가 나타는 영역
+.completer-row {
+    @include size(100%, auto);
+    // background-color: red;
+}
+
+.completer-selected-row {
+    @include size(100%, auto);
+    
+    &:hover{
+        background-color: purple;
+    }
+}   
+
+
+
+.completer-no-results{
+    
+    @include size(100%, auto);
+    background-color: $main-color;
+
+}
+
+
+.completer-dropdown-holder{
+    @include size(100%, auto);
+    background-color: $main-color;
+}
+
+.completer-dropdown {
+    @include size(100%, auto);
+    background-color: pink;
+}
+
+.completer_row_wrapper {
+    @include size(100%, auto);
+    background-color: pink;   
+}
+/*
+
+
+/deep/ .completer-selected-row {
+    @include size(100%, auto);
+    
+    &:hover{
+        background-color: purple;
+    }
+}   
+
+*/

@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 //custom module
 import { AppRoutingModule } from './app-routing.module';
+// lib
+import { Ng2CompleterModule } from "ng2-completer";
 
 //component
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { AppService } from './app.service';
 import { CupSliderComponent } from './cup-detail/cup-slider/cup-slider.component';
 import { ContributingComponent } from './contributing/contributing.component';
 import { SourceComponent } from './source/source.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,15 @@ import { SourceComponent } from './source/source.component';
     CupDetailComponent,
     CupSliderComponent,
     ContributingComponent,
-    SourceComponent
+    SourceComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng2CompleterModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
