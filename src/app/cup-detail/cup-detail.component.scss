@@ -1,7 +1,7 @@
 @import 'assets/scss/global';
 
 $imgWidth: 300px;
-$imgHeight: 450px;
+$imgHeight: 480px;
 
 p { font-size: $size-normal; }
 
@@ -18,23 +18,28 @@ p { font-size: $size-normal; }
         @include testBorder(ridge);
     }
     .view { 
+        @include testBg($main-color-light);
         text-align:center;
         p { 
             color: $text-light;
             font-size: $size-small;
         }
+        .rotate-toptohole {
+            text-align: right;
+            @include size(200px, 200px);
+            transform: rotate(270deg);
+        }
+        .rotate {
+            text-align: center;
+            @include size(200px, 200px);
+            transform: rotate(270deg);
+        }
 
-        .vertical-text {
-
-            // transform: scale(-1, -1);
-            p { 
-                display: inline-block;
-                vertical-align: top;
-                transform: translate(0,100%) rotate(90deg);
-                transform-origin: 0 0;
-                white-space: nowrap;
-            }
-          
+        .ruler {
+            margin-right:10px;
+            margin-left:10px;
+            border: .5px solid $grey;
+            border-bottom: none;
         }
 
         figure{ 

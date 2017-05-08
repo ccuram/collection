@@ -3,6 +3,8 @@
 .nav-item {  img { max-height: 3rem; } }
 
 .footer {
+    @include size(100%, 168px);
+    background-color: $main-color;
     padding: 2rem 0.5rem 1rem;
     line-height: 170%;
 

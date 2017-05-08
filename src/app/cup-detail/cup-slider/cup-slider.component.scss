@@ -1,42 +1,7 @@
 @import 'assets/scss/global';
+//percentage(0.2) => 20%
+//percentage(100px / 50px) => 200%
 
-
-
-
-
-$slider_duraition:1.05s; //슬라이드 카드 이동(지속)시간
-
-/* slide step px */
-$step1:200px;
-$step2:400px;
-$step3:600px;
-$step4:800px;
-$step5:1000px;
-$step6:1200px;
-$step7:1400px;
-
-@mixin slide_animation($animation-name, $ani-duration, $ani-timing){
-  animation: $animation-name $ani-duration;
-  animation-fill-mode: forwards;
-  animation-timing-function: $ani-timing
-}
-
-@keyframes step0_from_left {
-   from {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to{
-    -webkit-transform: translateX(-$step1);
-    transform: translateX(-$step1);
-  }
-}
-
-
-
-.slider-item.step { 
-  @include slide_animation(step0_from_left, 1.05s, ease);
-}
 
 
 .slider-container {
@@ -56,16 +21,14 @@ $step7:1400px;
 
 
   .sliders {
-    
     @include size(90%, auto);
     @include flex(flex, row nowrap);
     justify-content: space-around;
     overflow:hidden;
     
     .slider-item {
-        @include testShadow();
         @include testTransition();
-        @include size(18%, auto);
+        @include size(20%, auto);
         flex-shrink: 0;
 
         margin: 2px;
@@ -78,19 +41,3 @@ $step7:1400px;
 
 }
 
-
-
-/*
-
-
-
-
-.slider-row.stepN6_from_right { 
-  @include slide_animation(stepN6_from_right, 1.05s, ease);
-}
-
-.slider-row.stepN6_from_left  { @include slide_animation(stepN6_from_left, 1.05s, ease); }
-.slider-row.stepN5_from_right { @include slide_animation(stepN5_from_right, 1.05s, ease); }
-.slider-row.stepN5_from_left  { @include slide_animation(stepN5_from_right, 1.05s, ease); }
-
-*/

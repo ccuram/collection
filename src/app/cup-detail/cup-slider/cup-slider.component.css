@@ -4302,19 +4302,6 @@ label.panel-block {
 .is-center {
   text-align: center; }
 
-/* slide step px */
-@keyframes step0_from_left {
-  from {
-    -webkit-transform: translateX(0);
-    transform: translateX(0); }
-  to {
-    -webkit-transform: translateX(-200px);
-    transform: translateX(-200px); } }
-.slider-item.step {
-  animation: step0_from_left 1.05s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease; }
-
 .slider-container {
   width: 100%;
   height: auto;
@@ -4337,9 +4324,8 @@ label.panel-block {
     justify-content: space-around;
     overflow: hidden; }
     .slider-container .sliders .slider-item {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      width: 18%;
+      width: 20%;
       height: auto;
       flex-shrink: 0;
       margin: 2px;
@@ -4350,20 +4336,5 @@ label.panel-block {
         font-size: 1rem; }
       .slider-container .sliders .slider-item .en {
         font-size: 0.75rem; }
-
-/*
-
-
-
-
-.slider-row.stepN6_from_right { 
-  @include slide_animation(stepN6_from_right, 1.05s, ease);
-}
-
-.slider-row.stepN6_from_left  { @include slide_animation(stepN6_from_left, 1.05s, ease); }
-.slider-row.stepN5_from_right { @include slide_animation(stepN5_from_right, 1.05s, ease); }
-.slider-row.stepN5_from_left  { @include slide_animation(stepN5_from_right, 1.05s, ease); }
-
-*/
 
 /*# sourceMappingURL=cup-slider.component.css.map */

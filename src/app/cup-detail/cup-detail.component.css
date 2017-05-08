@@ -4316,25 +4316,35 @@ p {
   .section .column {
     border: 0.5px ridge black; }
   .section .view {
+    background-color: #fff799;
     text-align: center; }
     .section .view p {
       color: #7a7a7a;
       font-size: 0.75rem; }
-    .section .view .vertical-text p {
-      display: inline-block;
-      vertical-align: top;
-      transform: translate(0, 100%) rotate(90deg);
-      transform-origin: 0 0;
-      white-space: nowrap; }
+    .section .view .rotate-toptohole {
+      text-align: right;
+      width: 200px;
+      height: 200px;
+      transform: rotate(270deg); }
+    .section .view .rotate {
+      text-align: center;
+      width: 200px;
+      height: 200px;
+      transform: rotate(270deg); }
+    .section .view .ruler {
+      margin-right: 10px;
+      margin-left: 10px;
+      border: 0.5px solid #7a7a7a;
+      border-bottom: none; }
     .section .view figure {
       width: 100%;
-      height: 450px;
+      height: 480px;
       background-color: rgba(236, 236, 236, 0.8);
       margin: 0 auto; }
       .section .view figure img {
         border: 0.5px ridge black;
         width: 300px;
-        height: 450px;
+        height: 480px;
         margin: 0 auto; }
   .section .info span {
     padding: 4px 10px; }

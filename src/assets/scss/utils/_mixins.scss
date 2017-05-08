@@ -68,8 +68,8 @@
 @mixin testBorder($border-st: dashed){
   border: .5px $border-st black;
 }
-@mixin testBg(){
-  background-color: rgba(236, 236, 236, 0.8); ;
+@mixin testBg($colorname: rgba(236, 236, 236, 0.8)){
+  background-color: $colorname;
 }
 
 @mixin testShadow(){
