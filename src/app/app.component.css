@@ -4305,6 +4305,13 @@ label.panel-block {
 .is-front {
   z-index: 999; }
 
+.nav {
+  z-index: 200;
+  overflow: scroll; }
+
+.main {
+  z-index: 100; }
+
 .nav-item img {
   max-height: 3rem; }
 

@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: '', redirectTo: '/cups', pathMatch: 'full' },
     { path: 'app', component: AppComponent },
     { path: 'cups', component: CupsComponent },
-    { path: 'detail/:id', component: CupDetailComponent },
+    { path: 'detail/:id', component: CupDetailComponent, pathMatch: 'full' },
     { path: 'contributing', component: ContributingComponent },
     { path: 'source', component: SourceComponent }
 ];

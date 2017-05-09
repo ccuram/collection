@@ -1,5 +1,12 @@
 @import 'assets/scss/global';
 
+
+$z-index-nav: 200;
+$z-index-main: 100;
+
+.nav { z-index: $z-index-nav; overflow: scroll; }
+.main { z-index: $z-index-main; }
+
 .nav-item {  img { max-height: 3rem; } }
 
 .footer {

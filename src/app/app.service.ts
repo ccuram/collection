@@ -16,6 +16,7 @@ export class AppService implements OnInit{
   getSelectedIndex() {
     return this.selectedIndex;
   }
+  
   getCup(id: number) {
     return this.cups.find(cup => { return cup.id === id; });
   }

@@ -4,9 +4,11 @@ import "rxjs/Rx";
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
-import { AppService } from '../app.service';
-import { CompleterService, CompleterData } from 'ng2-completer';
+import { Cup } from '../model/cup';
 import { CUPS } from '../data/cups';
+
+import { CompleterService, CompleterData } from 'ng2-completer';
+
 
 
 @Component({
@@ -18,21 +20,19 @@ import { CUPS } from '../data/cups';
 export class SearchComponent implements OnInit {
  
   isSearch: boolean = false;
-    
+  cups: Cup[] = CUPS;
+
   public searchStr: string;
   public plceholder: string = "페미사이클";
   public dataService: CompleterData;
-  public searchData;
+  // public searchData;
 
-  constructor(
-      private completerService: CompleterService,
-      private appService: AppService
-  ) {
-      this.searchData = this.appService.getCups();
-      this.dataService = completerService.local(this.searchData, 'name', "name"); // data, searchTerm, viewTerm.
+  constructor(private completerService: CompleterService, public router: Router) {
+    this.dataService = completerService.local(this.cups, 'name', "name"); // data, searchTerm, viewTerm.
   }
 
   ngOnInit(): void {
+    
   }
 
   onSearch() {
@@ -40,6 +40,20 @@ export class SearchComponent implements OnInit {
       this.isSearch = !this.isSearch;
   }  
 
+  onSelect(obj: any) {
+    console.log(obj);
+    let name = obj.searchStr;
+    if (name === undefined || name === "") {
+      console.log(name);
+      return;
+    }
+
+    let selectedCup = this.cups.find(cup => { return cup.name === name; });
+    let link = ['/detail', selectedCup.id];
+
+    this.router.navigate(link); 
+    location.reload();
+  }
   close() {
     this.isSearch = false;
   }
