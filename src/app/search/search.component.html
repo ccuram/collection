@@ -1,37 +1,24 @@
 <div class="warpper">
+  <!-- search img -->
   <img (click)="onSearch()" src="../../assets/images/icons/search.png"/>
-  <ng2-completer #spy
-            class="isClass"
-            [(ngModel)]="searchStr"
-            [datasource]="dataService"
-            [minSearchLength]="0"
-            [placeholder]="'페미사이클'"
-            [textNoResults]="'찾을 수 없네요.'"
-            [textSearching]="'찾아보고 있습니다.'"
-            (selected)="onSelect(spy)"
-            >
-  </ng2-completer>
-</div>
-
-<!--
-
-<div class="modal" [class.is-active]="isSearch">
-  <div class="modal-background" (click)="close()"></div>
-  <div class="modal-card">
-    
-    <section class="modal-card-body">
-      <button (click)="close()" class="delete"></button>
-      <div class="searchBox">
-        <ng2-completer
-          *ngIf="isSearch"
-          [(ngModel)]="searchStr"
-          [datasource]="dataService"
-          [minSearchLength]="0"
-          [placeholder]="'페미사이클'"
-          >
-        </ng2-completer>
-      </div>
-    </section>
+  
+  <!-- search input  -->
+  <div class="field">
+    <p class="control">
+      <input
+        (focus)="changeStateResult('on')"
+        (blur)="changeStateResult()"
+        class="input is-small" 
+        type="text" [(ngModel)]="key" placeholder="검색어를 입력해보세요">
+    </p>
+  </div>
+  <!-- search result -->
+  <div  *ngIf="isResult" class="result">
+    <div  *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
+        (click)="gotoDetail(cup)">
+      {{ cup.name }}
+    </div>
   </div>
 </div>
--->
+  
+  

@@ -26,15 +26,19 @@
         @include size(960px, auto);
         margin: 0 auto;
 }
-.container { 
+.main { 
         @include size(960px, auto);
-        overflow: hidden;
+        margin: 0 auto;
  }
+ .container { 
+        @include size(960px, auto);
+        margin: 0 auto;
+ }
+
 
 
 .mw720 { @include size(720px, auto); margin: 0 auto; }
 
 .is-center { text-align: center;   }
-.is-front { z-index:999; }
 
 

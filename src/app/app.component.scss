@@ -4,10 +4,13 @@
 $z-index-nav: 200;
 $z-index-main: 100;
 
-.nav { z-index: $z-index-nav; overflow: scroll; }
+.nav { z-index: $z-index-nav;  }
 .main { z-index: $z-index-main; }
 
 .nav-item {  img { max-height: 3rem; } }
+
+
+
 
 .footer {
     @include size(100%, 168px);

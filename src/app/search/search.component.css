@@ -4289,10 +4289,15 @@ label.panel-block {
   height: auto;
   margin: 0 auto; }
 
+.main {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+
 .container {
   width: 960px;
   height: auto;
-  overflow: hidden; }
+  margin: 0 auto; }
 
 .mw720 {
   width: 720px;
@@ -4301,9 +4306,6 @@ label.panel-block {
 
 .is-center {
   text-align: center; }
-
-.is-front {
-  z-index: 999; }
 
 @keyframes slideInRight {
   from {
@@ -4316,76 +4318,37 @@ label.panel-block {
 
 .warpper {
   display: flex;
-  flex-flow: row nowrap;
-  width: 100%;
-  height: auto; }
-  .warpper .isClass {
-    animation-duration: 0.5s;
-    animation-name: slideInRight !important; }
-
-.completer-input {
-  width: 100%;
+  flex-flow: row wrap;
+  width: 200px;
   height: auto;
-  margin: 0 auto;
-  padding: 10px;
-  color: #363636;
-  font-size: 0.75rem;
-  font-weight: 300;
-  box-shadow: none;
-  border-bottom: 3px solid black; }
+  position: absolute;
+  z-index: 300;
+  background-color: lightblue;
+  top: 0;
+  right: 4%; }
+  .warpper img {
+    width: 24px;
+    height: 24px; }
+  .warpper .field {
+    width: 80%;
+    height: auto;
+    background-color: rgba(236, 236, 236, 0.8); }
+  .warpper .result {
+    width: 100%;
+    height: auto;
+    background-color: rgba(236, 236, 236, 0.8);
+    z-index: 400; }
+    .warpper .result div {
+      padding: 2px 8px;
+      font-size: 1rem;
+      font-weight: 300;
+      background-color: whitesmoke; }
+      .warpper .result div:hover {
+        background-color: #00d1b2;
+        color: white; }
 
-.completer-holder {
-  text-align: left;
-  width: 100%;
-  height: auto;
-  color: red; }
-
-.completer-list-item {
-  width: 100%;
-  height: auto;
-  background-color: #FFEF33; }
-
-.completer-list-item-holder {
-  width: 100%;
-  height: auto;
-  background-color: aqua; }
-
-.completer-row {
-  width: 100%;
-  height: auto; }
-
-.completer-selected-row {
-  width: 100%;
-  height: auto; }
-  .completer-selected-row:hover {
-    background-color: purple; }
-
-.completer-no-results {
-  width: 100%;
-  height: auto;
-  background-color: #FFEF33; }
-
-.completer-dropdown {
-  width: 100%;
-  height: auto;
-  background-color: pink; }
-
-.completer_row_wrapper {
-  width: 100%;
-  height: auto;
-  background-color: pink; }
-
-/*
-
-
-/deep/ .completer-selected-row {
-    @include size(100%, auto);
-    
-    &:hover{
-        background-color: purple;
-    }
-}   
-
-*/
+.isClass {
+  animation-duration: 0.5s;
+  animation-name: slideInRight !important; }
 
 /*# sourceMappingURL=search.component.css.map */

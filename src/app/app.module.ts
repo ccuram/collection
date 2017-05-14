@@ -18,6 +18,7 @@ import { CupSliderComponent } from './cup-detail/cup-slider/cup-slider.component
 import { ContributingComponent } from './contributing/contributing.component';
 import { SourceComponent } from './source/source.component';
 import { SearchComponent } from './search/search.component';
+import { CustomSearchPipe } from './search/custom-search.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SearchComponent } from './search/search.component';
     CupSliderComponent,
     ContributingComponent,
     SourceComponent,
-    SearchComponent
+    SearchComponent,
+    CustomSearchPipe
   ],
   imports: [
     BrowserModule,

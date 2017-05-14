@@ -7,39 +7,36 @@ import { Observable } from 'rxjs/Observable';
 import { Cup } from '../model/cup';
 import { CUPS } from '../data/cups';
 
-import { CompleterService, CompleterData } from 'ng2-completer';
-
-
 
 @Component({
   selector: 'search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
- 
-  isSearch: boolean = false;
   cups: Cup[] = CUPS;
 
-  public searchStr: string;
-  public plceholder: string = "페미사이클";
-  public dataService: CompleterData;
-  // public searchData;
+  isSearch: boolean = false;
+  isResult: boolean = false;
 
-  constructor(private completerService: CompleterService, public router: Router) {
-    this.dataService = completerService.local(this.cups, 'name', "name"); // data, searchTerm, viewTerm.
-  }
+  key = "";
+  field = "name";
+  ignoreCase = false;
+  
 
-  ngOnInit(): void {
-    
-  }
+  constructor(private router: Router) { }
+  ngOnInit(): void { }
 
   onSearch() {
-    console.log("click on search!");
-      this.isSearch = !this.isSearch;
-  }  
+    this.isSearch = !this.isSearch;
+  }
 
+  changeStateResult(s: string) {
+    // search result view first. and then do this.
+    setTimeout(() => {
+      this.isResult = (s === 'on') ? true : false;
+    }, 0);
+  }
   onSelect(obj: any) {
     console.log(obj);
     let name = obj.searchStr;
@@ -54,8 +51,10 @@ export class SearchComponent implements OnInit {
     this.router.navigate(link); 
     location.reload();
   }
-  close() {
-    this.isSearch = false;
+  gotoDetail(searchedCup: Cup) {
+    let link = ['/detail', searchedCup.id];
+    this.router.navigate(link); 
+    setTimeout(() => { location.reload(); }, 0);
+    
   }
-  
 }

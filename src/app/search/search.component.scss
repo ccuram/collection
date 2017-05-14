@@ -19,107 +19,43 @@
 
 
 .warpper {
-    @include flex(flex, row nowrap);
-    @include size(100%, auto);
-    // overflow-x:hidden;
+    @include flex(flex, row wrap);
+    @include size(200px, auto);
+    position: absolute;
+    z-index:300;
+    background-color:lightblue;
+    top:0;
+    right:4%;
 
-
-    .isClass {
-        animation-duration: 0.5s;
-        animation-name: slideInRight !important;
+    img { @include size(24px,24px); }
+    .field {
+        @include size(80%, auto);
+        @include testBg();
     }
 
-}
+    .result {
+        @include size(100%, auto);
+        @include testBg();
+        z-index: 400;
+        
+        div {
+            padding: 2px 8px;
+            font-size: $size-normal;
+            font-weight: $weight-light;
+            background-color: $light;
 
-
-
-
-.completer-input  {
-    @include size(100%, auto);
-    
-    margin: 0 auto;
-    padding: 10px;
-    color: $dark;
-
-    font-size: $size-7;
-    font-weight: $weight-light;
-
-    box-shadow: none;
-    border-bottom: 3px solid black;
-    // box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    // transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
-
-
-// 검색결과가 나타는 영역
-.completer-holder {
-    
-    text-align: left;
-    @include size(100%, auto);
-    color:red;    
-}
-
-
-.completer-list-item {
-    
-    @include size(100%, auto);
-    background-color: $main-color;
-}   
-
-
-
-.completer-list-item-holder {
-    
-    @include size(100%, auto);
-    background-color: aqua;
-}
-
-
-// 검색결과가 나타는 영역
-.completer-row {
-    
-    @include size(100%, auto);
-    // background-color: red;
-}
-
-.completer-selected-row {
-    
-    @include size(100%, auto);
-    
-    &:hover{
-        background-color: purple;
+            &:hover {
+                background-color: $primary;
+                color: white;
+            }
+        }
     }
-}   
 
-.completer-no-results{
-    
-    
-    @include size(100%, auto);
-    background-color: $main-color;
 
 }
 
 
-
-
-.completer-dropdown {
-    @include size(100%, auto);
-    background-color: pink;
+.isClass {
+    animation-duration: 0.5s;
+    animation-name: slideInRight !important;
 }
-
-.completer_row_wrapper {
-    @include size(100%, auto);
-    background-color: pink;   
-}
-/*
-
-
-/deep/ .completer-selected-row {
-    @include size(100%, auto);
-    
-    &:hover{
-        background-color: purple;
-    }
-}   
-
-*/
