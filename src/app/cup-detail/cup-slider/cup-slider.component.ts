@@ -31,7 +31,9 @@ export class CupSliderComponent implements OnInit {
   isRight: boolean = true;
   
   constructor(
-    private appService: AppService, private activatedRoute: ActivatedRoute, private router: Router
+    private appService: AppService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -53,13 +55,10 @@ export class CupSliderComponent implements OnInit {
   // Reordering base on selectedIndex.
   setReOrder() {
     let firstIndex = 0;                     // 첫 index
-    let lastIndex = this.cups.length - 1;     // 마지막 index   : length는 15지만, id는 14까지있기 때문.
+    let lastIndex = this.cups.length - 1;     // 마지막 index   : length는 3*지만, id는 3*까지있기 때문.
     let curIndex = this.selectedIndex;      // 현재 선택 index
     
     const divideIndex = Math.round((this.cups.length / 2));  //어디를 중간으로 할지를 결정하는 기준점.
-    console.log(this.cups.length);
-
-
     let pointPrev = divideIndex;
     let pointNext = 1;
     let count = { prev: 0, next: 0 };

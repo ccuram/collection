@@ -6,11 +6,31 @@
   
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0; }
+
+  #loader {
+    width: 2000px;
+    height: 2000px;
+    transition-timing-function: ease-in-out;
+    text-align: center; }
+    #loader p {
+      font-size: 100px;
+      font-weight: 100;
+      letter-spacing: -1px;
+      color: turquoise; }
+
+  </style>
   <!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
 </head>
 <body>
-  
-<app-root>Loading...</app-root>
+
+<app-root>
+  <div id="loader">
+    <p>Loading...</p>
+  </div>
+</app-root>
   
   
 </body>

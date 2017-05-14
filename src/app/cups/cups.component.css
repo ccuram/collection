@@ -4270,6 +4270,15 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 /* color */
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+.slideInRight {
+  animation-name: slideInRight; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4309,12 +4318,12 @@ label.panel-block {
 
 .rulers {
   z-index: 100;
-  width: 500%;
+  width: 900%;
   height: 1px;
   background-color: #7a7a7a;
   position: absolute;
   margin-top: -120px;
-  transform: translateX(-200px); }
+  transform: translateX(-500px); }
 
 .column {
   border: 0.5px dashed black;

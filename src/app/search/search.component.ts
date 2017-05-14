@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import "rxjs/Rx";
 
 import { Router } from '@angular/router';
@@ -16,7 +16,8 @@ import { CUPS } from '../data/cups';
 export class SearchComponent implements OnInit {
   cups: Cup[] = CUPS;
 
-  isSearch: boolean = false;
+  @Input() isSearch;
+
   isResult: boolean = false;
 
   key = "";
@@ -25,7 +26,10 @@ export class SearchComponent implements OnInit {
   
 
   constructor(private router: Router) { }
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    console.log('isSearch', this.isSearch);
+    console.log('isResult', this.isResult);
+  }
 
   onSearch() {
     this.isSearch = !this.isSearch;
@@ -35,7 +39,7 @@ export class SearchComponent implements OnInit {
     // search result view first. and then do this.
     setTimeout(() => {
       this.isResult = (s === 'on') ? true : false;
-    }, 0);
+    }, 100);
   }
   onSelect(obj: any) {
     console.log(obj);
@@ -52,9 +56,16 @@ export class SearchComponent implements OnInit {
     location.reload();
   }
   gotoDetail(searchedCup: Cup) {
+    console.log("gotoDetail()");
+
     let link = ['/detail', searchedCup.id];
     this.router.navigate(link); 
-    setTimeout(() => { location.reload(); }, 0);
+    setTimeout(() => {
+      this.isResult = false;
+      this.isSearch = false;
+      history.go(0);
+      // location.reload();
+    }, 0);
     
   }
 }

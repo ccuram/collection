@@ -11,7 +11,11 @@ import { Cup } from '../model/cup';
 })
 export class CupsComponent implements OnInit {
 
+  
   cups: Cup[];
+  sortMethod = "desc";
+  sortKey = "totalLength";
+
 
   
   constructor(
@@ -22,7 +26,6 @@ export class CupsComponent implements OnInit {
   ngOnInit() {
     this.getCups();
   }
-  
   getCups(){
     this.cups = this.appService.getCups();
   }

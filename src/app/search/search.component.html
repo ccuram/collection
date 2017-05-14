@@ -1,24 +1,25 @@
 <div class="warpper">
-  <!-- search img -->
-  <img (click)="onSearch()" src="../../assets/images/icons/search.png"/>
-  
   <!-- search input  -->
-  <div class="field">
+  <div class="field"
+      *ngIf="isSearch">
     <p class="control">
       <input
         (focus)="changeStateResult('on')"
         (blur)="changeStateResult()"
         class="input is-small" 
-        type="text" [(ngModel)]="key" placeholder="검색어를 입력해보세요">
+        type="text"
+        [(ngModel)]="key" 
+        placeholder="검색어를 입력해보세요">
     </p>
   </div>
   <!-- search result -->
-  <div  *ngIf="isResult" class="result">
+  <div *ngIf="isResult" class="result">
     <div  *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
         (click)="gotoDetail(cup)">
       {{ cup.name }}
     </div>
   </div>
+
 </div>
   
   

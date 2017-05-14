@@ -6,11 +6,11 @@
 
 .rulers {
     z-index:100;
-    @include size(500%, $rulerWeight);
+    @include size(900%, $rulerWeight);
     background-color: $rulerCol;
     position: absolute;
     margin-top: $rulerHeight;
-    transform: translateX(-200px);
+    transform: translateX(-500px);
 }
 
 .column {

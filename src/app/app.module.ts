@@ -19,6 +19,7 @@ import { ContributingComponent } from './contributing/contributing.component';
 import { SourceComponent } from './source/source.component';
 import { SearchComponent } from './search/search.component';
 import { CustomSearchPipe } from './search/custom-search.pipe';
+import { OrderPipe } from './pipes/order.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CustomSearchPipe } from './search/custom-search.pipe';
     ContributingComponent,
     SourceComponent,
     SearchComponent,
-    CustomSearchPipe
+    CustomSearchPipe,
+    OrderPipe
   ],
   imports: [
     BrowserModule,

@@ -2,35 +2,21 @@
 @import 'assets/scss/global';
 
 
-@keyframes slideInRight {
-  from {
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slideInRight {
-  animation-name: slideInRight;
-}
-
 
 .warpper {
+    @include testBorder();
     @include flex(flex, row wrap);
     @include size(200px, auto);
-    position: absolute;
+    // position: absolute;
     z-index:300;
-    background-color:lightblue;
-    top:0;
-    right:4%;
+    
+    // top:0;
+    // right:4%;
 
-    img { @include size(24px,24px); }
+    // img { @include size(24px,24px); }
     .field {
         @include size(80%, auto);
-        @include testBg();
+        @include testBorder();
     }
 
     .result {

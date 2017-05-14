@@ -6,12 +6,15 @@ import { CUPS } from './data/cups';
 export class AppService implements OnInit{
   cups: Cup[];
   selectedIndex: number;
+  
 
   constructor() { 
-    this.cups = CUPS;   
+    this.cups = CUPS;  
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.cups.sort((a, b) => { return a.totalLength - b.totalLength; });
+  }
 
   getSelectedIndex() {
     return this.selectedIndex;
@@ -24,5 +27,4 @@ export class AppService implements OnInit{
   getCups() {
     return this.cups;
   }
-
 }

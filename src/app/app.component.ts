@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  isSearch: boolean = false;
 
-  onTest(v: any) {
-    console.log("onTest : ", v);
+  onSearch() {
+    this.isSearch = !this.isSearch;
   }
 }

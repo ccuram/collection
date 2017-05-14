@@ -1,1 +1,21 @@
+@charset "utf-8";
+
 body { margin: 0; }
+
+#loader {
+    width: 2000px;
+    height: 2000px;
+    // background-color: turquoise;
+    transition-timing-function: ease-in-out;
+
+    text-align: center;
+    
+    
+    p {
+        font-size:100px;
+        font-weight: 100;
+        letter-spacing: -1px;
+        color: turquoise;
+
+    }
+}

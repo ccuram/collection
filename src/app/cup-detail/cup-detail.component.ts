@@ -10,9 +10,6 @@ import { Cup } from '../model/cup';
   styleUrls: ['./cup-detail.component.css']
 })
 export class CupDetailComponent implements OnInit {
-
-  
-
   cup: Cup;
   imgPath: string = '../../assets/images';
 

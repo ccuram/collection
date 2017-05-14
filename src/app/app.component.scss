@@ -1,14 +1,51 @@
 @import 'assets/scss/global';
 
-
+$z-index-search: 400;
 $z-index-nav: 200;
 $z-index-main: 100;
 
 .nav { z-index: $z-index-nav;  }
 .main { z-index: $z-index-main; }
 
-.nav-item {  img { max-height: 3rem; } }
+.nav-item { 
+    img { 
+        min-height: 50px;
+         }
+    
+}
 
+
+.search {
+    z-index: $z-index-search;
+    @include size(980px, auto);
+    @include flex(flex, row nowrap);
+    justify-content: stretch;
+    margin: 0 auto;
+    position: absolute;
+    
+    overflow-x: hidden;
+    
+
+    .blank { 
+        @include size(96%, auto);
+        flex-shrink: 5;
+    }
+    .search-img {
+        @include size(4%, auto);
+        animation-name: ease-in-out;
+        flex-shrink: 1;
+        img { @include size(24px,24px); }
+    }
+    
+    .search-area {
+        @include size(0, auto);
+    }
+    .isSearch {
+        animation-name: ease-in-out;
+        @include size(20%, auto);
+    }
+
+}
 
 
 
