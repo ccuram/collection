@@ -1,25 +1,24 @@
-<div class="warpper">
-  <!-- search input  -->
-  <div class="field"
-      *ngIf="isSearch">
-    <p class="control">
-      <input
-        (focus)="changeStateResult('on')"
-        (blur)="changeStateResult()"
-        class="input is-small" 
-        type="text"
-        [(ngModel)]="key" 
-        placeholder="검색어를 입력해보세요">
-    </p>
-  </div>
-  <!-- search result -->
-  <div *ngIf="isResult" class="result">
-    <div  *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
-        (click)="gotoDetail(cup)">
-      {{ cup.name }}
-    </div>
-  </div>
 
+<!-- search input  -->
+<div class="typing-box">
+   <input
+      (focus)="changeStateResult('on')"
+      (blur)="changeStateResult()"
+      class="input is-small" 
+      type="text"
+      [(ngModel)]="key" 
+      placeholder="검색" />
+    
+    <img src="../../assets/images/icons/search.png"/>
 </div>
-  
-  
+
+<!-- search result -->
+<div *ngIf="isResult" class="result">
+  <div  *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
+      (click)="gotoDetail(cup)">
+    {{ cup.name }}
+  </div>
+</div>
+
+
+

@@ -1,45 +1,39 @@
 @charset "utf-8";
 @import 'assets/scss/global';
 
+.typing-box {
+    border: 2px solid black;
+    @include border-radius(100px);
+    padding-left:4px;
 
-
-.warpper {
-    @include testBorder();
-    @include flex(flex, row wrap);
-    @include size(200px, auto);
-    // position: absolute;
-    z-index:300;
-    
-    // top:0;
-    // right:4%;
-
-    // img { @include size(24px,24px); }
-    .field {
-        @include size(80%, auto);
-        @include testBorder();
-    }
-
-    .result {
-        @include size(100%, auto);
-        @include testBg();
-        z-index: 400;
+    input {
+        @include size(percentage(205px/238px), auto);
+        @include border-radius(15px);
         
-        div {
-            padding: 2px 8px;
-            font-size: $size-normal;
-            font-weight: $weight-light;
-            background-color: $light;
-
-            &:hover {
-                background-color: $primary;
-                color: white;
-            }
-        }
+        background-color: none;
+        border: none;   
     }
-
-
+    img { 
+        @include size(percentage(20px/238px), auto);
+        vertical-align: text-bottom;
+    }
+    
 }
 
+.result {
+    @include size(205px, auto); 
+    div {
+        padding: 2px 8px;
+        font-size: $size-small;
+        font-weight: $weight-light;
+        background-color: $light;
+
+        &:hover {
+            background-color: $primary;
+            color: white;
+        }
+    }
+}
 
 .isClass {
     animation-duration: 0.5s;

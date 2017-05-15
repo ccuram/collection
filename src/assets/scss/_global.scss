@@ -4,42 +4,8 @@
 
 @import './utils/variables',
         './utils/mixins',
-        './utils/animations';
-
-
-
-
-
-
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-
-
-.no-padding-top { padding-top: 0; }
-.no-padding-bottom { padding-bottom: 0; }
-.page-margin { margin: 100px auto; }
-
-.nav {
-        @include size(960px, auto);
-        margin: 0 auto;
-}
-.main { 
-        @include size(960px, auto);
-        margin: 0 auto;
- }
- .container { 
-        @include size(960px, auto);
-        margin: 0 auto;
- }
-
-
-
-.mw720 { @include size(720px, auto); margin: 0 auto; }
-
-.is-center { text-align: center;   }
-
+        './utils/animations',
+        './utils/helpers',
+        './base/grid',
+        './base/typography';
 

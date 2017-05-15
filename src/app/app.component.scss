@@ -1,71 +1,58 @@
 @import 'assets/scss/global';
 
-$z-index-search: 400;
-$z-index-nav: 200;
-$z-index-main: 100;
-
-.nav { z-index: $z-index-nav;  }
-.main { z-index: $z-index-main; }
-
-.nav-item { 
-    img { 
-        min-height: 50px;
-         }
-    
-}
-
-
-.search {
-    z-index: $z-index-search;
-    @include size(980px, auto);
-    @include flex(flex, row nowrap);
-    justify-content: stretch;
-    margin: 0 auto;
-    position: absolute;
-    
-    overflow-x: hidden;
-    
-
-    .blank { 
-        @include size(96%, auto);
-        flex-shrink: 5;
-    }
-    .search-img {
-        @include size(4%, auto);
-        animation-name: ease-in-out;
-        flex-shrink: 1;
-        img { @include size(24px,24px); }
-    }
-    
-    .search-area {
-        @include size(0, auto);
-    }
-    .isSearch {
-        animation-name: ease-in-out;
-        @include size(20%, auto);
-    }
-
-}
-
 
 
 .footer {
-    @include size(100%, 168px);
+
     background-color: $main-color;
-    padding: 2rem 0.5rem 1rem;
+    padding: 0;
+
+    .columns {
+        p { 
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            color: $text-color;
+            line-height: 1.43;
+        }
+        div:nth-of-type(1){
+            padding: 35px 0 0 62px;
+
+            .title { 
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                line-height: 1.39;
+                color: $text-color;
+            }
+        }
+        div:nth-of-type(2){
+            padding: 24px 0 4px 62px;
+        }
+
+        div:nth-of-type(3){
+            padding-top: 24px;
+
+            
+            a { 
+                color: $text-color;
+            }
+            
+        }
+    }
+
+
+    // padding: 2rem 0.5rem 1rem;
     line-height: 170%;
 
     p { font-size: $size-normal; }
     .comment { font-size: $size-medium; }
     .email { font-size: $size-small; }
 
+
     a {
         color: $link;
         &:hover { color: $link-hover; }
-    }
-
-    img {
-        @include size(auto, 24px);
     }
 
 }

@@ -1,0 +1,11 @@
+
+
+.no-padding-top { padding-top: 0; }
+.no-padding-bottom { padding-bottom: 0; }
+.page-margin { margin: 100px auto; }
+
+
+.mw720 { @include size(720px, auto); margin: 0 auto; }
+.is-center { text-align: center;   }
+
+

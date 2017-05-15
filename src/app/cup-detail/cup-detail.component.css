@@ -4279,11 +4279,6 @@ label.panel-block {
 .slideInRight {
   animation-name: slideInRight; }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 .no-padding-top {
   padding-top: 0; }
 
@@ -4293,21 +4288,6 @@ label.panel-block {
 .page-margin {
   margin: 100px auto; }
 
-.nav {
-  width: 960px;
-  height: auto;
-  margin: 0 auto; }
-
-.main {
-  width: 960px;
-  height: auto;
-  margin: 0 auto; }
-
-.container {
-  width: 960px;
-  height: auto;
-  margin: 0 auto; }
-
 .mw720 {
   width: 720px;
   height: auto;
@@ -4315,6 +4295,60 @@ label.panel-block {
 
 .is-center {
   text-align: center; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.search {
+  z-index: 400;
+  width: 900px;
+  height: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  margin: 35px auto 0;
+  position: absolute;
+  overflow-x: hidden; }
+  .search .blank {
+    width: 73.55556%;
+    height: auto;
+    flex-shrink: 5; }
+  .search .search-box {
+    width: 26.44444%;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap; }
+
+.nav {
+  z-index: 200;
+  width: 900px;
+  height: auto;
+  margin: 35px auto 0; }
+  .nav .nav-item img {
+    min-height: 50px; }
+
+.main {
+  z-index: 100;
+  width: 900px;
+  height: auto;
+  margin: 168px auto 25px; }
+
+.container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto; }
+
+.footer {
+  width: 100%;
+  height: 166px; }
+  .footer img {
+    width: auto;
+    height: 24px; }
+
+.name-kor {
+  font-family: Apple SD Gothic Neo; }
 
 p {
   font-size: 1rem; }
@@ -4325,58 +4359,70 @@ p {
 .area {
   margin: 100px auto; }
 
-.section {
+.section .detail {
+  text-align: center; }
+  .section .detail p {
+    color: #333; }
+  .section .detail .title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 0.83;
+    letter-spacing: 1.3px; }
+  .section .detail .sub-title {
+    font-size: 18px;
+    line-height: 1.11;
+    font-weight: 500;
+    letter-spacing: 1.4px; }
+.section .column {
   border: 0.5px ridge black; }
-  .section .column {
-    border: 0.5px ridge black; }
-  .section .view {
-    background-color: #fff799;
-    text-align: center; }
-    .section .view p {
-      color: #7a7a7a;
-      font-size: 0.75rem; }
-    .section .view .rotate-toptohole {
-      text-align: right;
-      width: 200px;
-      height: 200px;
-      transform: rotate(270deg); }
-    .section .view .rotate {
-      text-align: center;
-      width: 200px;
-      height: 200px;
-      transform: rotate(270deg); }
-    .section .view .ruler {
-      margin-right: 10px;
-      margin-left: 10px;
-      border: 0.5px solid #7a7a7a;
-      border-bottom: none; }
-    .section .view figure {
-      width: 100%;
-      height: 480px;
-      background-color: rgba(236, 236, 236, 0.8);
-      margin: 0 auto; }
-      .section .view figure img {
-        border: 0.5px ridge black;
-        width: 300px;
-        height: 480px;
-        margin: 0 auto; }
-  .section .info span {
-    padding: 4px 10px; }
-  .section .info .column {
-    margin-bottom: 30px; }
-    .section .info .column:nth-of-type(1) {
-      margin-top: 40px; }
-  .section .info .item {
+.section .view {
+  background-color: #fff799;
+  text-align: center; }
+  .section .view p {
+    color: #7a7a7a;
+    font-size: 0.75rem; }
+  .section .view .rotate-toptohole {
+    text-align: right;
+    width: 200px;
+    height: 200px;
+    transform: rotate(270deg); }
+  .section .view .rotate {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    transform: rotate(270deg); }
+  .section .view .ruler {
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 0.5px solid #7a7a7a;
+    border-bottom: none; }
+  .section .view figure {
+    width: 100%;
+    height: 480px;
     background-color: rgba(236, 236, 236, 0.8);
-    width: 35%;
-    height: auto;
-    font-weight: #363636; }
-  .section .info .value {
-    width: 65%;
-    height: auto; }
-    .section .info .value img {
-      width: 18px;
-      height: 18px;
-      margin-left: 10px; }
+    margin: 0 auto; }
+    .section .view figure img {
+      border: 0.5px ridge black;
+      width: 300px;
+      height: 480px;
+      margin: 0 auto; }
+.section .info span {
+  padding: 4px 10px; }
+.section .info .column {
+  margin-bottom: 30px; }
+  .section .info .column:nth-of-type(1) {
+    margin-top: 40px; }
+.section .info .item {
+  background-color: rgba(236, 236, 236, 0.8);
+  width: 35%;
+  height: auto;
+  font-weight: #363636; }
+.section .info .value {
+  width: 65%;
+  height: auto; }
+  .section .info .value img {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px; }
 
 /*# sourceMappingURL=cup-detail.component.css.map */

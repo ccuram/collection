@@ -6,9 +6,12 @@ $main-color-light: lighten($main-color, 20%);
 $main-color-dark: darken($main-color, 20%);
 
 
+
+
 // custom variables
 $size-smaller: 0.6rem;
 $size-smallest: 0.4rem;
+
 
 
 //card for cup grid.
@@ -25,5 +28,17 @@ $rulerHeight: -120px;
 $rulerCol: $grey;
 $rulerWeight: 1px;
 
-//modal option
-$modal-zIndex: 200;
+
+
+// GRID
+
+$base: 900px;
+
+
+
+// color
+$text-color: #333;
+
+
+
+
