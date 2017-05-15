@@ -1,4 +1,4 @@
-<p><strong> 내친김에 더 보기 </strong></p>
+<p class="slider-title">내친김에 더 보기</p>
 
 <div class="slider-container">
   <div class="dir">
@@ -12,11 +12,12 @@
       *ngFor="let reorder of reOrderArr">
       <figure class="image">
         <img [src]="'/assets/images/cups/'+ reorder.imgUrls">
+        <div align="center" class="rulers"> &nbsp; </div>
       </figure>
-      
       <p class="ko">{{reorder.name}}</p>
       <p class="en"> {{ reorder.name_eng }} </p> 
     </a>
+    
   </div>
 
   <div class="dir">

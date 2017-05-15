@@ -1,14 +1,14 @@
 @import 'assets/scss/global';
 
-$imgWidth: 300px;
-$imgHeight: 480px;
+$imgWidth: 538px;
+$imgHeight: 600px;
 
 p { font-size: $size-normal; }
 
-.diameter { margin-bottom: 0;}
 
 .section { 
-    .detail {
+
+    .cup-title {
         text-align: center;
         p { color: $text-color; }
         .title { 
@@ -23,79 +23,97 @@ p { font-size: $size-normal; }
             font-weight: 500;
             letter-spacing: 1.4px;
         }
-
     }
 }
 
 
-
-/*
-.section{
-
-    .column {
-        @include testBorder(ridge);
+.detail {
+    @include flex(flex, row nowrap);
+    
+    .view {    
+        @include size(538px, 600px);
     }
-    .view { 
-        @include testBg($main-color-light);
-        text-align:center;
-        p { 
-            color: $text-light;
-            font-size: $size-small;
-        }
-        .rotate-toptohole {
-            text-align: right;
-            @include size(200px, 200px);
-            transform: rotate(270deg);
-        }
-        .rotate {
-            text-align: center;
-            @include size(200px, 200px);
-            transform: rotate(270deg);
-        }
+    .spec {
+        @include size(311px, auto);
+        @include flex(flex, column wrap);
 
-        .ruler {
-            margin-right:10px;
-            margin-left:10px;
-            border: .5px solid $grey;
-            border-bottom: none;
-        }
+        .spec-row {
+            @include size(311px, auto);
+            @include flex(flex, row wrap);
+            margin-bottom: 12px;
+            .item { 
+                @include size(55%, 25px);
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 1.39;
+                letter-spacing: 0.6px;
+                color: $text-item;
+            }
+            .value-box {
+                @include size(45%, 25px);
+                
+                .value {
+                    text-align: right;
+                    font-size: 17.5px;
+                    font-weight: $weight-semibold;
+                    line-height: 1.14;
+                    letter-spacing: 1px;
+                    color: $text-color;
+                }
+                img { @include size(19px, 19px); }
+            }
 
-        figure{ 
-            @include size(100%, $imgHeight);
-            @include testBg();
-            margin: 0 auto;
+            .sns-box {
+                @include size(100%, 19.5px);
+                @include flex(flex, row nowrap);
+                justify-content: flex-end;
+                margin-top: 56px;
+                img { @include size(19px, 19px); }
 
-            img { 
-                @include testBorder(ridge);
-                @include size($imgWidth, $imgHeight);
-                margin: 0 auto;
             }
         }
 
-
-    }
-    .info {
-        
-        span { padding: 4px 10px; }
-        .column {
-            margin-bottom: 30px;
-            &:nth-of-type(1) { margin-top:40px; }
-        }
-        .item {
-            @include testBg();
-
-            @include size(35%, auto);
-            font-weight: $text-strong;
-        }
-        .value {
-            @include size(65%, auto);
+        .spec-hover{
+            @include size(100%, 136px);
+            @include flex(flex, row wrap);
+            margin: 47px auto;
             
-            img {
-                @include size(18px, 18px);
-                margin-left: 10px;
+
+            .hover-item {
+                @include size(150px, 68px);
+                @include flex(flex, column nowrap);
+                justify-content: center;
+                align-self: center;
+                
+                margin: .5px;
+                border: 2px solid #262626;
+                
+                p:nth-of-type(1){ 
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 800;
+                    line-height: 1.39;
+                    letter-spacing: 0.6px;
+                    color: $text-item;
+                }
+                p:nth-of-type(2){
+                    text-align: center;
+                    font-size: 17.5px;
+                    font-weight: 500;
+                    line-height: 1.14;
+                    letter-spacing: 1px;
+                    color: $text-color;
+                }
             }
         }
+        
+    }
+    .white {
+        @include size(50px, auto);
     }
 }
 
-*/
+
+.slider {
+    margin: 76.5px auto 119px; 
+}

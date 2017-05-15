@@ -1,148 +1,119 @@
 <section class="section is-paddingless" >
-  <div class="container detail">
+  <div class="container cup-title">
       <p class="title">{{ cup.name }}</p>
       <p class="sub-title">{{ cup.name_eng }}</p>
   </div>
 </section>
 
 
-<section class="section">
-  <img [src]="'/assets/images/cups/'+ cup.imgUrls">
-  <div class="spec"> </div>
-  <div class="white"> </div>
+<section class="section detail">
+  <img class="view" [src]="'/assets/images/cups/'+ cup.imgUrls">
 
-</section>
-
-<!--
-<section class="section area">
-
-  <img [src]="'/assets/images/cups/'+ cup.imgUrls">
-  <div class="spec"> </div>
-  <div class="white"> </div>
-
-
-  <div class="columns">
-    
-    <div class="column is-one-half view">
-      
-      <div class="columns is-multiline">
-        
-        
-        <div class="column is-offset-4 is-8 no-padding-bottom">
-          <p> 바깥 지름<p>
-          <p> {{ cup.externalDiameter }} mm</p>
-        </div>
-        
-        <div class="column is-2" > 
-          <div class="rotate-toptohole">
-            <p>최상단에서 공기구멍까지의 길이</p>
-            <p>{{ cup.topToHole }} mm </p>
-            <p class="ruler">&nbsp;</p> 
-          </div>
-          
-        </div>
-
-
-        <div class="column is-2">
-
-          <div class="rotate">
-            <p>컵길이</p>
-            <p>{{ cup.bodyLength }} </p>
-            <p class="ruler">&nbsp;</p>
-          </div>
-
-          <div class="rotate">
-            <p> 손잡이 길이 </p>
-            <p> {{ cup.stemLength }} </p>
-            <p class="ruler">&nbsp;</p> 
-          </div>
-        </div> 
-        
-        
-        
-        <div class="column is-8 no-padding-top">
-          <figure class="image">
-            <img [src]="'/assets/images/cups/'+ cup.imgUrls">
-          </figure>
-        </div>
-        
-      </div>
-
-    </div>
-
-    
-    <div class="column is-half info">
-
-      <div class="columns is-multiline">
-        
-        <div class="column is-offset-2 is-10">
-          <div class="columns is-multiline">
-            <span class="item">색상</span>
-            <span class="value">색1, 색2, 색3</span>
-
-            <span class="item">제조국</span>
-            <span class="value">{{ cup.country }}</span>
-            
-            <span class="item">소재</span>
-            <span class="value">{{ cup.material }} </span>
-
-            <span class="item">가격</span>
-            <span class="value">{{ cup.price }} </span>
-
-            <span class="item">공기구멍 형태</span>
-            <span class="value">{{ cup.airholeType }} </span>
-
-            <span class="item">공기구멍 까지의 용량</span>
-            <span class="value">{{ cup.airholeCapacity }} ml </span>
-            
-            <span class="item">전체 용량</span>
-            <span class="value">{{ cup.totalCapacity }} ml </span>
-
-            <span class="item">손잡이 형태</span>
-            <span class="value">{{ cup.stemType }} </span>
-          </div>
-        </div>
-        
-        
-        <div class="column is-offset-2 is-10">
-          <div class="columns is-multiline">
-            <span class="item">전체 길이</span>
-            <span class="value">{{ cup.totalLength }} </span>
-
-            <span class="item">공기구멍 까지의 용량</span>
-            <span class="value">{{ cup.airholeCapacity }} </span>
-
-            <span class="item">전체 용량</span>
-            <span class="value">{{ cup.totalCapacity }} </span>
-
-            <span class="item">손잡이 형태</span>
-            <span class="value">{{ cup.stemType }} </span>
-          </div>
-        </div>
-
-
-
-        
-        <div class="column is-offset-2 is-10">
-          <div class="columns">
-            <span class="item">공식 홈페이지로 이동</span>
-            <a [href]="cup.officialsite" class="value">
-              <img align="middle" src="/assets/images/icons/home.png">
-            </a>
-          </div>
-        </div>
-
- 
+  <div class="spec">
+    <!-- spec row 1 -->
+    <div class="spec-row">
+      <p class="item">색상</p>
+      <div class="value-box">
+        <p class="value"> A B C D Cyncia </p>
       </div>
     </div>
+    
+    <div class="spec-row">
+      <p class="item">제조국</p>
+      <div class="value-box">
+        <p class="value">{{ cup.country }}</p>
+      </div>
+    </div>
+
+    <div class="spec-row">
+      <p class="item">소재</p>
+      <div class="value-box">
+        <p class="value">{{ cup.material }}</p>
+      </div>
+    </div>
+
+    <div class="spec-row">
+      <p class="item">가격</p>
+      <div class="value-box">
+        <p class="value">{{ cup.price }} 단위 </p>
+      </div>
+    </div>
+
+    <!-- hover area -->
+    <div class="spec-hover">
+      <div class="hover-item">
+        <p> 전체 길이  </p>
+        <p> {{ cup.totalLength }} mm </p>
+      </div>
+      <div class="hover-item">
+        <p> 바깥 지름  </p>
+        <p> {{ cup.externalDiameter }} mm </p>
+      </div>
+      <div class="hover-item">
+        <p> 컵 길이  </p>
+        <p> {{ cup.bodyLength }} mm </p>
+      </div>
+      <div class="hover-item">
+        <p> 손잡이 길이  </p>
+        <p> {{ cup.stemLength }} mm </p>
+      </div>
+    </div>
+
+
+
+    <!-- spec row 2 -->
+     <div class="spec-row">
+      <p class="item">공기구멍 형태</p>
+      <div class="value-box">
+        <p class="value">{{ cup.airholeType }}  </p>
+      </div>
+    </div>
+
+     <div class="spec-row">
+      <p class="item">공기구멍까지의 용량</p>
+      <div class="value-box">
+        <p class="value">{{ cup.topToHole }} ml </p>
+      </div>
+    </div>
+
+     <div class="spec-row">
+      <p class="item">전체 용량</p>
+      <div class="value-box">
+        <p class="value">{{ cup.totalCapacity }} ml </p>
+      </div>
+    </div>
+
+     <div class="spec-row">
+      <p class="item">손잡이의 형태</p>
+      <div class="value-box">
+        <p class="value">{{ cup.stemType }} </p>
+      </div>
+     </div>
+
+     <!-- spec row 3 -->
+     <div class="spec-row">
+      <p class="item">공식 홈페이지로 이동</p>
+      <div class="value-box">
+        <a [href]="cup.officialsite">
+          <img align="middle" src="/assets/images/icons/home.png">
+        </a>
+      </div>
+     </div>
+
+     <!-- share -->
+     <div class="spec-row">
+      <div class="sns-box">
+        <a href="sns"><img src="/assets/images/icons/facebook.png" alt="facebook"/></a>
+        <a href="sns"><img src="/assets/images/icons/twitter.png" alt="twitter"/></a>
+        <a href="sns"><img src="/assets/images/icons/instagram.png" alt="instagram"/></a>
+        <a href="sns"><img src="/assets/images/icons/share.png" alt="share"/></a>
+      </div>
+     </div>
 
   </div>
+  <div class="white">  </div>
 </section>
--->
 
-
-
-
-<section class="section area">
+<section class="section slider">
   <cup-slider></cup-slider>
 </section>

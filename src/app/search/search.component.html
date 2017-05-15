@@ -1,15 +1,7 @@
-
 <!-- search input  -->
 <div class="typing-box">
-   <input
-      (focus)="changeStateResult('on')"
-      (blur)="changeStateResult()"
-      class="input is-small" 
-      type="text"
-      [(ngModel)]="key" 
-      placeholder="검색" />
-    
-    <img src="../../assets/images/icons/search.png"/>
+  <input (focus)="changeStateResult('on')" (blur)="changeStateResult('off')" class="input is-small" type="text" [(ngModel)]="key"  placeholder="검색" >
+  <img src="/assets/images/icons/search.png"/>
 </div>
 
 <!-- search result -->

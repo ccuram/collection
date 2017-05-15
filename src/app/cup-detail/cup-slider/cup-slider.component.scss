@@ -1,16 +1,23 @@
 @import 'assets/scss/global';
-//percentage(0.2) => 20%
-//percentage(100px / 50px) => 200%
+$slide-ruler-margin: -77px;
 
 
+
+.slider-title {
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 1.39;
+	letter-spacing: 0.6px;
+	color: $text-item;
+}
 
 .slider-container {
-  @include size(100%, auto);
+  @include size($base, auto);
   @include flex(flex, row nowrap);
   justify-content: space-between;
-
+  
   .dir {  
-    @include size(5%, 100%);
+    @include size(12.6px, 25.2px);
     margin: 0 auto;
     align-self: center;
     opacity: 0.4;
@@ -21,22 +28,47 @@
 
 
   .sliders {
-    @include size(90%, auto);
+    @include size(835px, auto);
     @include flex(flex, row nowrap);
     justify-content: space-around;
     overflow:hidden;
-    
+    margin: 0 34.5px;
+
     .slider-item {
-        @include testTransition();
-        @include size(20%, auto);
+        @include size(162px, 300px);
         flex-shrink: 0;
-
         margin: 2px;
-        text-align: center;
 
-        .ko { font-size: $size-normal; }
-        .en { font-size: $size-small; }
+        .image { 
+          @include size(160px, 256px);
+          .rulers {
+            z-index:500;
+            @include size(100%, 2px);
+            position: absolute;
+            margin-top: $slide-ruler-margin;
+            background-color: #222;
+          }
+        }
+        
+        p { 
+          color: $text-color;
+          text-align: center;
+        }
+        .ko { 
+            font-size: 18px;
+            font-weight: $weight-boldest;
+            line-height: 1.39;
+            letter-spacing: 1px;
+        }
+        .en { 
+          font-size: 14px;
+          font-weight: $weight-semibold;
+          line-height: 1.43;
+          letter-spacing: 0.8px;          
+        }
     }
+
+
   }
 
 }

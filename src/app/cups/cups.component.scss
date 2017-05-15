@@ -15,7 +15,7 @@
 
 
 .column {
-    @include testBorder();
+    // @include testBorder();
     @include size($cardWidth, $cardHeight);
     @include flex(flex, column nowrap);
     padding:0;
@@ -41,18 +41,15 @@
             line-height: 1.43;
             color: $text-light;
         }
-        
-        
-
     }
   
     
     figure{ 
         @include size(100%, $imgHeight);
-        @include testBorder(ridge);
+        // @include testBorder(ridge);
         margin: 0 auto;
         img { 
-            @include testBorder(ridge);
+            // @include testBorder(ridge);
             @include size($imgWidth, $imgHeight);
             margin: 0 auto;
         }
