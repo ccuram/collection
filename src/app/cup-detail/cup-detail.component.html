@@ -6,15 +6,28 @@
 </section>
 
 
+<section class="section">
+  <img [src]="'/assets/images/cups/'+ cup.imgUrls">
+  <div class="spec"> </div>
+  <div class="white"> </div>
+
+</section>
+
+<!--
 <section class="section area">
 
+  <img [src]="'/assets/images/cups/'+ cup.imgUrls">
+  <div class="spec"> </div>
+  <div class="white"> </div>
+
+
   <div class="columns">
-    <!-- view -->
+    
     <div class="column is-one-half view">
       
       <div class="columns is-multiline">
         
-        <!-- Cup View Info : P -->
+        
         <div class="column is-offset-4 is-8 no-padding-bottom">
           <p> 바깥 지름<p>
           <p> {{ cup.externalDiameter }} mm</p>
@@ -24,7 +37,7 @@
           <div class="rotate-toptohole">
             <p>최상단에서 공기구멍까지의 길이</p>
             <p>{{ cup.topToHole }} mm </p>
-            <p class="ruler">&nbsp;</p> <!--200px-->
+            <p class="ruler">&nbsp;</p> 
           </div>
           
         </div>
@@ -35,18 +48,18 @@
           <div class="rotate">
             <p>컵길이</p>
             <p>{{ cup.bodyLength }} </p>
-            <p class="ruler">&nbsp;</p> <!--200px-->
+            <p class="ruler">&nbsp;</p>
           </div>
 
           <div class="rotate">
             <p> 손잡이 길이 </p>
             <p> {{ cup.stemLength }} </p>
-            <p class="ruler">&nbsp;</p> <!--200px-->
+            <p class="ruler">&nbsp;</p> 
           </div>
         </div> 
         
         
-        <!-- Cup View: Figure, Image -->
+        
         <div class="column is-8 no-padding-top">
           <figure class="image">
             <img [src]="'/assets/images/cups/'+ cup.imgUrls">
@@ -57,11 +70,11 @@
 
     </div>
 
-    <!-- info -->
+    
     <div class="column is-half info">
 
       <div class="columns is-multiline">
-        <!-- info 1 -->
+        
         <div class="column is-offset-2 is-10">
           <div class="columns is-multiline">
             <span class="item">색상</span>
@@ -90,7 +103,7 @@
           </div>
         </div>
         
-        <!-- info 2 -->
+        
         <div class="column is-offset-2 is-10">
           <div class="columns is-multiline">
             <span class="item">전체 길이</span>
@@ -109,7 +122,7 @@
 
 
 
-        <!-- info 3 -->
+        
         <div class="column is-offset-2 is-10">
           <div class="columns">
             <span class="item">공식 홈페이지로 이동</span>
@@ -125,6 +138,7 @@
 
   </div>
 </section>
+-->
 
 
 

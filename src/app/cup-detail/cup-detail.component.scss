@@ -5,12 +5,7 @@ $imgHeight: 480px;
 
 p { font-size: $size-normal; }
 
-
-
-
-
 .diameter { margin-bottom: 0;}
-.area { margin: 100px auto; }
 
 .section { 
     .detail {
@@ -30,6 +25,12 @@ p { font-size: $size-normal; }
         }
 
     }
+}
+
+
+
+/*
+.section{
 
     .column {
         @include testBorder(ridge);
@@ -97,3 +98,4 @@ p { font-size: $size-normal; }
     }
 }
 
+*/

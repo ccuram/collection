@@ -4356,9 +4356,6 @@ p {
 .diameter {
   margin-bottom: 0; }
 
-.area {
-  margin: 100px auto; }
-
 .section .detail {
   text-align: center; }
   .section .detail p {
@@ -4373,56 +4370,76 @@ p {
     line-height: 1.11;
     font-weight: 500;
     letter-spacing: 1.4px; }
-.section .column {
-  border: 0.5px ridge black; }
-.section .view {
-  background-color: #fff799;
-  text-align: center; }
-  .section .view p {
-    color: #7a7a7a;
-    font-size: 0.75rem; }
-  .section .view .rotate-toptohole {
-    text-align: right;
-    width: 200px;
-    height: 200px;
-    transform: rotate(270deg); }
-  .section .view .rotate {
-    text-align: center;
-    width: 200px;
-    height: 200px;
-    transform: rotate(270deg); }
-  .section .view .ruler {
-    margin-right: 10px;
-    margin-left: 10px;
-    border: 0.5px solid #7a7a7a;
-    border-bottom: none; }
-  .section .view figure {
-    width: 100%;
-    height: 480px;
-    background-color: rgba(236, 236, 236, 0.8);
-    margin: 0 auto; }
-    .section .view figure img {
-      border: 0.5px ridge black;
-      width: 300px;
-      height: 480px;
-      margin: 0 auto; }
-.section .info span {
-  padding: 4px 10px; }
-.section .info .column {
-  margin-bottom: 30px; }
-  .section .info .column:nth-of-type(1) {
-    margin-top: 40px; }
-.section .info .item {
-  background-color: rgba(236, 236, 236, 0.8);
-  width: 35%;
-  height: auto;
-  font-weight: #363636; }
-.section .info .value {
-  width: 65%;
-  height: auto; }
-  .section .info .value img {
-    width: 18px;
-    height: 18px;
-    margin-left: 10px; }
+
+/*
+.section{
+
+    .column {
+        @include testBorder(ridge);
+    }
+    .view { 
+        @include testBg($main-color-light);
+        text-align:center;
+        p { 
+            color: $text-light;
+            font-size: $size-small;
+        }
+        .rotate-toptohole {
+            text-align: right;
+            @include size(200px, 200px);
+            transform: rotate(270deg);
+        }
+        .rotate {
+            text-align: center;
+            @include size(200px, 200px);
+            transform: rotate(270deg);
+        }
+
+        .ruler {
+            margin-right:10px;
+            margin-left:10px;
+            border: .5px solid $grey;
+            border-bottom: none;
+        }
+
+        figure{ 
+            @include size(100%, $imgHeight);
+            @include testBg();
+            margin: 0 auto;
+
+            img { 
+                @include testBorder(ridge);
+                @include size($imgWidth, $imgHeight);
+                margin: 0 auto;
+            }
+        }
+
+
+    }
+    .info {
+        
+        span { padding: 4px 10px; }
+        .column {
+            margin-bottom: 30px;
+            &:nth-of-type(1) { margin-top:40px; }
+        }
+        .item {
+            @include testBg();
+
+            @include size(35%, auto);
+            font-weight: $text-strong;
+        }
+        .value {
+            @include size(65%, auto);
+            
+            img {
+                @include size(18px, 18px);
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+*/
 
 /*# sourceMappingURL=cup-detail.component.css.map */
