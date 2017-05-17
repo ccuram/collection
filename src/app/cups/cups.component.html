@@ -1,20 +1,25 @@
 
-<section class="section area">
-  <div class="columns is-multiline">
-    <div class="column is-one-third has-text-centered"
-      *ngFor="let cup of cups"
-      (click)="gotoDetail(cup.id)">
-          <div class="cup-name">
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-3 has-text-centered"
+        *ngFor="let cup of cups"
+        (click)="gotoDetail(cup.id)">
+        <div class="columns is-multiline">
+          <div class="column is-12">
             <p class="ko"> {{ cup.name }} </p>
             <p class="en" > {{ cup.name_eng }} </p>
           </div>
-          <figure class="image">
-            <img [src]="'/assets/images/cups/'+ cup.imgUrls">
+          <div class="column is-12">
+            <figure class="image">
+            <img [src]="'/assets/images/cups/'+ cup.imgUrls +'.png'">
             <div align="center" class="rulers"> &nbsp; </div>
           </figure>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
 </section>
 
 

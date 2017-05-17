@@ -1,0 +1,18 @@
+@import 'assets/scss/global';
+
+
+.footer {
+    background-color: $main-color;
+    img {
+        @include size(auto, 24px);
+    }
+
+    p { 
+        @include typo($size-4, $weight-medium, $line-height-3, $letter-spacing-3, left);
+    }
+
+
+    .footer-title{
+        @include typo($size-2, $weight-bold, $line-height-2, $letter-spacing-2, left);
+    }
+}

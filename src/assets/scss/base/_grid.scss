@@ -5,6 +5,12 @@ $z-index-search: 400;
 $z-index-nav: 200;
 $z-index-main: 100;
 
+html {
+    font-size: 16px;
+    font-family: AppleSDGothicNeo, sans-serif;
+    color: $font-color-1;
+}
+
 
 * {
   -webkit-box-sizing: border-box;
@@ -12,61 +18,28 @@ $z-index-main: 100;
           box-sizing: border-box;
 }
 
-
-/*
-.search {
-    z-index: $z-index-search;
-
-    @include size($base, auto);
-    @include flex(flex, row nowrap);
-    justify-content: stretch;
-    margin: 35px auto 0;
-    position: absolute; 
-    overflow-x: hidden;   
-
-    .blank { 
-        @include size(percentage(662px/$base), auto);
-        flex-shrink: 5;
-        .logo { @include size(50px, 50px); }
-    }
-    .search-box {
-        min-width: 238px;
-        @include size(percentage(238px/$base), auto);   
-    }
-}
-*/
-
 .nav {
         z-index: $z-index-nav;
-        @include size($base, auto);
-        margin: 38px auto 0;
+        // @include size($base, auto);
+        // margin: 38px auto 0;
 
         .logo { @include size(50px, 50px); }
-        .search-box {
+        .search-box {            
             position: absolute;
-            min-width: 238px;
-            @include size(percentage(238px/$base), auto);   
+            // min-width: 238px;
+            // @include size(percentage(238px/$base), auto);   
         }
 }
 
 .main { 
         z-index: $z-index-main;
-        @include size($base, auto);
+        
         margin: 168px auto 25px;
- }
-
-
- .container { 
-        @include size($base, auto);
-        margin: 0 auto;
+        overflow-x: hidden;
  }
 
 
 
 .footer {
-    @include size(100%, 166px);
-    padding: 0;
-    img {
-        @include size(auto, 24px);
-    }
+    height: 168px;
 }

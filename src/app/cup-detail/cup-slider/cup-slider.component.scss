@@ -2,74 +2,26 @@
 $slide-ruler-margin: -77px;
 
 
-
-.slider-title {
-	font-size: 18px;
-	font-weight: 800;
-	line-height: 1.39;
-	letter-spacing: 0.6px;
-	color: $text-item;
+.column {
+  @include testShadow();
 }
 
-.slider-container {
-  @include size($base, auto);
-  @include flex(flex, row nowrap);
-  justify-content: space-between;
-  
-  .dir {  
-    @include size(12.6px, 25.2px);
-    margin: 0 auto;
-    align-self: center;
-    opacity: 0.4;
-    &:hover {
-      opacity: 1;
-    }
-  }
 
+.dir {
+  height: 80%;
+}
 
-  .sliders {
-    @include size(835px, auto);
-    @include flex(flex, row nowrap);
-    justify-content: space-around;
+.slider-title {
+  @include typo($size-2, $weight-extraBold, $line-height-2, $letter-spacing-3, left);
+}
+
+.sliders {
     overflow:hidden;
-    margin: 0 34.5px;
-
-    .slider-item {
-        @include size(162px, 300px);
-        flex-shrink: 0;
-        margin: 2px;
-
-        .image { 
-          @include size(160px, 256px);
-          .rulers {
-            z-index:500;
-            @include size(100%, 2px);
-            position: absolute;
-            margin-top: $slide-ruler-margin;
-            background-color: #222;
-          }
-        }
-        
-        p { 
-          color: $text-color;
-          text-align: center;
-        }
-        .ko { 
-            font-size: 18px;
-            font-weight: $weight-boldest;
-            line-height: 1.39;
-            letter-spacing: 1px;
-        }
-        .en { 
-          font-size: 14px;
-          font-weight: $weight-semibold;
-          line-height: 1.43;
-          letter-spacing: 0.8px;          
-        }
+    .ko { 
+        @include typo($size-2, $weight-bold, $line-height-2, $letter-spacing-3, center);
     }
-
-
-  }
-
+    .en { 
+      @include typo($size-4, $weight-medium, $line-height-3, $letter-spacing-3, center);
+    }
 }
 

@@ -1,6 +1,42 @@
-<p class="slider-title">내친김에 더 보기</p>
 
-<div class="slider-container">
+<div class="container">
+  <div class="columns is-multiline">
+    <div class="column is-10 is-offset-1">
+      <p class="slider-title">내친김에 더 보기</p>
+    </div>
+    <div class="column is-10 is-offset-1">
+      <div class="columns">
+        <div class="column is-1">
+          <img class="dir" *ngIf="isLeft" (click)="updatePos('left')" src="/assets/images/icons/dir_left.png" />
+        </div>
+        <div class="column is-10"> 
+          <div class="columns sliders">
+
+            <div class="column is-3"
+                 *ngFor="let reorder of reOrderArr"
+                  [ngStyle]="{ 'transform' : currentClass }">
+
+                 <a class="slider-item"
+                    [href]="getTargetURL(reorder.id)">
+                    <figure class="image">
+                      <img [src]="'/assets/images/cups/'+ reorder.imgUrls + '.png'">
+                      <div align="center" class="rulers"> &nbsp; </div>
+                    </figure>
+                    <p class="ko">{{reorder.name}}</p>
+                    <p class="en"> {{ reorder.name_eng }} </p> 
+                  </a>
+            </div>
+          
+          </div>
+        </div>
+        <div class="column is-1">
+          <img class="dir" *ngIf="isRight"  (click)="updatePos('right')" align="right" src="/assets/images/icons/dir_right.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div class="slider-container">
   <div class="dir">
     <img *ngIf="isLeft" (click)="updatePos('left')" src="/assets/images/icons/dir_left.png" />
   </div>
@@ -11,7 +47,7 @@
       [href]="getTargetURL(reorder.id)"
       *ngFor="let reorder of reOrderArr">
       <figure class="image">
-        <img [src]="'/assets/images/cups/'+ reorder.imgUrls">
+        <img [src]="'/assets/images/cups/'+ reorder.imgUrls + '.png'">
         <div align="center" class="rulers"> &nbsp; </div>
       </figure>
       <p class="ko">{{reorder.name}}</p>
@@ -24,6 +60,8 @@
     <img *ngIf="isRight"  (click)="updatePos('right')" align="right" src="/assets/images/icons/dir_right.png" />
   </div>
 </div>
+-->
 
 
+</div>
 

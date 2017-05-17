@@ -13,32 +13,33 @@
 }
 
 
-
+/*
 .column {
     // @include testBorder();
     @include size($cardWidth, $cardHeight);
     @include flex(flex, column nowrap);
+    
     padding:0;
     
     .cup-name {
         @include size(100%, 90px);
         margin: 22px auto 23px;
         text-align: center;
+
         .ko { 
             @include size(100%, 25px);
-            font-size: 18px;
-
+            font-size:   $size-2;
             font-weight: $weight-bold;
-            line-height: 1.39;
-            letter-spacing: 1px;
+            line-height: $line-height-2;
+            letter-spacing: $letter-spacing-2;
             color: $text-color;
         }
         .en {
             @include size(100%, 20px);
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.8px;
-            line-height: 1.43;
+            font-size: $size-4;
+            font-weight: $weight-medium;
+            letter-spacing: $letter-spacing-3;
+            line-height:  $line-height-3;
             color: $text-light;
         }
     }
@@ -46,6 +47,8 @@
     
     figure{ 
         @include size(100%, $imgHeight);
+        overflow: hidden;
+
         // @include testBorder(ridge);
         margin: 0 auto;
         img { 
@@ -56,3 +59,4 @@
     }
     
 }
+*/

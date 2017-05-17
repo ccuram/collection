@@ -1,118 +1,125 @@
-<section class="section is-paddingless" >
+<section class="section" >
   <div class="container cup-title">
-      <p class="title">{{ cup.name }}</p>
-      <p class="sub-title">{{ cup.name_eng }}</p>
+      <p class="info-name-kor">{{ cup.name }}</p>
+      <p class="info-name-eng">{{ cup.name_eng }}</p>
   </div>
 </section>
 
-
-<section class="section detail">
-  <img class="view" [src]="'/assets/images/cups/'+ cup.imgUrls">
-
-  <div class="spec">
-    <!-- spec row 1 -->
-    <div class="spec-row">
-      <p class="item">색상</p>
-      <div class="value-box">
-        <p class="value"> A B C D Cyncia </p>
+<section class="section spec">
+  <div class="container">
+    <div class="columns">
+      <!-- viewer -->
+      <div class="column is-5 is-offset-1 viewer">
+        <img class="view" [src]="'/assets/images/cups/'+ cup.imgUrls + '.png'">
+        <!--<img class="view-info" [src]="'/assets/images/cups/'+ cup.imgUrls + imgType + '.png'">-->
       </div>
+
+      <!-- spec -->
+      <div class="column is-4 is-offset-1">
+
+        <div class="columns is-multiline">
+          <div class="column is-half"><p class="item">색상</p></div>
+          <div class="column is-half">
+            <div class="columns">
+              <p class="column is-1 value" 
+                  *ngFor="let col of cup.color"
+                  [style.background]="col">1</p>
+            </div>
+          </div>
+
+          <div class="column is-half"><p class="item">제조국</p></div>
+          <div class="column is-half"><p class="value">{{ cup.country }}</p></div>
+
+          <div class="column is-half"><p class="item">소재</p></div>
+          <div class="column is-half"><p class="value">{{ cup.material }}</p></div>
+
+          <div class="column is-half"><p class="item">가격</p></div>
+          <div class="column is-half"><p class="value">{{ cup.price }} 단위</p> </div>
+        </div>
+
+        <!-- hover area -->
+        <div class="columns is-multiline has-text-centered  hover-box">
+          <div class="column is-half">
+            <div class="columns is-multiline">
+              <div class="column is-12" >
+                <p class="item">전체길이</p>
+              </div>
+              <div class="column is-12">
+                <p class="value">{{ cup.totalLength }} mm</p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="columns is-multiline">
+              <div class="column is-12"><p class="item">바깥지름</p></div>
+              <div class="column is-12"><p class="value">{{ cup.externalDiameter }} mm</p> </div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="columns is-multiline">
+              <div class="column is-12"><p class="item">컵 길이</p></div>
+              <div class="column is-12"><p class="value">{{ cup.bodyLength }} mm</p></div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="columns is-multiline">
+              <div class="column is-12"><p class="item">손잡이 길이</p></div>
+              <div class="column is-12"><p class="value">{{ cup.stemLength }} mm</p> </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-multiline">
+          <div class="column is-half"><p class="item">공기구멍 형태</p></div>
+          <div class="column is-half"><p class="value">{{ cup.airholeType }}</p></div>
+
+          <div class="column is-half"><p class="item">공기구멍까지의 용량</p></div>
+          <div class="column is-half"><p class="value">{{ cup.airholeCapacity }} ml</p> </div>
+
+          <div class="column is-half"><p class="item">전체 용량</p></div>
+          <div class="column is-half"><p class="value">{{ cup.totalCapacity }} ml</p> </div>
+
+          <div class="column is-half"><p class="item">손잡이의 형태</p></div>
+          <div class="column is-half"><p class="value">{{ cup.stemType }}</p></div>
+
+          <div class="column is-half"><p class="item">공식 홈페이지로 이동</p></div>
+          <div class="column is-half">
+            <a [href]="cup.officialsite">
+              <img src="/assets/images/icons/home.png"/>
+            </a>
+          </div>
+        </div>
+
+        <div class="column is-3 is-offset-9">
+          <div class="columns">
+            <div class="column is-3">
+              <a [href]="cup.officialsite">
+                <img src="/assets/images/icons/facebook_sketch.png"/>
+              </a>
+            </div>
+            <div class="column is-3">
+              <a [href]="cup.officialsite">
+                <img src="/assets/images/icons/twitter_sketch.png"/>
+              </a>
+            </div>
+            <div class="column is-3">
+              <a [href]="cup.officialsite">
+                <img src="/assets/images/icons/instagram_sketch.png"/>
+              </a>
+            </div>
+            <div class="column is-3">
+              <a [href]="cup.officialsite">
+                <img src="/assets/images/icons/share.png"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    
-    <div class="spec-row">
-      <p class="item">제조국</p>
-      <div class="value-box">
-        <p class="value">{{ cup.country }}</p>
-      </div>
-    </div>
-
-    <div class="spec-row">
-      <p class="item">소재</p>
-      <div class="value-box">
-        <p class="value">{{ cup.material }}</p>
-      </div>
-    </div>
-
-    <div class="spec-row">
-      <p class="item">가격</p>
-      <div class="value-box">
-        <p class="value">{{ cup.price }} 단위 </p>
-      </div>
-    </div>
-
-    <!-- hover area -->
-    <div class="spec-hover">
-      <div class="hover-item">
-        <p> 전체 길이  </p>
-        <p> {{ cup.totalLength }} mm </p>
-      </div>
-      <div class="hover-item">
-        <p> 바깥 지름  </p>
-        <p> {{ cup.externalDiameter }} mm </p>
-      </div>
-      <div class="hover-item">
-        <p> 컵 길이  </p>
-        <p> {{ cup.bodyLength }} mm </p>
-      </div>
-      <div class="hover-item">
-        <p> 손잡이 길이  </p>
-        <p> {{ cup.stemLength }} mm </p>
-      </div>
-    </div>
-
-
-
-    <!-- spec row 2 -->
-     <div class="spec-row">
-      <p class="item">공기구멍 형태</p>
-      <div class="value-box">
-        <p class="value">{{ cup.airholeType }}  </p>
-      </div>
-    </div>
-
-     <div class="spec-row">
-      <p class="item">공기구멍까지의 용량</p>
-      <div class="value-box">
-        <p class="value">{{ cup.topToHole }} ml </p>
-      </div>
-    </div>
-
-     <div class="spec-row">
-      <p class="item">전체 용량</p>
-      <div class="value-box">
-        <p class="value">{{ cup.totalCapacity }} ml </p>
-      </div>
-    </div>
-
-     <div class="spec-row">
-      <p class="item">손잡이의 형태</p>
-      <div class="value-box">
-        <p class="value">{{ cup.stemType }} </p>
-      </div>
-     </div>
-
-     <!-- spec row 3 -->
-     <div class="spec-row">
-      <p class="item">공식 홈페이지로 이동</p>
-      <div class="value-box">
-        <a [href]="cup.officialsite">
-          <img align="middle" src="/assets/images/icons/home.png">
-        </a>
-      </div>
-     </div>
-
-     <!-- share -->
-     <div class="spec-row">
-      <div class="sns-box">
-        <a href="sns"><img src="/assets/images/icons/facebook.png" alt="facebook"/></a>
-        <a href="sns"><img src="/assets/images/icons/twitter.png" alt="twitter"/></a>
-        <a href="sns"><img src="/assets/images/icons/instagram.png" alt="instagram"/></a>
-        <a href="sns"><img src="/assets/images/icons/share.png" alt="share"/></a>
-      </div>
-     </div>
-
   </div>
-  <div class="white">  </div>
 </section>
+
 
 <section class="section slider">
   <cup-slider></cup-slider>

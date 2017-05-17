@@ -3,36 +3,77 @@
 $imgWidth: 538px;
 $imgHeight: 600px;
 
-p { font-size: $size-normal; }
+@mixin typo-item(){
+    @include typo($size-2, $weight-extraBold, $line-height-2, $letter-spacing-3, left);
+}
+@mixin typo-value(){
+    @include typo($size-3, $weight-medium, $line-height-3, $letter-spacing-3, right);
+}
+
+@mixin typo-hover-item(){
+    @include typo($size-2, $weight-extraBold, $line-height-2, $letter-spacing-3, center);
+}
+@mixin typo-hover-value(){
+    @include typo($size-3, $weight-medium, $line-height-3, $letter-spacing-3, center);
+}
 
 
-.section { 
 
-    .cup-title {
-        text-align: center;
-        p { color: $text-color; }
-        .title { 
-            font-size: 30px;
-            font-weight: $weight-bold;
-            line-height: 0.83;
-            letter-spacing: 1.3px;
-        }
-        .sub-title { 
-            font-size: 18px;
-            line-height: 1.11;
-            font-weight: 500;
-            letter-spacing: 1.4px;
+.column {
+    @include testShadow();
+}
+
+.cup-title {
+    p { color: $text-color; }
+    .info-name-kor { 
+        @include typo($size-1, $weight-bold, $line-height-1, $letter-spacing-1, center);
+    }
+    .info-name-eng {
+        @include typo($size-2, $weight-medium, $line-height-2, $letter-spacing-1, center);
+    }
+}
+
+.viewer {
+    @include testBg();
+    .view{
+        @include size(538px, 600px);
+        background-color: goldenrod;
+    }
+    
+}
+
+
+.spec{
+    
+    .item {
+        @include typo-item();
+    }
+    .value {
+        @include typo-value();
+    }
+    .hover-box {
+        margin: 20px 0;
+        p {
+            text-align: center;
         }
     }
 }
 
-
+/*
 .detail {
     @include flex(flex, row nowrap);
     
     .view {    
         @include size(538px, 600px);
     }
+    .view-info {
+        @include size(538px, 600px);
+        position: absolute;
+        z-index:500;
+    }
+
+
+
     .spec {
         @include size(311px, auto);
         @include flex(flex, column wrap);
@@ -41,24 +82,28 @@ p { font-size: $size-normal; }
             @include size(311px, auto);
             @include flex(flex, row wrap);
             margin-bottom: 12px;
+
             .item { 
                 @include size(55%, 25px);
-                font-size: 18px;
-                font-weight: 800;
-                line-height: 1.39;
-                letter-spacing: 0.6px;
-                color: $text-item;
+                @include typo($size-2, $weight-extraBold, $line-height-2, $letter-spacing-3, left);
             }
             .value-box {
                 @include size(45%, 25px);
-                
+                @include flex(flex, row nowrap);
+                overflow: hidden;
+
+                .btn-color {
+                    @include size(16px, 16px);
+                    @include border-radius(10px);
+                    min-width: 16px;
+                    box-shadow: none;
+                    border: solid 2px black;
+                }
+
                 .value {
+                    margin-left:2px;
                     text-align: right;
-                    font-size: 17.5px;
-                    font-weight: $weight-semibold;
-                    line-height: 1.14;
-                    letter-spacing: 1px;
-                    color: $text-color;
+                    @include typo($size-3, $weight-medium, $line-height-3, $letter-spacing-3, right);
                 }
                 img { @include size(19px, 19px); }
             }
@@ -69,7 +114,6 @@ p { font-size: $size-normal; }
                 justify-content: flex-end;
                 margin-top: 56px;
                 img { @include size(19px, 19px); }
-
             }
         }
 
@@ -84,9 +128,9 @@ p { font-size: $size-normal; }
                 @include flex(flex, column nowrap);
                 justify-content: center;
                 align-self: center;
-                
+
                 margin: .5px;
-                border: 2px solid #262626;
+                border: 2px solid $hover-inactive;
                 
                 p:nth-of-type(1){ 
                     text-align: center;
@@ -105,6 +149,11 @@ p { font-size: $size-normal; }
                     color: $text-color;
                 }
             }
+
+            .isHover {
+                border: 2px solid $hover-active;
+            }
+
         }
         
     }
@@ -117,3 +166,4 @@ p { font-size: $size-normal; }
 .slider {
     margin: 76.5px auto 119px; 
 }
+*/

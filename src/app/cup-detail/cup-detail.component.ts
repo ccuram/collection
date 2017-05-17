@@ -12,13 +12,22 @@ import { Cup } from '../model/cup';
 export class CupDetailComponent implements OnInit {
   cup: Cup;
   imgPath: string = '../../assets/images';
+  imgType: string = '_total';
+  imgColor: string = 'white';
+
 
 
   constructor(
     private appService: AppService,
     private activatedRoute: ActivatedRoute) { }
-
   
+  changeView(viewType: string) {
+    this.imgType = viewType;
+  }
+  changeColor(colorType: string) {
+    this.imgColor = colorType;
+    console.log("colorType", colorType);
+  }
   ngOnInit() {
     let cupId: number;
     this.activatedRoute.params.forEach((urlParameters) => {

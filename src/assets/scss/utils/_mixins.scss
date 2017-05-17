@@ -24,6 +24,16 @@
 
 
 
+@mixin typo($size, $weight, $line-height, $spacing, $align){
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    letter-spacing: $spacing;
+    text-align: $align;
+}
+
+
+
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;

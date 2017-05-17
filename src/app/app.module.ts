@@ -20,6 +20,7 @@ import { SourceComponent } from './source/source.component';
 import { SearchComponent } from './search/search.component';
 import { CustomSearchPipe } from './search/custom-search.pipe';
 import { OrderPipe } from './pipes/order.pipe';
+import { FooterComponent } from './ui/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { OrderPipe } from './pipes/order.pipe';
     SourceComponent,
     SearchComponent,
     CustomSearchPipe,
-    OrderPipe
+    OrderPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

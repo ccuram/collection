@@ -4296,166 +4296,181 @@ label.panel-block {
 .is-center {
   text-align: center; }
 
+html {
+  font-size: 16px;
+  font-family: AppleSDGothicNeo, sans-serif;
+  color: #333; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/*
-.search {
-    z-index: $z-index-search;
-
-    @include size($base, auto);
-    @include flex(flex, row nowrap);
-    justify-content: stretch;
-    margin: 35px auto 0;
-    position: absolute; 
-    overflow-x: hidden;   
-
-    .blank { 
-        @include size(percentage(662px/$base), auto);
-        flex-shrink: 5;
-        .logo { @include size(50px, 50px); }
-    }
-    .search-box {
-        min-width: 238px;
-        @include size(percentage(238px/$base), auto);   
-    }
-}
-*/
 .nav {
-  z-index: 200;
-  width: 900px;
-  height: auto;
-  margin: 38px auto 0; }
+  z-index: 200; }
   .nav .logo {
     width: 50px;
     height: 50px; }
   .nav .search-box {
-    position: absolute;
-    min-width: 238px;
-    width: 26.44444%;
-    height: auto; }
+    position: absolute; }
 
 .main {
   z-index: 100;
-  width: 900px;
-  height: auto;
-  margin: 168px auto 25px; }
-
-.container {
-  width: 900px;
-  height: auto;
-  margin: 0 auto; }
+  margin: 168px auto 25px;
+  overflow-x: hidden; }
 
 .footer {
-  width: 100%;
-  height: 166px;
-  padding: 0; }
-  .footer img {
-    width: auto;
-    height: 24px; }
+  height: 168px; }
 
-p {
-  font-size: 1rem; }
+.column {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
-.section .cup-title {
+.cup-title p {
+  color: #333; }
+.cup-title .info-name-kor {
+  font-size: 1.875rem;
+  font-weight: bold;
+  line-height: 0.83;
+  letter-spacing: 0.08125rem;
   text-align: center; }
-  .section .cup-title p {
-    color: #333; }
-  .section .cup-title .title {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 0.83;
-    letter-spacing: 1.3px; }
-  .section .cup-title .sub-title {
-    font-size: 18px;
-    line-height: 1.11;
-    font-weight: 500;
-    letter-spacing: 1.4px; }
+.cup-title .info-name-eng {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.39;
+  letter-spacing: 0.08125rem;
+  text-align: center; }
 
-.detail {
-  display: flex;
-  flex-flow: row nowrap; }
-  .detail .view {
+.viewer {
+  background-color: rgba(236, 236, 236, 0.8); }
+  .viewer .view {
     width: 538px;
-    height: 600px; }
-  .detail .spec {
-    width: 311px;
-    height: auto;
-    display: flex;
-    flex-flow: column wrap; }
-    .detail .spec .spec-row {
-      width: 311px;
-      height: auto;
-      display: flex;
-      flex-flow: row wrap;
-      margin-bottom: 12px; }
-      .detail .spec .spec-row .item {
-        width: 55%;
-        height: 25px;
-        font-size: 18px;
-        font-weight: 800;
-        line-height: 1.39;
-        letter-spacing: 0.6px;
-        color: #1d1d1d; }
-      .detail .spec .spec-row .value-box {
-        width: 45%;
-        height: 25px; }
-        .detail .spec .spec-row .value-box .value {
-          text-align: right;
-          font-size: 17.5px;
-          font-weight: 500;
-          line-height: 1.14;
-          letter-spacing: 1px;
-          color: #333; }
-        .detail .spec .spec-row .value-box img {
-          width: 19px;
-          height: 19px; }
-      .detail .spec .spec-row .sns-box {
-        width: 100%;
-        height: 19.5px;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
-        margin-top: 56px; }
-        .detail .spec .spec-row .sns-box img {
-          width: 19px;
-          height: 19px; }
-    .detail .spec .spec-hover {
-      width: 100%;
-      height: 136px;
-      display: flex;
-      flex-flow: row wrap;
-      margin: 47px auto; }
-      .detail .spec .spec-hover .hover-item {
-        width: 150px;
-        height: 68px;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-self: center;
-        margin: .5px;
-        border: 2px solid #262626; }
-        .detail .spec .spec-hover .hover-item p:nth-of-type(1) {
-          text-align: center;
-          font-size: 18px;
-          font-weight: 800;
-          line-height: 1.39;
-          letter-spacing: 0.6px;
-          color: #1d1d1d; }
-        .detail .spec .spec-hover .hover-item p:nth-of-type(2) {
-          text-align: center;
-          font-size: 17.5px;
-          font-weight: 500;
-          line-height: 1.14;
-          letter-spacing: 1px;
-          color: #333; }
-  .detail .white {
-    width: 50px;
-    height: auto; }
+    height: 600px;
+    background-color: goldenrod; }
+
+.spec .item {
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1.39;
+  letter-spacing: 0.05rem;
+  text-align: left; }
+.spec .value {
+  font-size: 1.10938rem;
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0.05rem;
+  text-align: right; }
+.spec .hover-box {
+  margin: 20px 0; }
+  .spec .hover-box p {
+    text-align: center; }
+
+/*
+.detail {
+    @include flex(flex, row nowrap);
+    
+    .view {    
+        @include size(538px, 600px);
+    }
+    .view-info {
+        @include size(538px, 600px);
+        position: absolute;
+        z-index:500;
+    }
+
+
+
+    .spec {
+        @include size(311px, auto);
+        @include flex(flex, column wrap);
+
+        .spec-row {
+            @include size(311px, auto);
+            @include flex(flex, row wrap);
+            margin-bottom: 12px;
+
+            .item { 
+                @include size(55%, 25px);
+                @include typo($size-2, $weight-extraBold, $line-height-2, $letter-spacing-3, left);
+            }
+            .value-box {
+                @include size(45%, 25px);
+                @include flex(flex, row nowrap);
+                overflow: hidden;
+
+                .btn-color {
+                    @include size(16px, 16px);
+                    @include border-radius(10px);
+                    min-width: 16px;
+                    box-shadow: none;
+                    border: solid 2px black;
+                }
+
+                .value {
+                    margin-left:2px;
+                    text-align: right;
+                    @include typo($size-3, $weight-medium, $line-height-3, $letter-spacing-3, right);
+                }
+                img { @include size(19px, 19px); }
+            }
+
+            .sns-box {
+                @include size(100%, 19.5px);
+                @include flex(flex, row nowrap);
+                justify-content: flex-end;
+                margin-top: 56px;
+                img { @include size(19px, 19px); }
+            }
+        }
+
+        .spec-hover{
+            @include size(100%, 136px);
+            @include flex(flex, row wrap);
+            margin: 47px auto;
+            
+
+            .hover-item {
+                @include size(150px, 68px);
+                @include flex(flex, column nowrap);
+                justify-content: center;
+                align-self: center;
+
+                margin: .5px;
+                border: 2px solid $hover-inactive;
+                
+                p:nth-of-type(1){ 
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 800;
+                    line-height: 1.39;
+                    letter-spacing: 0.6px;
+                    color: $text-item;
+                }
+                p:nth-of-type(2){
+                    text-align: center;
+                    font-size: 17.5px;
+                    font-weight: 500;
+                    line-height: 1.14;
+                    letter-spacing: 1px;
+                    color: $text-color;
+                }
+            }
+
+            .isHover {
+                border: 2px solid $hover-active;
+            }
+
+        }
+        
+    }
+    .white {
+        @include size(50px, auto);
+    }
+}
+
 
 .slider {
-  margin: 76.5px auto 119px; }
+    margin: 76.5px auto 119px; 
+}
+*/
 
 /*# sourceMappingURL=cup-detail.component.css.map */

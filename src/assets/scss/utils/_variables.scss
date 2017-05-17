@@ -12,6 +12,39 @@ $main-color-dark: darken($main-color, 20%);
 $size-smaller: 0.6rem;
 $size-smallest: 0.4rem;
 
+$size-1: 1.875rem;
+$size-2: 1.125rem;
+$size-3: 1.109375rem;
+$size-4: 0.875rem;
+
+
+// 자간
+
+$letter-spacing-1: 0.08125rem;
+$letter-spacing-2: 0.0625rem;
+$letter-spacing-3: 0.05rem;
+
+// 줄간격 변수
+
+$line-height-1: 0.83;
+$line-height-2: 1.39;
+$line-height-3: 1.43;
+
+
+
+// 굵기
+
+$weight-bold: bold;
+$weight-medium: 500;
+$weight-extraBold: 800;
+
+//색상 변수
+
+$font-color-1: #333;
+
+
+
+
 // weight variables
 $weight-boldest: 800;
 
@@ -46,4 +79,6 @@ $text-item: #1d1d1d;
 
 
 
-
+// 상세페이지 hover border color
+$hover-active: #262626;
+$hover-inactive: #f4f4f4;

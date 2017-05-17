@@ -4296,65 +4296,31 @@ label.panel-block {
 .is-center {
   text-align: center; }
 
+html {
+  font-size: 16px;
+  font-family: AppleSDGothicNeo, sans-serif;
+  color: #333; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/*
-.search {
-    z-index: $z-index-search;
-
-    @include size($base, auto);
-    @include flex(flex, row nowrap);
-    justify-content: stretch;
-    margin: 35px auto 0;
-    position: absolute; 
-    overflow-x: hidden;   
-
-    .blank { 
-        @include size(percentage(662px/$base), auto);
-        flex-shrink: 5;
-        .logo { @include size(50px, 50px); }
-    }
-    .search-box {
-        min-width: 238px;
-        @include size(percentage(238px/$base), auto);   
-    }
-}
-*/
 .nav {
-  z-index: 200;
-  width: 900px;
-  height: auto;
-  margin: 38px auto 0; }
+  z-index: 200; }
   .nav .logo {
     width: 50px;
     height: 50px; }
   .nav .search-box {
-    position: absolute;
-    min-width: 238px;
-    width: 26.44444%;
-    height: auto; }
+    position: absolute; }
 
 .main {
   z-index: 100;
-  width: 900px;
-  height: auto;
-  margin: 168px auto 25px; }
-
-.container {
-  width: 900px;
-  height: auto;
-  margin: 0 auto; }
+  margin: 168px auto 25px;
+  overflow-x: hidden; }
 
 .footer {
-  width: 100%;
-  height: 166px;
-  padding: 0; }
-  .footer img {
-    width: auto;
-    height: 24px; }
+  height: 168px; }
 
 .rulers {
   z-index: 100;
@@ -4365,40 +4331,52 @@ label.panel-block {
   margin-top: -120px;
   transform: translateX(-500px); }
 
+/*
 .column {
-  width: 300px;
-  height: 410px;
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 0; }
-  .column .cup-name {
-    width: 100%;
-    height: 90px;
-    margin: 22px auto 23px;
-    text-align: center; }
-    .column .cup-name .ko {
-      width: 100%;
-      height: 25px;
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 1.39;
-      letter-spacing: 1px;
-      color: #333; }
-    .column .cup-name .en {
-      width: 100%;
-      height: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.8px;
-      line-height: 1.43;
-      color: #7a7a7a; }
-  .column figure {
-    width: 100%;
-    height: 320px;
-    margin: 0 auto; }
-    .column figure img {
-      width: 200px;
-      height: 320px;
-      margin: 0 auto; }
+    // @include testBorder();
+    @include size($cardWidth, $cardHeight);
+    @include flex(flex, column nowrap);
+    
+    padding:0;
+    
+    .cup-name {
+        @include size(100%, 90px);
+        margin: 22px auto 23px;
+        text-align: center;
+
+        .ko { 
+            @include size(100%, 25px);
+            font-size:   $size-2;
+            font-weight: $weight-bold;
+            line-height: $line-height-2;
+            letter-spacing: $letter-spacing-2;
+            color: $text-color;
+        }
+        .en {
+            @include size(100%, 20px);
+            font-size: $size-4;
+            font-weight: $weight-medium;
+            letter-spacing: $letter-spacing-3;
+            line-height:  $line-height-3;
+            color: $text-light;
+        }
+    }
+  
+    
+    figure{ 
+        @include size(100%, $imgHeight);
+        overflow: hidden;
+
+        // @include testBorder(ridge);
+        margin: 0 auto;
+        img { 
+            // @include testBorder(ridge);
+            @include size($imgWidth, $imgHeight);
+            margin: 0 auto;
+        }
+    }
+    
+}
+*/
 
 /*# sourceMappingURL=cups.component.css.map */
