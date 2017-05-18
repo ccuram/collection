@@ -16,7 +16,7 @@ import { CUPS } from '../data/cups';
 export class SearchComponent implements OnInit {
   cups: Cup[] = CUPS;
 
-  isResult: boolean = false;
+  isResult: boolean;
 
   key = "";
   field = "name";
@@ -25,28 +25,14 @@ export class SearchComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit(): void {}
-
-  changeStateResult(s: any) {
-    // search result view first. and then do this.
-    setTimeout(() => {
-      this.isResult = (s === 'on') ? true : false;
-      
-    }, 100);
+  ngOnInit(): void {
+    this.isResult = false;
   }
 
-
-  onSelect(obj: any) {
-    let name = obj.searchStr;
-    if (name === undefined || name === "") {
-      return;
-    }
-
-    let selectedCup = this.cups.find(cup => { return cup.name === name; });
-    let link = ['/detail', selectedCup.id];
-
-    this.router.navigate(link); 
-    location.reload();
+  changeStateResult(resultState: string) {
+    setTimeout(() => {
+      this.isResult = (resultState === 'on') ? true : false;
+    }, 0);
   }
 
   gotoDetail(searchedCup: Cup) {
@@ -54,10 +40,6 @@ export class SearchComponent implements OnInit {
 
     let link = ['/detail', searchedCup.id];
     this.router.navigate(link); 
-    setTimeout(() => {
-      history.go(0);
-      // location.reload();
-    }, 0);
-    
+    history.go(0);
   }
 }

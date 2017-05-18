@@ -1,6 +1,8 @@
 @import 'assets/scss/global';
 
-
+.is-margin-top {
+    margin-top: 100px;
+}
 
 
 .rulers {
@@ -11,52 +13,3 @@
     margin-top: $rulerHeight;
     transform: translateX(-500px);
 }
-
-
-/*
-.column {
-    // @include testBorder();
-    @include size($cardWidth, $cardHeight);
-    @include flex(flex, column nowrap);
-    
-    padding:0;
-    
-    .cup-name {
-        @include size(100%, 90px);
-        margin: 22px auto 23px;
-        text-align: center;
-
-        .ko { 
-            @include size(100%, 25px);
-            font-size:   $size-2;
-            font-weight: $weight-bold;
-            line-height: $line-height-2;
-            letter-spacing: $letter-spacing-2;
-            color: $text-color;
-        }
-        .en {
-            @include size(100%, 20px);
-            font-size: $size-4;
-            font-weight: $weight-medium;
-            letter-spacing: $letter-spacing-3;
-            line-height:  $line-height-3;
-            color: $text-light;
-        }
-    }
-  
-    
-    figure{ 
-        @include size(100%, $imgHeight);
-        overflow: hidden;
-
-        // @include testBorder(ridge);
-        margin: 0 auto;
-        img { 
-            // @include testBorder(ridge);
-            @include size($imgWidth, $imgHeight);
-            margin: 0 auto;
-        }
-    }
-    
-}
-*/

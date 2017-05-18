@@ -4316,11 +4316,8 @@ html {
 
 .main {
   z-index: 100;
-  margin: 168px auto 25px;
+  margin-bottom: 30px;
   overflow-x: hidden; }
-
-.footer {
-  height: 168px; }
 
 .column {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }

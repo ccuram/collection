@@ -35,9 +35,8 @@ $imgHeight: 600px;
 
 .viewer {
     @include testBg();
-    .view{
-        @include size(538px, 600px);
-        background-color: goldenrod;
+    figure {
+        @include size(538px, 600px); 
     }
     
 }
@@ -51,119 +50,20 @@ $imgHeight: 600px;
     .value {
         @include typo-value();
     }
+    .color-chip {
+        @include size(20px, 20px);
+        @include border-radius(50%);
+    }
+
+
     .hover-box {
         margin: 20px 0;
         p {
             text-align: center;
         }
-    }
-}
 
-/*
-.detail {
-    @include flex(flex, row nowrap);
-    
-    .view {    
-        @include size(538px, 600px);
-    }
-    .view-info {
-        @include size(538px, 600px);
-        position: absolute;
-        z-index:500;
-    }
-
-
-
-    .spec {
-        @include size(311px, auto);
-        @include flex(flex, column wrap);
-
-        .spec-row {
-            @include size(311px, auto);
-            @include flex(flex, row wrap);
-            margin-bottom: 12px;
-
-            .item { 
-                @include size(55%, 25px);
-                @include typo($size-2, $weight-extraBold, $line-height-2, $letter-spacing-3, left);
-            }
-            .value-box {
-                @include size(45%, 25px);
-                @include flex(flex, row nowrap);
-                overflow: hidden;
-
-                .btn-color {
-                    @include size(16px, 16px);
-                    @include border-radius(10px);
-                    min-width: 16px;
-                    box-shadow: none;
-                    border: solid 2px black;
-                }
-
-                .value {
-                    margin-left:2px;
-                    text-align: right;
-                    @include typo($size-3, $weight-medium, $line-height-3, $letter-spacing-3, right);
-                }
-                img { @include size(19px, 19px); }
-            }
-
-            .sns-box {
-                @include size(100%, 19.5px);
-                @include flex(flex, row nowrap);
-                justify-content: flex-end;
-                margin-top: 56px;
-                img { @include size(19px, 19px); }
-            }
+        .isHover {
+            border: 2px solid black;
         }
-
-        .spec-hover{
-            @include size(100%, 136px);
-            @include flex(flex, row wrap);
-            margin: 47px auto;
-            
-
-            .hover-item {
-                @include size(150px, 68px);
-                @include flex(flex, column nowrap);
-                justify-content: center;
-                align-self: center;
-
-                margin: .5px;
-                border: 2px solid $hover-inactive;
-                
-                p:nth-of-type(1){ 
-                    text-align: center;
-                    font-size: 18px;
-                    font-weight: 800;
-                    line-height: 1.39;
-                    letter-spacing: 0.6px;
-                    color: $text-item;
-                }
-                p:nth-of-type(2){
-                    text-align: center;
-                    font-size: 17.5px;
-                    font-weight: 500;
-                    line-height: 1.14;
-                    letter-spacing: 1px;
-                    color: $text-color;
-                }
-            }
-
-            .isHover {
-                border: 2px solid $hover-active;
-            }
-
-        }
-        
-    }
-    .white {
-        @include size(50px, auto);
     }
 }
-
-
-.slider {
-    margin: 76.5px auto 119px; 
-}
-*/

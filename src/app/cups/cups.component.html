@@ -5,17 +5,20 @@
       <div class="column is-3 has-text-centered"
         *ngFor="let cup of cups"
         (click)="gotoDetail(cup.id)">
-        <div class="columns is-multiline">
+        <div class="columns is-multiline is-margin-top">
+          
+          <div class="column is-12">
+            <figure class="image">
+              <img [src]="'/assets/images/cups/'+ cup.imgUrls +'.png'">
+              <div align="center" class="rulers"> &nbsp; </div>
+            </figure>
+          </div>
+
           <div class="column is-12">
             <p class="ko"> {{ cup.name }} </p>
             <p class="en" > {{ cup.name_eng }} </p>
           </div>
-          <div class="column is-12">
-            <figure class="image">
-            <img [src]="'/assets/images/cups/'+ cup.imgUrls +'.png'">
-            <div align="center" class="rulers"> &nbsp; </div>
-          </figure>
-          </div>
+
         </div>
       </div>
     </div>

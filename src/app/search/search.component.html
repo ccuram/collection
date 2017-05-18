@@ -1,22 +1,28 @@
 <!-- search input  -->
-<div class="columns">
+<div class="columns is-multiline" (focusin)="changeStateResult('on')" (focusout)="changeStateResult('off')">
   <div class="column is-11">
     <input class="input is-small" type="text" [(ngModel)]="key"  placeholder="검색"
-          (focus)="changeStateResult('on')" (blur)="changeStateResult('off')" >
+          >
   </div>
   <div class="column is-1 search-icon">
-    <span class="icon is-small">
-      <i class="fa fa-search" aria-hidden="true"></i>
-    </span>
-    <!--<img src="/assets/images/icons/search.png"/>-->
+    <img src="/assets/images/icons/search.png"/>
+  </div>
+
+  <div *ngIf="isResult" class="columns is-multiline">
+    <div *ngFor="let cup of cups | customSearch:key:field:ignoreCase" (click)="gotoDetail(cup)" class="column is-12">
+      {{ cup.name }}
+    </div>
   </div>
 </div>
 
+
+<!--
 <div *ngIf="isResult" class="columns is-multiline">
   <div class="column is-12 has-text-left"  
        *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
        (click)="gotoDetail(cup)">
-    {{ cup.name }}
+    <p> {{ cup.name }}</p>
   </div>
 </div>
+-->
 

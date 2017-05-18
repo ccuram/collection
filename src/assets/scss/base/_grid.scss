@@ -20,8 +20,6 @@ html {
 
 .nav {
         z-index: $z-index-nav;
-        // @include size($base, auto);
-        // margin: 38px auto 0;
 
         .logo { @include size(50px, 50px); }
         .search-box {            
@@ -33,13 +31,8 @@ html {
 
 .main { 
         z-index: $z-index-main;
-        
-        margin: 168px auto 25px;
+        margin-bottom: 30px;
         overflow-x: hidden;
  }
 
 
-
-.footer {
-    height: 168px;
-}

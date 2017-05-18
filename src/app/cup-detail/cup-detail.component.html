@@ -5,26 +5,32 @@
   </div>
 </section>
 
-<section class="section spec">
+    
+<section class="section">
   <div class="container">
     <div class="columns">
       <!-- viewer -->
-      <div class="column is-5 is-offset-1 viewer">
-        <img class="view" [src]="'/assets/images/cups/'+ cup.imgUrls + '.png'">
-        <!--<img class="view-info" [src]="'/assets/images/cups/'+ cup.imgUrls + imgType + '.png'">-->
+      <div class="column is-6 is-offset-1 viewer">
+        <figure class="image"
+                [style.background-image]="'url(/assets/images/cups/spec/'+ cup.imgUrls + '.png)'">
+          <img class="view-info" [src]="'/assets/images/cups/spec/'+ cup.imgUrls + imgType + '.png'">
+        </figure>
       </div>
 
       <!-- spec -->
-      <div class="column is-4 is-offset-1">
+      <div class="column is-4 spec">
+
 
         <div class="columns is-multiline">
           <div class="column is-half"><p class="item">색상</p></div>
-          <div class="column is-half">
-            <div class="columns">
-              <p class="column is-1 value" 
-                  *ngFor="let col of cup.color"
-                  [style.background]="col">1</p>
-            </div>
+          <div class="column is-half has-text-right">
+  
+            <a *ngFor="let col of cup.color"
+                [style.background-color]="col"
+                class="button is-small color-chip"
+                [class.is-active]="imgColor === col"
+                (click)="changeColor(col)">&nbsp;</a>
+
           </div>
 
           <div class="column is-half"><p class="item">제조국</p></div>
@@ -39,7 +45,8 @@
 
         <!-- hover area -->
         <div class="columns is-multiline has-text-centered  hover-box">
-          <div class="column is-half">
+          <div class="column is-half" [class.isHover]="imgType === '_total'"
+               (mouseover)="changeView('_total')">
             <div class="columns is-multiline">
               <div class="column is-12" >
                 <p class="item">전체길이</p>
@@ -49,19 +56,22 @@
               </div>
             </div>
           </div>
-          <div class="column is-half">
+          <div class="column is-half" [class.isHover]="imgType === '_diameter'"
+               (mouseover)="changeView('_diameter')">
             <div class="columns is-multiline">
               <div class="column is-12"><p class="item">바깥지름</p></div>
               <div class="column is-12"><p class="value">{{ cup.externalDiameter }} mm</p> </div>
             </div>
           </div>
-          <div class="column is-half">
+          <div class="column is-half" [class.isHover]="imgType === '_body'"
+               (mouseover)="changeView('_body')">
             <div class="columns is-multiline">
               <div class="column is-12"><p class="item">컵 길이</p></div>
               <div class="column is-12"><p class="value">{{ cup.bodyLength }} mm</p></div>
             </div>
           </div>
-          <div class="column is-half">
+          <div class="column is-half" [class.isHover]="imgType === '_stem'"
+               (mouseover)="changeView('_stem')">
             <div class="columns is-multiline">
               <div class="column is-12"><p class="item">손잡이 길이</p></div>
               <div class="column is-12"><p class="value">{{ cup.stemLength }} mm</p> </div>

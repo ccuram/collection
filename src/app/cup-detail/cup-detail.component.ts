@@ -15,19 +15,14 @@ export class CupDetailComponent implements OnInit {
   imgType: string = '_total';
   imgColor: string = 'white';
 
+  
 
 
   constructor(
     private appService: AppService,
     private activatedRoute: ActivatedRoute) { }
   
-  changeView(viewType: string) {
-    this.imgType = viewType;
-  }
-  changeColor(colorType: string) {
-    this.imgColor = colorType;
-    console.log("colorType", colorType);
-  }
+
   ngOnInit() {
     let cupId: number;
     this.activatedRoute.params.forEach((urlParameters) => {
@@ -38,6 +33,18 @@ export class CupDetailComponent implements OnInit {
 
     window.scrollTo(0, 0);                  // 초기화시 최 상단으로 이동
   }
+
+
+  changeView(viewType: string) {
+    this.imgType = viewType;
+    console.log("viewType", viewType);
+  }
+
+  changeColor(colorType: string) {
+    this.imgColor = colorType;
+    console.log("colorType", colorType);
+  }
+
 
 
 

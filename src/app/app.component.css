@@ -4316,10 +4316,7 @@ html {
 
 .main {
   z-index: 100;
-  margin: 168px auto 25px;
+  margin-bottom: 30px;
   overflow-x: hidden; }
-
-.footer {
-  height: 168px; }
 
 /*# sourceMappingURL=app.component.css.map */
