@@ -34,11 +34,8 @@ $imgHeight: 600px;
 }
 
 .viewer {
-    @include testBg();
-    figure {
-        @include size(538px, 600px); 
-    }
-    
+    background-repeat: no-repeat;
+   
 }
 
 

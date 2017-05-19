@@ -13,9 +13,7 @@ export class CupDetailComponent implements OnInit {
   cup: Cup;
   imgPath: string = '../../assets/images';
   imgType: string = '_total';
-  imgColor: string = 'white';
-
-  
+  imgColor: any; // { name: string , code: string }
 
 
   constructor(
@@ -30,8 +28,9 @@ export class CupDetailComponent implements OnInit {
     });
 
     this.cup = this.appService.getCup(cupId);
+    this.imgColor = this.cup.color[0];
 
-    window.scrollTo(0, 0);                  // 초기화시 최 상단으로 이동
+    window.scrollTo(0, 0);      // 초기화시 최 상단으로 이동
   }
 
 

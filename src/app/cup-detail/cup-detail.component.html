@@ -12,7 +12,8 @@
       <!-- viewer -->
       <div class="column is-6 is-offset-1 viewer">
         <figure class="image"
-                [style.background-image]="'url(/assets/images/cups/spec/'+ cup.imgUrls + '.png)'">
+            [style.background-image]="'url(/assets/images/cups/spec/'+ cup.imgUrls + '_' + imgColor.name + '.png)'"
+            [style.background-size]="'contain'">
           <img class="view-info" [src]="'/assets/images/cups/spec/'+ cup.imgUrls + imgType + '.png'">
         </figure>
       </div>
@@ -26,7 +27,7 @@
           <div class="column is-half has-text-right">
   
             <a *ngFor="let col of cup.color"
-                [style.background-color]="col"
+                [style.background-color]="col.code"
                 class="button is-small color-chip"
                 [class.is-active]="imgColor === col"
                 (click)="changeColor(col)">&nbsp;</a>

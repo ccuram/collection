@@ -8,7 +8,9 @@ export const CUPS = [
         imgUrls: "femmycycle_regular",
         size: "레귤러",
         size_eng: "Regular",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://femmycycle.com/",
         country: "미국",
         country_eng: "usa",
@@ -31,7 +33,9 @@ export const CUPS = [
         imgUrls: "femmycycle_teen",
         size: "10대용",
         size_eng: "Teen",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://femmycycle.com/",
         country: "미국",
         country_eng: "usa",
@@ -54,7 +58,9 @@ export const CUPS = [
         imgUrls: "femmycycle_low_cervix",
         size: "낮은 포궁용",
         size_eng: "Low Cervix",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://femmycycle.com/",
         country: "미국",
         country_eng: "usa",
@@ -77,7 +83,16 @@ export const CUPS = [
         imgUrls: "sckoon_cup_1",
         size: 1,
         size_eng: 1,
-        color: ["purple", "pink", "#fff", "red", "azure", "blue", "cyan"],
+        color: [
+            { name: "clarity", code: "#9793e8" },
+            { name: "hope", code: "#f6bbff" },
+            { name: "zen", code: "#913ffc" },
+            { name: "wellness", code: "#ff0b34" },
+            { name: "harmony", code: "#1bdbc8" },
+            { name: "sunrise", code: "#f9ff15" },
+            { name: "balance", code: "#8dbbff" },
+            { name: "meditation", code: "#0076bf" }
+        ],
         officialsite: "https://sckooncup.com/",
         country: "미국",
         country_eng: "usa",
@@ -100,7 +115,16 @@ export const CUPS = [
         imgUrls: "sckoon_cup_2",
         size: 2,
         size_eng: 2,
-        color: ["purple", "pink", "#fff", "red", "azure", "blue", "cyan"],
+        color: [
+            { name: "clarity", code: "#9793e8" },
+            { name: "hope", code: "#f6bbff" },
+            { name: "zen", code: "#913ffc" },
+            { name: "wellness", code: "#ff0b34" },
+            { name: "harmony", code: "#1bdbc8" },
+            { name: "sunrise", code: "#f9ff15" },
+            { name: "balance", code: "#8dbbff" },
+            { name: "meditation", code: "#0076bf" }
+        ],
         officialsite: "https://sckooncup.com/",
         country: "미국",
         country_eng: "usa",
@@ -123,7 +147,10 @@ export const CUPS = [
         imgUrls: "iris_cup_small",
         size: "S",
         size_eng: "S",
-        color: ["pink", "#e9e9e9"],
+        color: [
+            { name: "clear", code: "#fff" },
+            { name: "pink", code: "#fcd9ff" }
+        ],
         officialsite: "https://www.iriscup.com/",
         country: "스페인",
         country_eng: "spain",
@@ -146,7 +173,10 @@ export const CUPS = [
         imgUrls: "iris_cup_large",
         size: "L",
         size_eng: "L",
-        color: ["#FFFF66", "#33FFF"],
+        color: [
+            { name: "clear", code: "#fff" },
+            { name: "pink", code: "#fcd9ff" }
+        ],
         officialsite: "https://www.iriscup.com/",
         country: "스페인",
         country_eng: "spain",
@@ -169,7 +199,9 @@ export const CUPS = [
         imgUrls: "femme_cup",
         size: "-",
         size_eng: "-",
-        color: ["#FFFF66", "#33FFF"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "http://www.femmecup.com/",
         country: "영국",
         country_eng: "uk",
@@ -192,7 +224,9 @@ export const CUPS = [
         imgUrls: "juju_cup_model_1",
         size: "Model 1",
         size_eng: "Model 1",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://www.juju.com.au/",
         country: "호주",
         country_eng: "australia",
@@ -215,7 +249,9 @@ export const CUPS = [
         imgUrls: "juju_cup_model_2",
         size: "Model 2",
         size_eng: "Model 2",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://www.juju.com.au/",
         country: "호주",
         country_eng: "australia",
@@ -238,7 +274,11 @@ export const CUPS = [
         imgUrls: "lena_cup_small",
         size: "Small",
         size_eng: "Small",
-        color: ["#fff", "pink", "azure", "purple"],
+        color: [
+            { name: "pink", code: "#ff9ba5" },
+            { name: "purple", code: "#9793e8" },
+            { name: "turquoise", code: "#a5e1e0" }
+        ],
         officialsite: "https://lenacup.com/",
         country: "미국",
         country_eng: "usa",
@@ -261,7 +301,11 @@ export const CUPS = [
         imgUrls: "lena_cup_large",
         size: "Large",
         size_eng: "Large",
-        color: ["#fff", "pink", "azure", "purple"],
+        color: [
+            { name: "pink", code: "#ff9ba5" },
+            { name: "purple", code: "#9793e8" },
+            { name: "turquoise", code: "#a5e1e0" }
+        ],
         officialsite: "https://lenacup.com/",
         country: "미국",
         country_eng: "usa",
@@ -284,7 +328,9 @@ export const CUPS = [
         imgUrls: "fleur_cup_small",
         size: "Small",
         size_eng: "Small",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://Fleurcup.com",
         country: "프랑스",
         country_eng: "france",
@@ -307,7 +353,9 @@ export const CUPS = [
         imgUrls: "fleur_cup_large",
         size: "Large",
         size_eng: "Large",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://Fleurcup.com",
         country: "프랑스",
         country_eng: "france",
@@ -330,7 +378,13 @@ export const CUPS = [
         imgUrls: "lunette_cup_1",
         size: 1,
         size_eng: 1,
-        color: ["coral", "#fff", "violet", "yellow", "blue"],
+        color: [
+            { name: "clear", code: "#fff" },
+            { name: "aine", code: "#ed662b" },
+            { name: "cynthia", code: "#c92fac" },
+            { name: "lucia", code: "#ffec00" },
+            { name: "selene", code: "#6ca1ff" }
+        ],
         officialsite: "https://www.lunette.com/",
         country: "핀란드",
         country_eng: "finland",
@@ -353,7 +407,13 @@ export const CUPS = [
         imgUrls: "lunette_cup_2",
         size: 2,
         size_eng: 2,
-        color: ["coral", "#fff", "violet", "yellow", "blue"],
+        color: [
+            { name: "clear", code: "#fff" },
+            { name: "aine", code: "#ed662b" },
+            { name: "cynthia", code: "#c92fac" },
+            { name: "lucia", code: "#ffec00" },
+            { name: "selene", code: "#6ca1ff" }
+        ],
         officialsite: "https://www.lunette.com/",
         country: "핀란드",
         country_eng: "finland",
@@ -376,7 +436,9 @@ export const CUPS = [
         imgUrls: "lily_cup_a",
         size: "A",
         size_eng: "A",
-        color: ["lightpink"],
+        color: [
+            { name: "pink", code: "#ffbdd4" }
+        ],
         officialsite: "http://www.intimina.com/en/lily_cup_pd.php",
         country: "스웨덴",
         country_eng: "sweden",
@@ -399,7 +461,9 @@ export const CUPS = [
         imgUrls: "lily_cup_b",
         size: "B",
         size_eng: "B",
-        color: ["pink"],
+        color: [
+            { name: "hotpink", code: "#ffbde3" }
+        ],
         officialsite: "http://www.intimina.com/en/lily_cup_pd.php",
         country: "스웨덴",
         country_eng: "sweden",
@@ -422,7 +486,9 @@ export const CUPS = [
         imgUrls: "lily_cup_compact_a",
         size: "A",
         size_eng: "A",
-        color: ["lightpink"],
+        color: [
+            { name: "pink", code: "#ffbdd4" }
+        ],
         officialsite: "https://www.intimina.com/en/lily_cup_pd.php",
         country: "스웨덴",
         country_eng: "sweden",
@@ -445,7 +511,9 @@ export const CUPS = [
         imgUrls: "lily_cup_compact_b",
         size: "B",
         size_eng: "B",
-        color: ["pink"],
+        color: [
+            { name: "hotpink", code: "#ffbde3" }
+        ],
         officialsite: "https://www.intimina.com/en/lily_cup_pd.php",
         country: "스웨덴",
         country_eng: "sweden",
@@ -468,7 +536,10 @@ export const CUPS = [
         imgUrls: "yuuki_cup_soft_small",
         size: "소프트 스몰",
         size_eng: "Soft Small",
-        color: ["#fff", "red"],
+        color: [
+            { name: "clear", code: "#fff" },
+            { name: "rainbow", code: "#fcd9ff" }
+        ],
         officialsite: "https://www.yuuki.cz/",
         country: "체코",
         country_eng: "czechrepublic",
@@ -491,7 +562,9 @@ export const CUPS = [
         imgUrls: "yuuki_cup_classic_small",
         size: "클래식 스몰",
         size_eng: "Classic Small",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://www.yuuki.cz/",
         country: "체코",
         country_eng: "czechrepublic",
@@ -514,7 +587,10 @@ export const CUPS = [
         imgUrls: "yuuki_cup_soft_large",
         size: "소프트 라지",
         size_eng: "Soft Large",
-        color: ["#fff", "red"],
+        color: [
+            { name: "clear", code: "#fff" },
+            { name: "rainbow", code: "#fcd9ff" }
+        ],
         officialsite: "https://www.yuuki.cz/",
         country: "체코",
         country_eng: "czechrepublic",
@@ -537,7 +613,9 @@ export const CUPS = [
         imgUrls: "yuuki_cup_classic_large",
         size: "클래식 라지",
         size_eng: "Classic Large",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://www.yuuki.cz/",
         country: "체코",
         country_eng: "czechrepublic",
@@ -560,30 +638,9 @@ export const CUPS = [
         imgUrls: "moon_cup_uk_a",
         size: "A",
         size_eng: "A",
-        color: ["#fff"],
-        officialsite: "https://www.mooncup.co.uk/",
-        country: "영국",
-        country_eng: "uk",
-        price: "€25.99",
-        externalDiameter: 43,
-        totalLength: 71,
-        bodyLength: 50,
-        topToHole: "-",
-        stemType: "Hollow Round",
-        stemLength: 21,
-        material: "실리콘",
-        totalCapacity: 28.8,
-        airholeCapacity: "-",
-        airholeType: "-"
-    },
-    {
-        id: 25,
-        name: "문컵UK B",
-        name_eng: "Mooncup UK B",
-        imgUrls: "moon_cup_uk_b",
-        size: "B",
-        size_eng: "B",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://www.mooncup.co.uk/",
         country: "영국",
         country_eng: "uk",
@@ -600,13 +657,40 @@ export const CUPS = [
         airholeType: "-"
     },
     {
+        id: 25,
+        name: "문컵UK B",
+        name_eng: "Mooncup UK B",
+        imgUrls: "moon_cup_uk_b",
+        size: "B",
+        size_eng: "B",
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
+        officialsite: "https://www.mooncup.co.uk/",
+        country: "영국",
+        country_eng: "uk",
+        price: "€25.99",
+        externalDiameter: 43,
+        totalLength: 71,
+        bodyLength: 50,
+        topToHole: "-",
+        stemType: "Hollow Round",
+        stemLength: 21,
+        material: "실리콘",
+        totalCapacity: 28.8,
+        airholeCapacity: "-",
+        airholeType: "-"
+    },
+    {
         id: 26,
         name: "디바컵 1",
         name_eng: "DivaCup 1",
         imgUrls: "diva_cup_1",
         size: 1,
         size_eng: 1,
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://www.divacup.com",
         country: "캐나다",
         country_eng: "canada",
@@ -630,7 +714,9 @@ export const CUPS = [
         imgUrls: "diva_cup_2",
         size: 2,
         size_eng: 2,
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://www.divacup.com",
         country: "캐나다",
         country_eng: "canada",
@@ -653,30 +739,9 @@ export const CUPS = [
         imgUrls: "keeper_a",
         size: "A",
         size_eng: "A",
-        color: ["brown"],
-        officialsite: "https://keeper.com/",
-        country: "미국",
-        country_eng: "usa",
-        price: "$35.00",
-        externalDiameter: 45,
-        totalLength: 79,
-        bodyLength: 54,
-        topToHole: "-",
-        stemType: "Hollow Tube",
-        stemLength: 25,
-        material: "천연고무(라텍스)",
-        totalCapacity: 21,
-        airholeCapacity: "-",
-        airholeType: "-"
-    },
-    {
-        id: 29,
-        name: "키퍼 B",
-        name_eng: "Keeper B",
-        imgUrls: "keeper_b",
-        size: "B",
-        size_eng: "B",
-        color: ["brown"],
+        color: [
+            { name: "rubber", code: "#935141" }
+        ],
         officialsite: "https://keeper.com/",
         country: "미국",
         country_eng: "usa",
@@ -693,13 +758,65 @@ export const CUPS = [
         airholeType: "-"
     },
     {
+        id: 29,
+        name: "키퍼 B",
+        name_eng: "Keeper B",
+        imgUrls: "keeper_b",
+        size: "B",
+        size_eng: "B",
+        color: [
+            { name: "rubber", code: "#935141" }
+        ],
+        officialsite: "https://keeper.com/",
+        country: "미국",
+        country_eng: "usa",
+        price: "$35.00",
+        externalDiameter: 45,
+        totalLength: 79,
+        bodyLength: 54,
+        topToHole: "-",
+        stemType: "Hollow Tube",
+        stemLength: 25,
+        material: "천연고무(라텍스)",
+        totalCapacity: 21,
+        airholeCapacity: "-",
+        airholeType: "-"
+    },
+    {
         id: 30,
         name: "더 문컵 A",
         name_eng: "The Moon Cup A",
         imgUrls: "the_moon_cup_a",
         size: "A",
         size_eng: "A",
-        color: ["#fff"],
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
+        officialsite: "https://keeper.com/",
+        country: "미국",
+        country_eng: "usa",
+        price: "$35.00",
+        externalDiameter: 45,
+        totalLength: 79,
+        bodyLength: 54,
+        topToHole: "-",
+        stemType: "Hollow Tube",
+        stemLength: 25,
+        material: "실리콘",
+        totalCapacity: 25,
+        airholeCapacity: "-",
+        airholeType: "-"
+    },
+    {
+        id: 31,
+        name: "더 문컵 B",
+        name_eng: "The Moon Cup B",
+        imgUrls: "the_moon_cup_b",
+        size: "B",
+        size_eng: "B",
+        color: [
+            { name: "clear", code: "#fff" }
+        ],
         officialsite: "https://keeper.com/",
         country: "미국",
         country_eng: "usa",
@@ -712,29 +829,6 @@ export const CUPS = [
         stemLength: 25,
         material: "실리콘",
         totalCapacity: 21,
-        airholeCapacity: "-",
-        airholeType: "-"
-    },
-    {
-        id: 31,
-        name: "더 문컵 B",
-        name_eng: "The Moon Cup B",
-        imgUrls: "the_moon_cup_b",
-        size: "B",
-        size_eng: "B",
-        color: ["#fff"],
-        officialsite: "https://keeper.com/",
-        country: "미국",
-        country_eng: "usa",
-        price: "$35.00",
-        externalDiameter: 4,
-        totalLength: 79,
-        bodyLength: 54,
-        topToHole: "-",
-        stemType: "Hollow Tube",
-        stemLength: 25,
-        material: "실리콘",
-        totalCapacity: 25,
         airholeCapacity: "-",
         airholeType: "-"
     }

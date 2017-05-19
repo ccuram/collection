@@ -1,3 +1,9 @@
+type ColorType = {
+  name: string;
+  code: string;
+};
+
+
 export class Cup {
   id: number;
   name: string;
@@ -6,7 +12,7 @@ export class Cup {
   size: any;
   size_eng: any;
     
-  color: string[];
+  color?: ColorType[];
   officialsite: string;
   country: string;
   country_eng: string;

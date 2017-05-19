@@ -14,7 +14,8 @@ import { CUPS } from '../data/cups';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  cups: Cup[] = CUPS;
+  cups;
+
 
   isResult: boolean;
 
@@ -26,7 +27,9 @@ export class SearchComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.cups = CUPS;
     this.isResult = false;
+    
   }
 
   changeStateResult(resultState: string) {
@@ -41,5 +44,6 @@ export class SearchComponent implements OnInit {
     let link = ['/detail', searchedCup.id];
     this.router.navigate(link); 
     history.go(0);
+    window.scrollTo(0, 0);
   }
 }

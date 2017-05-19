@@ -4,6 +4,12 @@
     margin-top: 100px;
 }
 
+.cups {
+    &:hover {
+        @include testShadow();
+    }
+}
+
 
 .rulers {
     z-index:100;

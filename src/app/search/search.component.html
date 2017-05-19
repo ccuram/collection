@@ -9,20 +9,10 @@
   </div>
 
   <div *ngIf="isResult" class="columns is-multiline">
-    <div *ngFor="let cup of cups | customSearch:key:field:ignoreCase" (click)="gotoDetail(cup)" class="column is-12">
-      {{ cup.name }}
+    <div *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
+        (click)="gotoDetail(cup)" class="column is-12 search-row">
+      <p (click)="gotoDetail(cup)">{{ cup.name }}</p>
     </div>
   </div>
 </div>
-
-
-<!--
-<div *ngIf="isResult" class="columns is-multiline">
-  <div class="column is-12 has-text-left"  
-       *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
-       (click)="gotoDetail(cup)">
-    <p> {{ cup.name }}</p>
-  </div>
-</div>
--->
 

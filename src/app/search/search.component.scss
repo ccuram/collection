@@ -4,3 +4,16 @@
     padding-left: 0;
     padding-right: 0;
 }
+
+
+.search-row{
+    @include testBg();
+    text-align:left;
+    p {
+    
+    font-size: $size-7;
+    font-weight: $weight-light;
+    letter-spacing: $letter-spacing-1;
+
+    }
+}
