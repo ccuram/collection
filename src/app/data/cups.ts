@@ -84,7 +84,7 @@ export const CUPS = [
         size: 1,
         size_eng: 1,
         color: [
-            { name: "clarity", code: "#9793e8" },
+            { name: "clearity", code: "#fff" },
             { name: "hope", code: "#f6bbff" },
             { name: "zen", code: "#913ffc" },
             { name: "wellness", code: "#ff0b34" },
@@ -116,7 +116,7 @@ export const CUPS = [
         size: 2,
         size_eng: 2,
         color: [
-            { name: "clarity", code: "#9793e8" },
+            { name: "clearity", code: "#fff" },
             { name: "hope", code: "#f6bbff" },
             { name: "zen", code: "#913ffc" },
             { name: "wellness", code: "#ff0b34" },
