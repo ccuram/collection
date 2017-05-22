@@ -3,6 +3,11 @@ type ColorType = {
   code: string;
 };
 
+type StemType = {
+  name: string;
+  name_eng: string;
+  isNonSlip: boolean;
+}
 
 export class Cup {
   id: number;
@@ -23,7 +28,7 @@ export class Cup {
   bodyLength: number;
   topToHole: string;
 
-  stemType: string;
+  stemType?: StemType;
   stemLength: any;
   
   material: string;

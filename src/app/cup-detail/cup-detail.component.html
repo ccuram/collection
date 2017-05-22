@@ -90,8 +90,11 @@
           <div class="column is-half"><p class="item">전체 용량</p></div>
           <div class="column is-half"><p class="value">{{ cup.totalCapacity }} ml</p> </div>
 
-          <div class="column is-half"><p class="item">손잡이의 형태</p></div>
-          <div class="column is-half"><p class="value">{{ cup.stemType }}</p></div>
+          <div class="column is-half">
+            <p class="item">손잡이의 형태
+              <span><img (click)="onModal()" class="img-info" src="assets/images/icons/info.png" /></span></p>
+          </div>
+          <div class="column is-half"><p class="value">{{ cup.stemType.name }}</p></div>
 
           <div class="column is-half"><p class="item">공식 홈페이지로 이동</p></div>
           <div class="column is-half">
@@ -135,3 +138,53 @@
 <section class="section slider">
   <cup-slider></cup-slider>
 </section>
+
+
+
+
+<div class="modal"
+  [class.is-active]="isModal">
+  <div (click)="onModal()" class="modal-background"></div>
+  <div class="modal-content">
+    <div class="columns is-multiline modal-wrapper">
+      <div class="column is-12 has-text-centered">
+        <p class="modal-title"> 손잡이 형태 </p>
+      </div>
+      <div class="column is-12  has-text-centered">
+        <p class="modal-subtitle"> 생리컵의 손잡이 기본적인 형태를 크게 6가지로 분류한다면 <br/>
+          <span>{{ cup.name }}</span> 의 손잡이는 <span>{{ cup.stemType.name }}</span>에 가깝습니다.</p>
+      </div>
+      
+      <div class="column has-text-centered">
+        <div class="columns">
+          <div class="column is-2 stem-col" [class.is-active-stem]="(cup.stemType.name === '뾰족한 기둥 모양')">
+            <img class="stem-img"  src="assets/images/cups/stem/stem1-selected.png" alt="뾰족한 기둥 모양">
+            <p class="stem-name"> 뾰족한 <br/>기둥 모양 </p>
+          </div>
+          <div class="column is-2 stem-col" [class.is-active-stem]="(cup.stemType.name === '납작한 기둥 모양')">
+            <img class="stem-img"  src="assets/images/cups/stem/stem2-selected.png" alt="납작한 막대 모양">
+            <p class="stem-name"> 납작한 <br/>막대 모양 </p>
+          </div>
+          <div class="column is-2 stem-col">
+            <img class="stem-img" src="assets/images/cups/stem/stem3-selected.png" alt="기둥 모양">
+            <p class="stem-name"> 기둥 모양</p>
+          </div>
+          <div class="column is-2 stem-col" [class.is-active-stem]="(cup.stemType.name === '속이 빈 기둥 모양')">
+            <img class="stem-img" src="assets/images/cups/stem/stem4-selected.png" alt="속이 빈 기둥 모양">
+            <p class="stem-name">속이 빈 <br/>기둥 모양 </p>
+          </div>
+          <div class="column is-2 stem-col" [class.is-active-stem]="(cup.stemType.name === '고리 모양')">
+            <img class="stem-img"  src="assets/images/cups/stem/stem5-selected.png" alt="고리 모양">
+            <p class="stem-name"> 고리 모양</p>
+          </div>
+          <div class="column is-2 stem-col" [class.is-active-stem]="(cup.stemType.name === '공 모양')">
+            <img class="stem-img"  src="assets/images/cups/stem/stem6-selected.png" alt="공 모양">
+            <p class="stem-name"> 공 모양 </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <button (click)="onModal()" class="modal-close"></button>
+</div>

@@ -11,6 +11,14 @@
 }
 
 
+.ko {
+    @include typo($size-2, $weight-bold, $line-height-2, $letter-spacing-2, center);
+}
+
+.en {
+    @include typo($size-4, $weight-medium, $line-height-3, $letter-spacing-3, center);
+}
+
 .rulers {
     z-index:100;
     @include size(900%, $rulerWeight);

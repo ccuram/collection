@@ -19,7 +19,11 @@ export const CUPS = [
         totalLength: 63,
         bodyLength: 43,
         topToHole: "-",
-        stemType: "Ring",
+        stemType: {
+            name: '고리 모양',
+            name_eng: 'Ring',
+            isNonslip: false
+        },
         stemLength: 20,
         material: "실리콘",
         totalCapacity: 30,
@@ -44,7 +48,11 @@ export const CUPS = [
         totalLength: 57,
         bodyLength: 38,
         topToHole: "-",
-        stemType: "Ring",
+        stemType: {
+            name: '고리 모양',
+            name_eng: 'Ring',
+            isNonslip: false
+        },
         stemLength: 19,
         material: "실리콘",
         totalCapacity: 17.5,
@@ -69,7 +77,11 @@ export const CUPS = [
         totalLength: 50,
         bodyLength: 43,
         topToHole: "-",
-        stemType: "Ring",
+        stemType: {
+            name: '고리 모양',
+            name_eng: 'Ring',
+            isNonslip: false
+        },
         stemLength: 7,
         material: "실리콘",
         totalCapacity: 30,
@@ -101,7 +113,11 @@ export const CUPS = [
         totalLength: 70,
         bodyLength: 40,
         topToHole: "-",
-        stemType: "Long Thin",
+        stemType: {
+            name: '뾰족한 기둥 모양',
+            name_eng: 'Long Thin',
+            isNonslip: true
+        },
         stemLength: 30,
         material: "실리콘",
         totalCapacity: 23,
@@ -133,7 +149,11 @@ export const CUPS = [
         totalLength: 70,
         bodyLength: 50,
         topToHole: "-",
-        stemType: "Long Thin",
+        stemType: {
+            name: '뾰족한 기둥 모양',
+            name_eng: 'Long Thin',
+            isNonslip: true
+        },
         stemLength: 20,
         material: "실리콘",
         totalCapacity: 30,
@@ -159,7 +179,11 @@ export const CUPS = [
         totalLength: 65,
         bodyLength: 45,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: true
+        },
         stemLength: 15,
         material: "실리콘",
         totalCapacity: 15,
@@ -185,7 +209,11 @@ export const CUPS = [
         totalLength: 65,
         bodyLength: 50,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: true
+        },
         stemLength: 15,
         material: "실리콘",
         totalCapacity: 20,
@@ -210,7 +238,11 @@ export const CUPS = [
         totalLength: 60,
         bodyLength: 45,
         topToHole: "-",
-        stemType: "Solid Round",
+        stemType: {
+            name: '기둥 모양',
+            name_eng: 'Solid Round',
+            isNonslip: true
+        },
         stemLength: 15,
         material: "실리콘",
         totalCapacity: 30,
@@ -235,7 +267,11 @@ export const CUPS = [
         totalLength: 65,
         bodyLength: 46,
         topToHole: "-",
-        stemType: "Long Thin",
+        stemType: {
+            name: '뾰족한 기둥 모양',
+            name_eng: 'Long Thin',
+            isNonslip: false
+        },
         stemLength: 19,
         material: "실리콘",
         totalCapacity: 20,
@@ -260,7 +296,11 @@ export const CUPS = [
         totalLength: 69,
         bodyLength: 50,
         topToHole: "-",
-        stemType: "Long Thin",
+        stemType: {
+            name: '뾰족한 기둥 모양',
+            name_eng: 'Long Thin',
+            isNonslip: false
+        },
         stemLength: 19,
         material: "실리콘",
         totalCapacity: 30,
@@ -287,7 +327,11 @@ export const CUPS = [
         totalLength: 71,
         bodyLength: 46,
         topToHole: "-",
-        stemType: "Solid Flat",
+        stemType: {
+            name: '납작한 기둥 모양',
+            name_eng: 'Solid Flat',
+            isNonslip: true
+        },
         stemLength: 25,
         material: "실리콘",
         totalCapacity: 25,
@@ -314,7 +358,11 @@ export const CUPS = [
         totalLength: 70.4,
         bodyLength: 50.7,
         topToHole: "-",
-        stemType: "Solid Flat",
+        stemType: {
+            name: '납작한 기둥 모양',
+            name_eng: 'Solid Flat',
+            isNonslip: true
+        },
         stemLength: 19.7,
         material: "실리콘",
         totalCapacity: 30,
@@ -339,7 +387,11 @@ export const CUPS = [
         totalLength: 70,
         bodyLength: 47,
         topToHole: "-",
-        stemType: "Solid Flat",
+        stemType: {
+            name: '납작한 기둥 모양',
+            name_eng: 'Solid Flat',
+            isNonslip: true
+        },
         stemLength: 23,
         material: "실리콘",
         totalCapacity: 20,
@@ -364,7 +416,11 @@ export const CUPS = [
         totalLength: 70,
         bodyLength: 52,
         topToHole: "-",
-        stemType: "Solid Flat",
+        stemType: {
+            name: '납작한 기둥 모양',
+            name_eng: 'Solid Flat',
+            isNonslip: true
+        },
         stemLength: 18,
         material: "실리콘",
         totalCapacity: 29,
@@ -393,7 +449,11 @@ export const CUPS = [
         totalLength: 72,
         bodyLength: 47,
         topToHole: "-",
-        stemType: "Flat Tab",
+        stemType: {
+            name: '납작한 기둥 모양',
+            name_eng: 'Solid Flat',
+            isNonslip: true
+        },
         stemLength: 25,
         material: "실리콘",
         totalCapacity: 25,
@@ -422,7 +482,11 @@ export const CUPS = [
         totalLength: 72,
         bodyLength: 52,
         topToHole: "-",
-        stemType: "Flat Tab",
+        stemType: {
+            name: '납작한 기둥 모양',
+            name_eng: 'Solid Flat',
+            isNonslip: true
+        },
         stemLength: 20,
         material: "실리콘",
         totalCapacity: 30,
@@ -447,7 +511,11 @@ export const CUPS = [
         totalLength: 78,
         bodyLength: 66,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: true
+        },
         stemLength: 12,
         material: "실리콘",
         totalCapacity: 28,
@@ -472,7 +540,11 @@ export const CUPS = [
         totalLength: 78,
         bodyLength: 66,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: true
+        },
         stemLength: 12,
         material: "실리콘",
         totalCapacity: 32,
@@ -497,7 +569,11 @@ export const CUPS = [
         totalLength: 58,
         bodyLength: 47.5,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: true
+        },
         stemLength: 10.5,
         material: "실리콘",
         totalCapacity: 18,
@@ -522,7 +598,11 @@ export const CUPS = [
         totalLength: 58,
         bodyLength: 47.5,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: true
+        },
         stemLength: 10.5,
         material: "실리콘",
         totalCapacity: 23,
@@ -548,7 +628,11 @@ export const CUPS = [
         totalLength: 67,
         bodyLength: 50,
         topToHole: "-",
-        stemType: "Hollow Round",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Round',
+            isNonslip: true
+        },
         stemLength: 17,
         material: "실리콘",
         totalCapacity: 24,
@@ -573,7 +657,11 @@ export const CUPS = [
         totalLength: 67,
         bodyLength: 50,
         topToHole: "-",
-        stemType: "Hollow Round",
+         stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Round',
+            isNonslip: true
+        },
         stemLength: 17,
         material: "실리콘",
         totalCapacity: 24,
@@ -599,7 +687,11 @@ export const CUPS = [
         totalLength: 75,
         bodyLength: 57,
         topToHole: "-",
-        stemType: "Hollow Round",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Round',
+            isNonslip: true
+        },
         stemLength: 18,
         material: "실리콘",
         totalCapacity: 37,
@@ -624,7 +716,11 @@ export const CUPS = [
         totalLength: 75,
         bodyLength: 57,
         topToHole: "-",
-        stemType: "Hollow Round",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Round',
+            isNonslip: true
+        },
         stemLength: 18,
         material: "실리콘",
         totalCapacity: 37,
@@ -649,7 +745,11 @@ export const CUPS = [
         totalLength: 71,
         bodyLength: 50,
         topToHole: "-",
-        stemType: "Hollow Round",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Round',
+            isNonslip: true
+        },
         stemLength: 21,
         material: "실리콘",
         totalCapacity: 29.3,
@@ -674,7 +774,11 @@ export const CUPS = [
         totalLength: 71,
         bodyLength: 50,
         topToHole: "-",
-        stemType: "Hollow Round",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Round',
+            isNonslip: true
+        },
         stemLength: 21,
         material: "실리콘",
         totalCapacity: 28.8,
@@ -699,7 +803,11 @@ export const CUPS = [
         totalLength: 70,
         bodyLength: 53,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: true
+        },
         stemLength: 17,
         material: "실리콘",
         totalCapacity: 20,
@@ -725,7 +833,11 @@ export const CUPS = [
         totalLength: 70,
         bodyLength: 57,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: true
+        },
         stemLength: 13,
         material: "실리콘",
         totalCapacity: 30,
@@ -750,7 +862,11 @@ export const CUPS = [
         totalLength: 79,
         bodyLength: 54,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: false
+        },
         stemLength: 25,
         material: "천연고무(라텍스)",
         totalCapacity: 25,
@@ -775,7 +891,11 @@ export const CUPS = [
         totalLength: 79,
         bodyLength: 54,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: false
+        },
         stemLength: 25,
         material: "천연고무(라텍스)",
         totalCapacity: 21,
@@ -800,7 +920,11 @@ export const CUPS = [
         totalLength: 79,
         bodyLength: 54,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: false
+        },
         stemLength: 25,
         material: "실리콘",
         totalCapacity: 25,
@@ -825,7 +949,11 @@ export const CUPS = [
         totalLength: 79,
         bodyLength: 54,
         topToHole: "-",
-        stemType: "Hollow Tube",
+        stemType: {
+            name: '속이 빈 기둥 모양',
+            name_eng: 'Hollow Tube',
+            isNonslip: false
+        },
         stemLength: 25,
         material: "실리콘",
         totalCapacity: 21,

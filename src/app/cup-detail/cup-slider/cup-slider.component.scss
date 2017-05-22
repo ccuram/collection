@@ -17,6 +17,7 @@ $slide-ruler-margin: -77px;
 
 .sliders {
     overflow:hidden;
+    p { color: #333; }
     .ko { 
         @include typo($size-2, $weight-bold, $line-height-2, $letter-spacing-3, center);
     }

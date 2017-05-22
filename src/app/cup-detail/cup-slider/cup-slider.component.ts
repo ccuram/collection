@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+
 import { Cup } from '../../model/cup';
 import { AppService } from '../../app.service';
 
@@ -28,21 +29,40 @@ export class CupSliderComponent implements OnInit {
     
   
   isLeft: boolean = true;
-  isRight: boolean = true;
+  isRight: boolean = true;  
+
+  @ViewChild('sliderArea') sliderArea: ElementRef;
+  sliderHeight: number;
+  sliderWidth: number;
+
   
+
+
+  getElementSize() {
+    this.sliderWidth = this.sliderArea.nativeElement.offsetWidth;
+    this.sliderHeight = this.sliderArea.nativeElement.offsetHeight;
+    console.log(this.sliderWidth);
+  }
+  
+  
+
   constructor(
     private appService: AppService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit() {
+
+    
     this.activatedRoute.params.forEach((urlParameters) => {
       this.selectedIndex = parseInt(urlParameters['id']);
     });
     
     this.cups = this.appService.getCups();
     this.setReOrder();
+    this.getElementSize();
+    
   }
 
 

@@ -15,6 +15,16 @@ export class CupDetailComponent implements OnInit {
   imgType: string = '_total';
   imgColor: any; // { name: string , code: string }
 
+  
+
+  isModal: boolean = false;
+
+  onModal() {
+    console.log("onModal!");
+    this.isModal = !this.isModal;
+  }
+
+
 
   constructor(
     private appService: AppService,

@@ -35,7 +35,6 @@ $imgHeight: 600px;
 
 .viewer {
     background-repeat: no-repeat;
-   
 }
 
 
@@ -51,6 +50,11 @@ $imgHeight: 600px;
         @include size(20px, 20px);
         @include border-radius(50%);
     }
+    .img-info {
+        @include size(18px, 18px);
+        vertical-align: text-top;
+
+    }
 
 
     .hover-box {
@@ -61,6 +65,45 @@ $imgHeight: 600px;
 
         .isHover {
             border: 2px solid black;
+        }
+    }
+}
+
+
+
+
+.modal-content {
+    @include min-size(620px, 331px);
+    background-color: #e9e9e9;
+    @include border-radius(11px);
+    overflow: hidden;
+    .modal-wrapper {
+        padding: 40px;
+
+        .modal-title {
+            @include typo($size-2, $weight-extraBold, $line-height-2, $letter-spacing-3, center);
+        }
+        .modal-subtitle{
+            margin-top:10px;
+            @include typo($size-3, $weight-medium, $line-height-3, $letter-spacing-3, center);
+            span { color: red; }
+        }
+        .stem-col {
+            opacity:0.4;
+            border: solid 2px #333;
+            .stem-name {
+                @include typo($size-4, $weight-medium, $line-height-3, $letter-spacing-3, center);
+            }
+
+        }
+      
+
+        .is-active-stem {
+            opacity: 1.0;
+            background-color: #ffff8c;
+            
+            
+
         }
     }
 }
