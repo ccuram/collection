@@ -18,12 +18,14 @@ export class CupSliderComponent implements OnInit {
   currentPos = 0;                 // current Cup Element Pos. (based on selected Cup Element.)
   currentClass = 'translateX(0)'; // default setting.
 
-  cupWidth: number = 160; // cup element width.
+  cupCount: number = 5; // how many .column elemnt.
+  cupWidth: number; // cup element width.
   cupMargin: number = 4;  // cup element margin.
 
   offsetLev: number = 2;  // how many skips.
-  offsetX: number = (this.cupWidth + this.cupMargin) * this.offsetLev; // Move by this value.
+  offsetX: number; // Move by this value.
 
+  curLev: number = 0; // Current Cup Move Level. (-8 ~ +8, start 0.)
   maxLev: number; // Maximum number of moves allowed. (count)
   maxPos: number; // Maximum moveable area (px)
     
@@ -34,16 +36,6 @@ export class CupSliderComponent implements OnInit {
   @ViewChild('sliderArea') sliderArea: ElementRef;
   sliderHeight: number;
   sliderWidth: number;
-
-  
-
-
-  getElementSize() {
-    this.sliderWidth = this.sliderArea.nativeElement.offsetWidth;
-    this.sliderHeight = this.sliderArea.nativeElement.offsetHeight;
-    console.log(this.sliderWidth);
-  }
-  
   
 
   constructor(
@@ -53,8 +45,6 @@ export class CupSliderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    
     this.activatedRoute.params.forEach((urlParameters) => {
       this.selectedIndex = parseInt(urlParameters['id']);
     });
@@ -62,8 +52,34 @@ export class CupSliderComponent implements OnInit {
     this.cups = this.appService.getCups();
     this.setReOrder();
     this.getElementSize();
+    this.currentPos = -(this.cupWidth * (this.cups.length / 2) - (this.cupWidth * 2));
+    this.currentClass = 'translateX(' + this.currentPos + 'px)';
+    /**
+     * maxLev : 좌,우 이동 버튼을 최대 몇 번 누를 수 있게 할지.
+     * 현재컵은 슬라이드의 5개 컵 중 가운데에 위치한다.
+     * 현재컵 좌-우에는 목록의 이전/이후가 절반씩 위치한다.
+     * 전체 컵 개수에서 1을 뺀 값을 offsetLev로 나눈다.
+     * 1을 빼는 것은 현재 컵을 뺀 것이다.(현재 컵 기준으로 한다는 것은 현재 컵의 개수는 카운팅하지 않기 때문이다.)
+     * offsetLev : 몇 개의 컵씩 이동할 지. 
+     */
+    this.maxLev = Math.floor(((this.cups.length/2)-1) / this.offsetLev);
+    
+    console.log(this.maxLev);
+    console.log(this.currentClass);
     
   }
+
+
+
+
+  getElementSize() {
+    this.sliderWidth = this.sliderArea.nativeElement.offsetWidth;
+    this.sliderHeight = this.sliderArea.nativeElement.offsetHeight;
+    this.cupWidth = this.sliderWidth / this.cupCount;
+
+    this.offsetX = this.cupWidth * this.offsetLev;
+  }
+  
 
 
   // Relative Content Navigate
@@ -79,6 +95,7 @@ export class CupSliderComponent implements OnInit {
     let curIndex = this.selectedIndex;      // 현재 선택 index
     
     const divideIndex = Math.round((this.cups.length / 2));  //어디를 중간으로 할지를 결정하는 기준점.
+    console.log(divideIndex);
     let pointPrev = divideIndex;
     let pointNext = 1;
     let count = { prev: 0, next: 0 };
@@ -98,6 +115,7 @@ export class CupSliderComponent implements OnInit {
       prevArr.push(this.cups[prev]);
       pointPrev--;
     }
+    
 
 
     
@@ -143,26 +161,33 @@ export class CupSliderComponent implements OnInit {
 
     //최종 Arr 형태
     this.reOrderArr = prevArr.concat(currentArr, nextArr);
+    
   }
 
   
   // .slider-item element position update.
   updatePos(dir: string) {
+    // console.log("currentPos", this.currentPos);
+    // console.log("offsetX", this.offsetX);
+    // console.log("curLev before", this.curLev);
 
-    // Compute maxLev, maxPos
-    this.maxLev = (Math.round((this.cups.length / 2)) / this.offsetLev);
-    this.maxPos = (this.offsetX * (this.maxLev - 1));
+    if (dir === 'right') {
+      this.curLev++;
+      this.currentPos = this.currentPos - this.offsetX;
+
+    } else if (dir === 'left') {
+      this.curLev--;
+      this.currentPos = this.currentPos + this.offsetX;
+    }
+
+
+    this.isLeft = (this.curLev <= (-this.maxLev)) ? false : true;
+    this.isRight = (this.curLev >= this.maxLev) ? false : true;
     
-    // Check whether to activate. (left btn, right btn).
-    this.isLeft = (this.currentPos >= this.maxPos) ? false : true; 
-    this.isRight = (this.currentPos <= -(this.maxPos))? false : true; 
-    
-    // Change value of currentPosition
-    this.currentPos = (dir === 'right')
-      ? (this.currentPos - this.offsetX)
-      : (this.currentPos + this.offsetX);
-    
-    // Set element position by this result.
+
+    console.log("currentPos", this.currentPos);
+    console.log("curLev after", this.curLev);
+
     this.currentClass = 'translateX(' + this.currentPos + 'px)';
   }
   

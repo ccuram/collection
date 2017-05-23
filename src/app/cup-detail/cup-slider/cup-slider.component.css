@@ -4334,6 +4334,9 @@ html {
 
 .sliders {
   overflow: hidden; }
+  .sliders .slider-item-div {
+    width: 20%;
+    height: auto; }
   .sliders p {
     color: #333; }
   .sliders .ko {

@@ -6,7 +6,7 @@ type ColorType = {
 type StemType = {
   name: string;
   name_eng: string;
-  isNonSlip: boolean;
+  isNonslip: boolean;
 }
 
 export class Cup {
