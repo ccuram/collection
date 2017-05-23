@@ -29,7 +29,10 @@ export class CupSliderComponent implements OnInit {
   maxLev: number; // Maximum number of moves allowed. (count)
   maxPos: number; // Maximum moveable area (px)
     
-  
+  /**
+   * isLeft : 왼쪽 이동 기능 on/off
+   * isRight : 오른쪽 이동 기능 on/off
+   */
   isLeft: boolean = true;
   isRight: boolean = true;  
 
