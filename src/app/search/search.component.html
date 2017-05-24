@@ -1,18 +1,28 @@
 <!-- search input  -->
-<div class="columns is-multiline" (focusin)="changeStateResult('on')" (focusout)="changeStateResult('off')">
-  <div class="column is-11">
-    <input class="input is-small" type="text" [(ngModel)]="key"  placeholder="검색"
-          >
-  </div>
-  <div class="column is-1 search-icon">
-    <img src="/assets/images/icons/search.png"/>
-  </div>
+<div class="columns is-marginless is-multiline"  (focusout)="changeStateResult('off')">
+  <div class="column is-12 input-container ">
+    <div class="columns is-marginless">
+      <div class="column is-10 is-paddingless">
+        <input (focusin)="changeStateResult('on')"  type="text" [(ngModel)]="key"  placeholder="검색" />
+      </div>
+      <div class="column is-1 search-icon" [style.background-image]="'url(/assets/images/icons/search.png)'">
+      <!--<div class="column is-2 is-paddingless search-icon">-->
+        &nbsp;
+        <!--<img src="/assets/images/icons/search.png"/>-->
+      </div>
+    </div>
 
-  <div *ngIf="isResult" class="columns is-multiline">
-    <div *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
-        (click)="gotoDetail(cup)" class="column is-12 search-row">
-      <p (click)="gotoDetail(cup)">{{ cup.name }}</p>
+  </div>
+  
+  <div class="column is-12">
+     <div *ngIf="isResult" class="columns is-multiline">
+      <div *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
+          (click)="gotoDetail(cup)" class="column is-12 search-row">
+        <p (click)="gotoDetail(cup)">{{ cup.name }}</p>
+      </div>
     </div>
   </div>
+ 
 </div>
 
+<!--[style.background-image]="'url(/assets/images/cups/spec/'+ cup.imgUrls + '_' + imgColor.name + '.png)'"-->

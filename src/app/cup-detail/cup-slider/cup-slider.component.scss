@@ -2,13 +2,12 @@
 $slide-ruler-margin: -77px;
 
 
-.column {
-  @include testShadow();
-}
-
 
 .dir {
-  height: 80%;
+  @include size(auto, 100%);
+  background-repeat: no-repeat;
+  // background-size: contain;
+  background-position: center center;
 }
 
 .slider-title {

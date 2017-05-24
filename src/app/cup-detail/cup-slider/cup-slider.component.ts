@@ -66,10 +66,6 @@ export class CupSliderComponent implements OnInit {
      * offsetLev : 몇 개의 컵씩 이동할 지. 
      */
     this.maxLev = Math.floor(((this.cups.length/2)-1) / this.offsetLev);
-    
-    console.log(this.maxLev);
-    console.log(this.currentClass);
-    
   }
 
 
@@ -143,14 +139,7 @@ export class CupSliderComponent implements OnInit {
         }
       }
     }
-
-
     
-    
-    
-
-
-
     // nextArr : 8 to 15
     for (let j = divideIndex; j < lastIndex; j++) {
       let next = curIndex + pointNext;
@@ -188,8 +177,8 @@ export class CupSliderComponent implements OnInit {
     this.isRight = (this.curLev >= this.maxLev) ? false : true;
     
 
-    console.log("currentPos", this.currentPos);
-    console.log("curLev after", this.curLev);
+    // console.log("currentPos", this.currentPos);
+    // console.log("curLev after", this.curLev);
 
     this.currentClass = 'translateX(' + this.currentPos + 'px)';
   }

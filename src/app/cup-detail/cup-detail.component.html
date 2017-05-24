@@ -1,6 +1,6 @@
 <section class="section" >
   <div class="container cup-title">
-      <p class="info-name-kor">{{ cup.name }}</p>
+      <p util-Tooltip colorName="#test" class="info-name-kor">{{ cup.name }}</p>
       <p class="info-name-eng">{{ cup.name_eng }}</p>
   </div>
 </section>
@@ -20,18 +20,18 @@
 
       <!-- spec -->
       <div class="column is-4 spec">
-
-
         <div class="columns is-multiline">
+          <!-- color -->
           <div class="column is-half"><p class="item">색상</p></div>
           <div class="column is-half has-text-right">
-  
-            <a *ngFor="let col of cup.color"
+            <a *ngFor="let col of cup.color; let i = index;"
                 [style.background-color]="col.code"
                 class="button is-small color-chip"
                 [class.is-active]="imgColor === col"
-                (click)="changeColor(col)">&nbsp;</a>
-
+                (click)="changeColor(col)"
+                (mouseenter)="viewColor(true, i)"
+                (mouseleave)="viewColor(false, i)"
+                >&nbsp;</a>
           </div>
 
           <div class="column is-half"><p class="item">제조국</p></div>
@@ -43,7 +43,6 @@
           <div class="column is-half"><p class="item">가격</p></div>
           <div class="column is-half"><p class="value">{{ cup.price }} 단위</p> </div>
         </div>
-
         <!-- hover area -->
         <div class="columns is-multiline has-text-centered  hover-box">
           <div class="column is-half" [class.isHover]="imgType === '_total'"
@@ -92,40 +91,21 @@
 
           <div class="column is-half">
             <p class="item">손잡이의 형태
-              <span><img (click)="onModal()" class="img-info" src="assets/images/icons/info.png" /></span></p>
+              <span><img (click)="onModal()" class="img-info" src="assets/images/icons/more.png" /></span></p>
           </div>
           <div class="column is-half"><p class="value">{{ cup.stemType.name }}</p></div>
 
           <div class="column is-half"><p class="item">공식 홈페이지로 이동</p></div>
           <div class="column is-half">
-            <a [href]="cup.officialsite">
+            <a href="#" (click)="openWindow(cup.officialsite)">
               <img src="/assets/images/icons/home.png"/>
             </a>
           </div>
         </div>
-
+        <!-- social share feature -->
         <div class="column is-3 is-offset-9">
           <div class="columns">
-            <div class="column is-3">
-              <a [href]="cup.officialsite">
-                <img src="/assets/images/icons/facebook_sketch.png"/>
-              </a>
-            </div>
-            <div class="column is-3">
-              <a [href]="cup.officialsite">
-                <img src="/assets/images/icons/twitter_sketch.png"/>
-              </a>
-            </div>
-            <div class="column is-3">
-              <a [href]="cup.officialsite">
-                <img src="/assets/images/icons/instagram_sketch.png"/>
-              </a>
-            </div>
-            <div class="column is-3">
-              <a [href]="cup.officialsite">
-                <img src="/assets/images/icons/share.png"/>
-              </a>
-            </div>
+            <util-social></util-social>
           </div>
         </div>
       </div>
@@ -134,14 +114,14 @@
   </div>
 </section>
 
-
+<!-- cup slider User Interface -->
 <section class="section slider">
   <cup-slider></cup-slider>
 </section>
 
 
 
-
+<!-- Adavanced info : about stem -->
 <div class="modal"
   [class.is-active]="isModal">
   <div (click)="onModal()" class="modal-background"></div>
@@ -188,3 +168,10 @@
   </div>
   <button (click)="onModal()" class="modal-close"></button>
 </div>
+
+
+<div class="tooltip" *ngIf="isTooltip" [ngStyle]="{'left': curTooltipPos.left+'px', 'top': curTooltipPos.top+'px'}">
+   <p> {{ curTooltipInfo }} </p>
+</div>
+
+<!--<util-tooltip [pos]="tooltipPos"></util-tooltip>-->

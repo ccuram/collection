@@ -33,7 +33,9 @@
 }
 
 
-
+@mixin transform-origin($x-axis, $y-axis, $z-axis){
+  transform-origin: $x-axis $y-axis $z-axis;
+}
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;

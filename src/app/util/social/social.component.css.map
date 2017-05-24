@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,GAAI;EACA,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI",
+"sources": ["social.component.scss"],
+"names": [],
+"file": "social.component.css"
+}

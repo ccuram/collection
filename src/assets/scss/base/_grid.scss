@@ -22,10 +22,11 @@ html {
         z-index: $z-index-nav;
 
         .logo { @include size(50px, 50px); }
-        .search-box {            
-            position: absolute;
-            // min-width: 238px;
-            // @include size(percentage(238px/$base), auto);   
+        .search-wrapper {
+            @include size(238px, 40px);
+            .search-box {            
+                position: absolute;
+            }
         }
 }
 

@@ -21,6 +21,8 @@ import { SearchComponent } from './search/search.component';
 import { CustomSearchPipe } from './search/custom-search.pipe';
 import { OrderPipe } from './pipes/order.pipe';
 import { FooterComponent } from './ui/footer/footer.component';
+import { SocialComponent } from './util/social/social.component';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { FooterComponent } from './ui/footer/footer.component';
     SearchComponent,
     CustomSearchPipe,
     OrderPipe,
-    FooterComponent
+    FooterComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,

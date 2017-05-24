@@ -4311,17 +4311,39 @@ html {
   .nav .logo {
     width: 50px;
     height: 50px; }
-  .nav .search-box {
-    position: absolute; }
+  .nav .search-wrapper {
+    width: 238px;
+    height: 40px; }
+    .nav .search-wrapper .search-box {
+      position: absolute; }
 
 .main {
   z-index: 100;
   margin-bottom: 30px;
   overflow-x: hidden; }
 
-.search-icon {
-  padding-left: 0;
-  padding-right: 0; }
+.input-container {
+  width: 238px;
+  height: 40px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  overflow: hidden;
+  padding: 2px;
+  border: 2px solid #2a2a2a; }
+  .input-container input {
+    width: 204px;
+    height: 34px;
+    border: none;
+    box-shadow: none; }
+    .input-container input:focus {
+      outline: none; }
+  .input-container .search-icon {
+    width: auto;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-position: left center; }
 
 .search-row {
   background-color: rgba(236, 236, 236, 0.8);

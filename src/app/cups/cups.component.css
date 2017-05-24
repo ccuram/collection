@@ -4311,8 +4311,11 @@ html {
   .nav .logo {
     width: 50px;
     height: 50px; }
-  .nav .search-box {
-    position: absolute; }
+  .nav .search-wrapper {
+    width: 238px;
+    height: 40px; }
+    .nav .search-wrapper .search-box {
+      position: absolute; }
 
 .main {
   z-index: 100;
@@ -4343,7 +4346,7 @@ html {
   z-index: 100;
   width: 900%;
   height: 1px;
-  background-color: #7a7a7a;
+  background-color: #333;
   position: absolute;
   margin-top: -120px;
   transform: translateX(-500px); }

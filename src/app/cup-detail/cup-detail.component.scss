@@ -19,10 +19,6 @@ $imgHeight: 600px;
 
 
 
-.column {
-    @include testShadow();
-}
-
 .cup-title {
     p { color: $text-color; }
     .info-name-kor { 
@@ -96,14 +92,43 @@ $imgHeight: 600px;
             }
 
         }
-      
-
         .is-active-stem {
             opacity: 1.0;
             background-color: #ffff8c;
-            
-            
-
         }
     }
 }
+
+
+
+
+.tooltip {
+    @include border-radius(10px);
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 1000;
+    background-color: $tooltip-bg;
+    
+    
+    p {
+        @include typo($size-4, $weight-medium, $line-height-3, $letter-spacing-3, center);
+        padding: 4px 14px;
+        color: $tooltip-text;
+    }
+    
+    
+}
+
+/*
+.tooltip {
+    
+    // @include transform-origin(0, 50%, 0);
+    
+    // transform-origin: left 50% 0;
+    
+    margin: 0 auto;
+    
+    
+
+}
+*/
