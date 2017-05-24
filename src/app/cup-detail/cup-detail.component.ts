@@ -19,6 +19,7 @@ export class CupDetailComponent implements OnInit, AfterViewInit {
   
   // modal
   isModal: boolean = false;
+  isNonslip: boolean = false;
 
 
 
@@ -100,8 +101,11 @@ export class CupDetailComponent implements OnInit, AfterViewInit {
 
   
 
-  onModal() {
+  onModal(cup: Cup) {
+    this.isNonslip = cup.stemType.isNonslip;
     this.isModal = !this.isModal;
+
+
   }
 
 

@@ -5,17 +5,15 @@
       <div class="column is-10 is-paddingless">
         <input (focusin)="changeStateResult('on')"  type="text" [(ngModel)]="key"  placeholder="검색" />
       </div>
-      <div class="column is-1 search-icon" [style.background-image]="'url(/assets/images/icons/search.png)'">
-      <!--<div class="column is-2 is-paddingless search-icon">-->
+      <div class="column is-1  search-icon" [style.background-image]="'url(/assets/images/icons/search.png)'">
         &nbsp;
-        <!--<img src="/assets/images/icons/search.png"/>-->
       </div>
     </div>
 
   </div>
   
   <div class="column is-12">
-     <div *ngIf="isResult" class="columns is-multiline">
+     <div *ngIf="isResult" class="columns is-multiline search-row-wrapper">
       <div *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
           (click)="gotoDetail(cup)" class="column is-12 search-row">
         <p (click)="gotoDetail(cup)">{{ cup.name }}</p>

@@ -10,6 +10,11 @@
   min-height: $min-height;
 }
 
+@mixin max-size($max-width, $max-height) {
+  max-width: $max-width;
+  max-height: $max-height;
+}
+
 @mixin margin($top, $right, $bottom, $left) {
   margin-top: $top;
   margin-right: $right;

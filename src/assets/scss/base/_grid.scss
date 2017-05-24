@@ -21,7 +21,7 @@ html {
 
 .nav {
         z-index: $z-index-nav;
-
+        margin-top: 20px;
         .logo { @include size(50px, 50px); }
         .search-wrapper {
             @include size(238px, 40px);

@@ -15,8 +15,11 @@ $size-4: 0.875rem;
 $letter-spacing-1: 0.08125rem;
 $letter-spacing-2: 0.0625rem;
 $letter-spacing-3: 0.05rem;
+$letter-spacing-4: 0.04rem;
+$letter-spacing-5: 0.03rem;
 
 // 줄간격 변수
+
 $line-height-1: 0.83;
 $line-height-2: 1.39;
 $line-height-3: 1.43;
@@ -31,7 +34,7 @@ $weight-extraBold: 800;
 
 
 /* color */
-$main-color: #FFEF33;
+$main-color: #ffff8c;
 $main-color-light: lighten($main-color, 20%);
 $main-color-dark: darken($main-color, 20%);
 
@@ -55,6 +58,9 @@ $text-item: #1d1d1d;
     $selectedInfo: #000;
     $active-stem: #ffff8c;
     $inactive-opacity: 0.4;
+
+// icon
+$icon-opacity-before: 0.25;
 
 //card for cup grid.
 $cardWidth: 300px;

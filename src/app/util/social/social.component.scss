@@ -1,4 +1,17 @@
-img {
-    width: 18px;
-    height: auto;
+@import 'assets/scss/global';
+
+
+
+.btn-social {
+    @include min-size(25px, 25px);
+    margin: 0 2px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    opacity: $icon-opacity-before;
+
+    &:hover {
+        opacity: 1;
+    }
 }

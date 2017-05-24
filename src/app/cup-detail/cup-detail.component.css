@@ -4307,7 +4307,8 @@ html {
   box-sizing: border-box; }
 
 .nav {
-  z-index: 200; }
+  z-index: 200;
+  margin-top: 20px; }
   .nav .logo {
     width: 50px;
     height: 50px; }
@@ -4359,10 +4360,13 @@ html {
   border-radius: 50%;
   background-clip: padding-box;
   /* stops bg color from leaking outside the border: */ }
-.spec .img-info {
+.spec .icon-info {
   width: 18px;
   height: 18px;
-  vertical-align: text-top; }
+  vertical-align: text-top;
+  opacity: 0.25; }
+  .spec .icon-info:hover {
+    opacity: 1; }
 .spec .hover-box {
   margin: 20px 0; }
   .spec .hover-box p {
@@ -4394,21 +4398,32 @@ html {
       line-height: 1.43;
       letter-spacing: 0.05rem;
       text-align: center; }
-      .modal-content .modal-wrapper .modal-subtitle span {
+      .modal-content .modal-wrapper .modal-subtitle .selectedInfo {
         color: #000;
         font-weight: 800; }
-    .modal-content .modal-wrapper .stem-col {
-      opacity: 0.4;
-      border: solid 2px #333; }
-      .modal-content .modal-wrapper .stem-col .stem-name {
-        font-size: 0.875rem;
-        font-weight: 500;
-        line-height: 1.43;
-        letter-spacing: 0.05rem;
-        text-align: center; }
-    .modal-content .modal-wrapper .is-active-stem {
-      opacity: 1.0;
-      background-color: #ffff8c; }
+    .modal-content .modal-wrapper .stem-col-wrapper {
+      margin-top: 7px; }
+      .modal-content .modal-wrapper .stem-col-wrapper .stem-col {
+        padding: 10px;
+        box-shadow: 0 0 0 1px #333 inset;
+        outline: 1px solid #333; }
+        .modal-content .modal-wrapper .stem-col-wrapper .stem-col .stem-name {
+          font-size: 0.875rem;
+          font-weight: 500;
+          line-height: 1.2;
+          letter-spacing: 0.04rem;
+          text-align: center; }
+      .modal-content .modal-wrapper .stem-col-wrapper .is-active-stem {
+        opacity: 1.0;
+        background-color: #ffff8c; }
+
+.icon-link {
+  opacity: 0.25; }
+  .icon-link img {
+    max-width: 18px;
+    max-height: 16px; }
+  .icon-link:hover {
+    opacity: 1; }
 
 .tooltip {
   -webkit-border-radius: 10px;

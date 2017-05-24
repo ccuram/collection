@@ -91,23 +91,26 @@
 
           <div class="column is-half">
             <p class="item">손잡이의 형태
-              <span><img (click)="onModal()" class="img-info" src="assets/images/icons/more.png" /></span></p>
+              <span><img (click)="onModal(cup)" class="icon-info" src="assets/images/icons/more_icon@2x.png" /></span></p>
           </div>
           <div class="column is-half"><p class="value">{{ cup.stemType.name }}</p></div>
 
-          <div class="column is-half"><p class="item">공식 홈페이지로 이동</p></div>
-          <div class="column is-half">
-            <a href="#" (click)="openWindow(cup.officialsite)">
-              <img src="/assets/images/icons/home.png"/>
-            </a>
+          <div class="column is-12">
+            <p class="item">공식 홈페이지로 이동 
+                <span class="icon-link">
+                  <img (click)="openWindow(cup.officialsite)"  src="/assets/images/icons/link_hover@2x.png"/>
+                </span>
+            </p>
           </div>
+          
         </div>
         <!-- social share feature -->
-        <div class="column is-3 is-offset-9">
+        <div class="column is-4 is-offset-8">
           <div class="columns">
             <util-social></util-social>
           </div>
         </div>
+
       </div>
 
     </div>
@@ -124,18 +127,21 @@
 <!-- Adavanced info : about stem -->
 <div class="modal"
   [class.is-active]="isModal">
-  <div (click)="onModal()" class="modal-background"></div>
+  <div (click)="onModal(cup)" class="modal-background"></div>
   <div class="modal-content">
+
     <div class="columns is-multiline modal-wrapper">
-      <div class="column is-12 has-text-centered">
-        <p class="modal-title"> 손잡이 형태 </p>
-      </div>
+      <!--<div class="column is-12 has-text-centered">
+        
+      </div>-->
       <div class="column is-12  has-text-centered">
-        <p class="modal-subtitle"> 생리컵의 손잡이 기본적인 형태를 크게 6가지로 분류한다면 <br/>
-          <span>{{ cup.name }}</span> 의 손잡이는 <span>{{ cup.stemType.name }}</span>에 가깝습니다.</p>
+        <p class="modal-title"> 손잡이 형태 </p>
+        <p class="modal-subtitle"> 생리컵 손잡이의 기본적인 형태를 크게 6가지로 분류한다면 <br/>
+          <span class="selectedInfo">{{ cup.name }}</span>의 손잡이는 <span  class="selectedInfo">{{ cup.stemType.name }}</span>에 <span *ngIf="isNonslip"> 가까우며,</span><span *ngIf="!isNonslip"> 가깝습니다.</span></p>
+          <p *ngIf="isNonslip" class="modal-subtitle is-marginless">미끄럼 방지용 요철이 있습니다.</p>
       </div>
-      
-      <div class="column has-text-centered">
+
+      <div class="column has-text-centered stem-col-wrapper">
         <div class="columns is-gapless">
           <div class="column is-2 stem-col" [class.is-active-stem]="(cup.stemType.name === '뾰족한 기둥 모양')">
             <img class="stem-img"  src="assets/images/cups/stem/stem1-selected.png" alt="뾰족한 기둥 모양">
@@ -166,7 +172,7 @@
       </div>
     </div>
   </div>
-  <button (click)="onModal()" class="modal-close"></button>
+  <button (click)="onModal(cup)" class="modal-close"></button>
 </div>
 
 

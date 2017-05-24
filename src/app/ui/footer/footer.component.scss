@@ -10,7 +10,9 @@
     p { 
         @include typo($size-4, $weight-medium, $line-height-3, $letter-spacing-3, left);
     }
-
+    a {
+        color: $text-color;
+    }
 
     .footer-title{
         @include typo($size-2, $weight-bold, $line-height-2, $letter-spacing-2, left);

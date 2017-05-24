@@ -4307,7 +4307,8 @@ html {
   box-sizing: border-box; }
 
 .nav {
-  z-index: 200; }
+  z-index: 200;
+  margin-top: 20px; }
   .nav .logo {
     width: 50px;
     height: 50px; }
@@ -4336,21 +4337,33 @@ html {
     width: 204px;
     height: 34px;
     border: none;
-    box-shadow: none; }
+    box-shadow: none;
+    font-size: 0.875rem;
+    padding-left: 4px;
+    padding-bottom: 5px; }
     .input-container input:focus {
       outline: none; }
   .input-container .search-icon {
     width: auto;
     height: 34px;
     background-repeat: no-repeat;
-    background-position: left center; }
+    background-position: right 36%; }
 
-.search-row {
-  background-color: rgba(236, 236, 236, 0.8);
-  text-align: left; }
-  .search-row p {
-    font-size: 0.75rem;
-    font-weight: 300;
-    letter-spacing: 0.08125rem; }
+.search-row-wrapper {
+  max-width: 200px;
+  max-height: 180px;
+  margin-left: 10px;
+  overflow: scroll; }
+  .search-row-wrapper .search-row {
+    background-color: rgba(236, 236, 236, 0.8);
+    text-align: left; }
+    .search-row-wrapper .search-row p {
+      font-size: 0.875rem;
+      font-weight: 300;
+      letter-spacing: 0.08125rem; }
+    .search-row-wrapper .search-row:hover {
+      background-color: #ffff8c; }
+      .search-row-wrapper .search-row:hover p {
+        font-weight: bold; }
 
 /*# sourceMappingURL=search.component.css.map */

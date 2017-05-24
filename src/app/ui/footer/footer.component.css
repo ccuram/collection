@@ -4307,7 +4307,8 @@ html {
   box-sizing: border-box; }
 
 .nav {
-  z-index: 200; }
+  z-index: 200;
+  margin-top: 20px; }
   .nav .logo {
     width: 50px;
     height: 50px; }
@@ -4323,7 +4324,7 @@ html {
   overflow-x: hidden; }
 
 .footer {
-  background-color: #FFEF33; }
+  background-color: #ffff8c; }
   .footer img {
     width: auto;
     height: 24px; }
@@ -4333,6 +4334,8 @@ html {
     line-height: 1.43;
     letter-spacing: 0.05rem;
     text-align: left; }
+  .footer a {
+    color: #333; }
   .footer .footer-title {
     font-size: 1.125rem;
     font-weight: bold;

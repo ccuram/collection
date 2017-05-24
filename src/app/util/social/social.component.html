@@ -1,18 +1,23 @@
 
-
-<a href="#"  (click)="socialShare('facebook')" alt="Share on Facebook">
-    <img src="/assets/images/icons/facebook_sketch.png">
-</a>
-
-<a href="#" (click)="socialShare('twitter')" alt="Share on twitter">
-    <img src="/assets/images/icons/twitter_sketch.png">
-</a>
-
-
-<a href="#"  (click)="socialShare('instagram')" alt="Share on instagram">
-    <img src="/assets/images/icons/instagram_sketch.png">
-</a>
-
-<a href="#" (click)="socialShare('copylink')" alt="Share on link">
-    <img src="/assets/images/icons/link.png">
-</a>
+<div class="columns">
+    <div class="column is-paddingless is-3 btn-social" (click)="socialShare('facebook')" 
+         [style.background-image]="'url(assets/images/icons/fb_icon.png)'" alt="Share on Facebook">
+         &nbsp;
+        <!--<img class="icon-social" src="/assets/images/icons/fb_icon.png">-->
+    </div>
+    <div class="column is-paddingless is-3 btn-social" (click)="socialShare('twitter')" alt="Share on twitter"
+        [style.background-image]="'url(assets/images/icons/tw_icon.png)'" >
+        &nbsp;
+        <!--<img class="icon-social" src="/assets/images/icons/tw_icon.png">-->
+    </div>
+    <div class="column is-paddingless is-3 btn-social" (click)="socialShare('instagram')" 
+        [style.background-image]="'url(assets/images/icons/insta_icon.png)'" alt="Share on instagram">
+        <!--<img class="icon-social" src="/assets/images/icons/insta_icon.png">-->
+        &nbsp;
+    </div>
+    <div class="column is-paddingless is-3 btn-social" (click)="socialShare('copylink')" alt="Share on link"
+        [style.background-image]="'url(assets/images/icons/share_icon.png)'" >
+        &nbsp;
+        <!--<img class="icon-social" src="/assets/images/icons/share_icon.png">-->
+    </div>
+</div>
