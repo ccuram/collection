@@ -4314,6 +4314,58 @@ html {
   margin-bottom: 30px;
   overflow-x: hidden; }
 
+.hover-enter {
+  transform-origin: center;
+  animation: spring-up 0.4s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+
+.hover-leave {
+  transform-origin: center;
+  animation: spring-down 0.8s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+
+.hover-enter-slide {
+  transform-origin: center;
+  animation: spring-up-slide 0.2s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+
+.hover-leave-slide {
+  transform-origin: center;
+  animation: spring-down-slide 0.4s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+
+@keyframes spring-up {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-50px) scale(1.05); } }
+@keyframes spring-down {
+  0% {
+    transform: translateY(-50px) scale(1.05); }
+  100% {
+    transform: translateY(0) scale(1); } }
+@keyframes spring-up-slide {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-25px) scale(1.05); } }
+@keyframes spring-down-slide {
+  0% {
+    transform: translateY(-25px) scale(1.05); }
+  100% {
+    transform: translateY(0) scale(1); } }
+/*
+
+@keyframes spring-up{
+  0% {transform: translate(0,0); }
+  100%{transform: translate(0,-50px) scale(1.05);}
+}
+
+@keyframes spring-down{
+   0% {transform: translate(0,-50px) scale(1.05);}
+  100%{transform: translate(0,0) scale(1);}
+}
+*/
+.image:hover {
+  transform-origin: center;
+  animation: spring-up-slide 0.2s cubic-bezier(1, 0.015, 0.295, 1.225) forwards running; }
+
 .dir {
   width: auto;
   height: 100%;

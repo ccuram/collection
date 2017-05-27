@@ -15,6 +15,11 @@ export class CupSliderComponent implements OnInit {
   reOrderArr = [];
   selectedIndex: number;
 
+  // hover
+  curHoverCupId: any;
+
+
+
   currentPos = 0;                 // current Cup Element Pos. (based on selected Cup Element.)
   currentClass = 'translateX(0)'; // default setting.
 
@@ -182,5 +187,14 @@ export class CupSliderComponent implements OnInit {
 
     this.currentClass = 'translateX(' + this.currentPos + 'px)';
   }
+
+
+
+
+  cupUp(cup: Cup) {
+    console.log("cupUp!", cup.name);
+    this.curHoverCupId = cup.id;
+  }
+
   
 }

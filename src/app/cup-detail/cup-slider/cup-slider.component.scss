@@ -1,5 +1,15 @@
 @import 'assets/scss/global';
+@import 'assets/scss/utils/animations';
 $slide-ruler-margin: -77px;
+
+.image {
+    &:hover {
+        transform-origin: center;
+        animation: spring-up-slide 0.2s cubic-bezier(1,.015,.295,1.225) forwards running;
+    }
+
+}
+
 
 
 

@@ -1,35 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { trigger, state, transition, animate, style, keyframes } from '@angular/animations';
+// import { trigger, state, transition, animate, style, keyframes } from '@angular/animations';
 import { AppService } from '../app.service';
 import { Cup } from '../model/cup';
 
-// animations: [
-//   trigger('flyInOut', [
-//     state('in', style({transform: 'translateX(0)'})),
-//     transition('void => *', [
-//       animate(300, keyframes([
-//         style({opacity: 0, transform: 'translateX(-100%)', offset: 0}),
-//         style({opacity: 1, transform: 'translateX(15px)',  offset: 0.3}),
-//         style({opacity: 1, transform: 'translateX(0)',     offset: 1.0})
-//       ]))
-//     ]),
-//     transition('* => void', [
-//       animate(300, keyframes([
-//         style({opacity: 1, transform: 'translateX(0)',     offset: 0}),
-//         style({opacity: 1, transform: 'translateX(-15px)', offset: 0.7}),
-//         style({opacity: 0, transform: 'translateX(100%)',  offset: 1.0})
-//       ]))
-//     ])
-//   ])
-// ]
-
-
-@Component({
-  selector: 'app-cups',
-  templateUrl: './cups.component.html',
-  styleUrls: ['./cups.component.css'],
-  animations: [
+/*
+animations: [
     trigger('hoverState', [
       state('unhover', style({
         // transform: 'translateY(0px) scale(1)'
@@ -54,6 +30,13 @@ import { Cup } from '../model/cup';
       transition('onhover => unhover', animate('100ms ease-out'))
     ])
   ]
+  */
+
+
+@Component({
+  selector: 'app-cups',
+  templateUrl: './cups.component.html',
+  styleUrls: ['./cups.component.css']
 })
 export class CupsComponent implements OnInit {
 
@@ -63,7 +46,7 @@ export class CupsComponent implements OnInit {
   sortKey = "totalLength";
 
   // hover
-  curHoverCupId: number;
+  curHoverCupId: any;
 
   constructor(
     private appService: AppService,

@@ -15,18 +15,20 @@
           <div class="columns sliders" #sliderArea >
            
             <div class="column is-2 slider-item-div"
-                 *ngFor="let reorder of reOrderArr"
+                  *ngFor="let reorder of reOrderArr"
                   [ngStyle]="{ 'transform' : currentClass }">
 
-                 <a class="slider-item"
-                    [href]="getTargetURL(reorder.id)">
-                    <figure class="image">
-                      <img [src]="'/assets/images/cups/'+ reorder.imgUrls + '.png'">
-                      <div align="center" class="rulers"> &nbsp; </div>
+                 <a class="slider-item" [href]="getTargetURL(reorder.id)">
+                    
+                    <figure class="image"
+                      [class.hover-leave-slide]="curHoverCupId === reorder.id"
+                      (mouseleave)="cupUp(reorder)">
+                        <img [src]="'/assets/images/cups/'+ reorder.imgUrls + '.png'">
                     </figure>
+
                     <p class="ko">{{reorder.name}}</p>
                     <p class="en"> {{ reorder.name_eng }} </p> 
-                  </a>
+                </a>
             </div>
             
           </div>

@@ -1,17 +1,24 @@
 @import 'assets/scss/global';
 @import 'assets/scss/utils/animations';
+
+.cups {
+    &:hover {
+        transform-origin: center;
+        animation: spring-up 0.2s cubic-bezier(1,.015,.295,1.225) forwards running;
+    }
+
+}
 .is-margin-top {
     margin-top: 100px;
 }
 
+.cup-names {
+    margin-top: -40px;
+    .ko { @include typo($size-2, $weight-bold, $line-height-2, $letter-spacing-2, center); }
+    .en { @include typo($size-4, $weight-medium, $line-height-3, $letter-spacing-3, center); }
 
-.ko {
-    @include typo($size-2, $weight-bold, $line-height-2, $letter-spacing-2, center);
 }
 
-.en {
-    @include typo($size-4, $weight-medium, $line-height-3, $letter-spacing-3, center);
-}
 
 .rulers {
     z-index:100;
