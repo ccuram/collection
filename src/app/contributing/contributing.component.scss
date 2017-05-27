@@ -1,9 +1,26 @@
 @import 'assets/scss/global';
 
-.column {
-    margin-bottom: 40px;
-    p { 
-        @include size(720px, auto);
-        margin: 15px auto;
-    }
+
+p{
+    text-align: center;
 }
+
+.index {
+    text-align: center;
+}
+
+.hero {
+    .title {
+        @include typo($size-1, $weight-bold, $line-height-1, $letter-spacing-1, center);
+    }
+    .hero-title { 
+        margin-bottom: 30px;
+        @include typo(1.375rem, $weight-extraBold, $line-height-2, $letter-spacing-3, center);
+    }
+    .hero-text {
+        @include typo($size-3, $weight-medium, $line-height-3, $letter-spacing-3, center);
+     }
+   
+}
+
+

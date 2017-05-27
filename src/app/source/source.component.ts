@@ -13,4 +13,10 @@ export class SourceComponent implements OnInit {
     window.scrollTo(0, 0);
   }
 
+
+  openWindow(url: string) {
+    let urls = 'http://' + url;
+
+    window.open(urls);
+  }
 }

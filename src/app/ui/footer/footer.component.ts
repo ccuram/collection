@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  comment: string = "누군가 정리해줬으면 좋겠다 싶었는데";
+  comment: string = "이걸 내가 다 모으면 아마 깜짝놀랄거야";
   author: string = "스투키 스튜디오";
   email: string = "stuckyi.info@gmail.com";
   lastUpdate: string = "2017. 05. 24";

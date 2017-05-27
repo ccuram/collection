@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 //custom module
 import { AppRoutingModule } from './app-routing.module';
-// lib
-import { Ng2CompleterModule } from "ng2-completer";
+
 
 //component
 import { AppComponent } from './app.component';
@@ -43,7 +43,7 @@ import { SocialComponent } from './util/social/social.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    Ng2CompleterModule
+    BrowserAnimationsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

@@ -8,7 +8,8 @@
       <div class="columns">
         <div class="column is-1">
           <div class="dir" *ngIf="isLeft"  (click)="updatePos('left')"
-               [style.background-image]="'url(/assets/images/icons/dir_left.png)'">&nbsp;</div>
+               [style.background-image]="'url(/assets/images/icons/btn_left.png)'">
+               &nbsp;</div>
         </div>
         <div class="column is-10"> 
           <div class="columns sliders" #sliderArea >
@@ -33,7 +34,7 @@
         
         <div class="column is-1">
           <div class="dir" *ngIf="isRight"  (click)="updatePos('right')"
-               [style.background-image]="'url(/assets/images/icons/dir_right.png)'">&nbsp;</div>
+               [style.background-image]="'url(/assets/images/icons/btn_right.png)'">&nbsp;</div>
         </div>
       </div>
     </div>

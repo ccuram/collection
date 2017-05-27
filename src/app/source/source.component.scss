@@ -1,11 +1,85 @@
 @import 'assets/scss/global';
 
-.column {
-        @include size(720px, auto);
-        margin: 40px auto;
-    
-    // p { 
-    //     @include size(720px, auto);
-    //     margin: 15px auto;
-    // }
+
+p{
+    text-align: center;
+}
+
+
+.hero {
+    .title {
+        @include typo($size-1, $weight-bold, $line-height-1, $letter-spacing-1, center);
+    }
+    .hero-title { 
+        margin-bottom: 22px;
+        @include typo(1.375rem, $weight-extraBold, $line-height-2, $letter-spacing-3, center);
+    }
+    .hero-text {
+        @include typo($size-3, $weight-medium, $line-height-4, $letter-spacing-3, center);
+     }
+
+     .site-box-container {
+         margin-top:30px;
+          .site-box {
+            border-top: 2px solid black;
+            
+            p:nth-of-type(1){
+                @include typo($size-2, $weight-bold, $line-height-2, $letter-spacing-2, left);
+            }
+            p:nth-of-type(2){
+                @include typo($size-3, $weight-medium, $line-height-3, $letter-spacing-3, left);
+            }
+        }
+     }  
+}
+.last {
+    margin-top: 60px;
+
+    .hero-head{
+        width: 100px;
+        border-top: 3px solid #333;
+        margin: 0 auto;
+        margin-bottom: -25px;
+    }
+
+
+
+    .contributor {
+        text-align: center;
+        a { 
+            @include size(250px, 45px);
+            @include border-radius(100px);
+            @include typo($size-4, $weight-bold, $line-height-3, $letter-spacing-3, center);
+            margin-top: 35px;
+            padding: 12px 50px;
+            border: 3px solid #333;
+            color: #333 !important;
+
+            &:hover {
+                background-color: $main-color;
+            }
+        }
+
+    }
+}
+
+
+.index {
+    min-height: 40px;
+    text-align: center;
+    background-image: url('/assets/images/icons/index_3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 0%;
+    .hero-title {
+        padding: 5px;
+    }
+}
+
+
+.icon-link {
+    vertical-align: text-bottom;
+    max-width: 14px;
+    opacity: $icon-opacity-before;
+    &:hover { opacity: 1; }
 }
