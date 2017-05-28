@@ -4344,12 +4344,12 @@ html {
   0% {
     transform: translateY(0); }
   100% {
-    transform: translateY(-25px) scale(1.05); } }
+    transform: translateY(-25px); } }
 @keyframes spring-down-slide {
   0% {
-    transform: translateY(-25px) scale(1.05); }
+    transform: translateY(-25px); }
   100% {
-    transform: translateY(0) scale(1); } }
+    transform: translateY(0); } }
 /*
 
 @keyframes spring-up{
