@@ -1,12 +1,12 @@
 <!-- search input  -->
-<div class="columns is-marginless is-multiline"  (focusout)="changeStateResult('off')">
+<div class="columns is-marginless is-multiline">
   <div class="column is-12 input-container ">
     <div class="columns is-marginless">
       <div class="column is-10 is-paddingless">
-        <input (focusin)="changeStateResult('on')"  type="text" [(ngModel)]="key"  placeholder="검색" />
+        <input (focusin)="changeStateResult('on')"   (focusout)="changeStateResult('off')" type="text" [(ngModel)]="key"  placeholder="검색" />
       </div>
       <div class="column is-1  search-icon" [style.background-image]="'url(/assets/images/icons/search.png)'">
-        &nbsp;
+        <!--&nbsp;-->
       </div>
     </div>
 

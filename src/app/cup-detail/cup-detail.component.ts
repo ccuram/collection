@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Meta } from '@angular/platform-browser';
 
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { AppService } from '../app.service';
 import { Cup } from '../model/cup';
 
@@ -37,15 +39,25 @@ export class CupDetailComponent implements OnInit, AfterViewInit {
   tooltip_offsetX: number = 0;  // horizontal distance(tooltip with targetElement). (px)
 
 
-
+  
   constructor(
     private appService: AppService,
     private activatedRoute: ActivatedRoute,
-    private elf: ElementRef
+    private elf: ElementRef,
+    private metaService: Meta
   ) { }
   
-
+  getTags() {
+    const selector = 'property="og:title"';
+    const title = this.metaService.getTag(selector);
+    console.log(title);
+    this.metaService.updateTag(
+      { content: 'Angular로 변경한 title' },
+      "property='og:title'");
+  }
+ 
   ngOnInit() {
+    console.log("ngoninit");
     let cupId: number;
     this.activatedRoute.params.forEach((urlParameters) => {
       cupId = parseInt(urlParameters['id']);  

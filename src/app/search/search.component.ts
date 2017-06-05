@@ -15,8 +15,6 @@ import { CUPS } from '../data/cups';
 })
 export class SearchComponent implements OnInit {
   cups;
-
-
   isResult: boolean;
 
   key = "";
@@ -33,24 +31,17 @@ export class SearchComponent implements OnInit {
   }
 
   changeStateResult(resultState: string) {
+    // console.log("changeStateResult", resultState);
     setTimeout(() => {
       this.isResult = (resultState === 'on') ? true : false;
-    }, 0);
-  }
-
-  gotoDetail(searchedCup: Cup) {
-    console.log("gotoDetail()");
-
-    let link = ['/detail', searchedCup.id];
-    this.router.navigate(link); 
-    history.go(0);
-    window.scrollTo(0, 0);
+    }, 10);
   }
 
 
 
   // Relative Content Navigate
   getTargetURL(id: number) {
+    console.log("getTargetUrl", id);
     return '/detail/' + id;
   }
 

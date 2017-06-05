@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./social.component.css']
 })
 export class SocialComponent implements OnInit {
-
+    shareMsg: string = "생리컵에 대한 정보를 찾는다면 이곳 '모두의 생리컵'사이트를 확인하세요. 링크는 ";
+    url: string = "https://cups.kr";
+  
   constructor() { }
 
   ngOnInit() {
@@ -20,7 +22,7 @@ export class SocialComponent implements OnInit {
             openUrl = "https://www.facebook.com/sharer/sharer.php?u=";
             break;
         case 'twitter':
-            openUrl = "https://twitter.com/intent/tweet?text=helloMenstrualcup?";
+            openUrl = "https://twitter.com/intent/tweet?text=" + this.shareMsg + this.url;
             break;
         default:
             openUrl = 'none';

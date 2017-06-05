@@ -7,7 +7,6 @@ export class AppService implements OnInit{
   cups: Cup[];
   selectedIndex: number;
   
-
   constructor() { 
     this.cups = CUPS;  
   }
