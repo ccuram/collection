@@ -46,4 +46,13 @@ export class SearchComponent implements OnInit {
     history.go(0);
     window.scrollTo(0, 0);
   }
+
+
+
+  // Relative Content Navigate
+  getTargetURL(id: number) {
+    return '/detail/' + id;
+  }
+
+  
 }

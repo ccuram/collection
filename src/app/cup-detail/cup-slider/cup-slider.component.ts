@@ -56,6 +56,7 @@ export class CupSliderComponent implements OnInit {
     this.activatedRoute.params.forEach((urlParameters) => {
       this.selectedIndex = parseInt(urlParameters['id']);
     });
+    console.log(this.activatedRoute.params);
     
     this.cups = this.appService.getCups();
     this.setReOrder();

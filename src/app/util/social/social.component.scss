@@ -1,17 +1,20 @@
 @import 'assets/scss/global';
 
 
+.columns {
+    
+    .btn-social {
+        
+        @include min-size(25px, 25px);
+        margin: 0 2px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
 
-.btn-social {
-    @include min-size(25px, 25px);
-    margin: 0 2px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
+        opacity: $icon-opacity-before;
 
-    opacity: $icon-opacity-before;
-
-    &:hover {
-        opacity: 1;
+        &:hover {
+            opacity: 1;
+        }
     }
 }

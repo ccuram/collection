@@ -14,13 +14,9 @@
   
   <div class="column is-12">
      <div *ngIf="isResult" class="columns is-multiline search-row-wrapper">
-      <div *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
-          (click)="gotoDetail(cup)" class="column is-12 search-row">
-        <p (click)="gotoDetail(cup)">{{ cup.name }}</p>
-      </div>
+       <a *ngFor="let cup of cups | customSearch:key:field:ignoreCase"
+            class="column is-12 search-row" [href]="getTargetURL(cup.id)"><span>{{cup.name}}</span></a>
     </div>
   </div>
  
 </div>
-
-<!--[style.background-image]="'url(/assets/images/cups/spec/'+ cup.imgUrls + '_' + imgColor.name + '.png)'"-->

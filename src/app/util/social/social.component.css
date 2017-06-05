@@ -4314,7 +4314,7 @@ html {
   margin-bottom: 30px;
   overflow-x: hidden; }
 
-.btn-social {
+.columns .btn-social {
   min-width: 25px;
   min-height: 25px;
   margin: 0 2px;
@@ -4322,7 +4322,7 @@ html {
   background-size: contain;
   background-position: center center;
   opacity: 0.25; }
-  .btn-social:hover {
+  .columns .btn-social:hover {
     opacity: 1; }
 
 /*# sourceMappingURL=social.component.css.map */

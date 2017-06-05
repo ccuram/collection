@@ -35,21 +35,13 @@
     margin-left:10px;
     overflow: scroll;
 
-    .search-row{
+    .search-row {
         @include testBg();
-        text-align:left;
-        p {
-            font-size: $size-4;
-            font-weight: $weight-light;
-            letter-spacing: $letter-spacing-1;
-        }
+        @include typo($size-4, $weight-light, $line-height-1, $letter-spacing-2, left);
+        color: $text-color;
         &:hover {
             background-color: $main-color;
-            p {
-                font-weight: $weight-bold;
-            }
-            
+            font-weight: $weight-bold;
         }
     }
-
 }

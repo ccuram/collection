@@ -4314,12 +4314,6 @@ html {
   margin-bottom: 30px;
   overflow-x: hidden; }
 
-p {
-  text-align: center; }
-
-.index {
-  text-align: center; }
-
 .hero .title {
   font-size: 1.875rem;
   font-weight: bold;
@@ -4339,5 +4333,15 @@ p {
   line-height: 1.43;
   letter-spacing: 0.05rem;
   text-align: center; }
+
+.index {
+  min-height: 40px;
+  text-align: center;
+  background-image: url("/assets/images/icons/index_3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 0%; }
+  .index .hero-title {
+    padding: 5px; }
 
 /*# sourceMappingURL=contributing.component.css.map */
